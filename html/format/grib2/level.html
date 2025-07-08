@@ -1,0 +1,1423 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>层次 &#8212; CEMC Data Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'format/grib2/level';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="GRIB KEY参数" href="grib_key.html" />
+    <link rel="prev" title="要素名" href="parameter.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CEMC Data Guide</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    cedarkit数据指南
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">快速开始</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../started/getting-started.html">开始使用</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">数据来源</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../source/local/hpc2023-local.html">气象超算本地文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/local/config.html">配置文件</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">数据格式</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">GRIB2</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="parameter.html">要素名</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">层次</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grib_key.html">GRIB KEY参数</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cemc-oper/data-notebook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cemc-oper/data-notebook/issues/new?title=Issue%20on%20page%20%2Fformat/grib2/level.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/format/grib2/level.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>层次</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eccodestypeoflevellevel">ecCodes的typeOfLevel和level</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grib-key">使用GRIB Key</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reki">使用reki内置的层次类型</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pl">pl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sfc">sfc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ml">ml</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">使用reki内置的层次</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>层次<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>GRIB2 要素场的层次信息与使用的产品模板 (productDefinitionTemplateNumber) 有关。</p>
+<p>CEMC 模式 GRIB2 产品大部分要素均使用产品模板 4.0 (瞬时要素) 和 4.8 (统计要素)。
+两种模板都支持设置两个层次，每个层次可以设置层次类型和层次值。相关 GRIB KEY 如下</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>GRIB KEY</p></th>
+<th class="head"><p>描述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>typeOfFirstFixedSurface</p></td>
+<td><p>层次类型</p></td>
+</tr>
+<tr class="row-odd"><td><p>scaleFactorOfFirstFixedSurface</p></td>
+<td><p>层次值</p></td>
+</tr>
+<tr class="row-even"><td><p>scaledValueOfFirstFixedSurface</p></td>
+<td><p>层次值</p></td>
+</tr>
+<tr class="row-odd"><td><p>typeOfSecondFixedSurface</p></td>
+<td><p>层次类型</p></td>
+</tr>
+<tr class="row-even"><td><p>scaleFactorOfSecondFixedSurface</p></td>
+<td><p>层次值</p></td>
+</tr>
+<tr class="row-odd"><td><p>scaledValueOfSecondFixedSurface</p></td>
+<td><p>层次值</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>计算层次值的公式如下：</p>
+<div class="math notranslate nohighlight">
+\[
+level = 10^{-f} \cdot v
+\]</div>
+<p>对于第一个层次来说，<code class="docutils literal notranslate"><span class="pre">f</span></code> 是 <code class="docutils literal notranslate"><span class="pre">scaleFactorOfFirstFixedSurface</span></code>，<code class="docutils literal notranslate"><span class="pre">v</span></code> 是 <code class="docutils literal notranslate"><span class="pre">scaledValueOfFirstFixedSurface</span></code>。</p>
+<p>ecCodes 额外提供 <code class="docutils literal notranslate"><span class="pre">typeOfLevel</span></code> 和 <code class="docutils literal notranslate"><span class="pre">level</span></code> 两个 GRIB Key 表示层次类型和层次值，支持大部分要素场，但不支持某些使用两个层次的要素场。</p>
+<p>下面介绍 reki 支持的几种检索层次的方法。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">reki.data_finder</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_local_file</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">reki.format.grib.eccodes</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_field_from_file</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s2">&quot;D&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">start_time_label</span> <span class="o">=</span> <span class="n">start_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">%H&quot;</span><span class="p">)</span>
+<span class="n">forecast_time_label</span> <span class="o">=</span> <span class="s2">&quot;24h&quot;</span>
+<span class="n">forecast_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="n">forecast_time_label</span><span class="p">)</span>
+
+<span class="n">gfs_grib2_orig_file_path</span> <span class="o">=</span> <span class="n">find_local_file</span><span class="p">(</span>
+    <span class="s2">&quot;cma_gfs_gmf/grib2/orig&quot;</span><span class="p">,</span>
+    <span class="n">start_time</span><span class="o">=</span><span class="n">start_time</span><span class="p">,</span>
+    <span class="n">forecast_time</span><span class="o">=</span><span class="n">forecast_time</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">gfs_grib2_orig_file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/g3/COMMONDATA/OPER/CEMC/GFS_GMF/Prod-grib/2025070600/ORIG/gmf.gra.2025070600024.grb2&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gfs_grib2_modelvar_file_path</span> <span class="o">=</span> <span class="n">find_local_file</span><span class="p">(</span>
+    <span class="s2">&quot;cma_gfs_gmf/grib2/modelvar&quot;</span><span class="p">,</span>
+    <span class="n">start_time</span><span class="o">=</span><span class="n">start_time</span><span class="p">,</span>
+    <span class="n">forecast_time</span><span class="o">=</span><span class="n">forecast_time</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">gfs_grib2_modelvar_file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/g3/COMMONDATA/OPER/CEMC/GFS_GMF/Prod-grib/2025070600/MODELVAR/modelvar2025070600024.grb2&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="eccodestypeoflevellevel">
+<h2>ecCodes的typeOfLevel和level<a class="headerlink" href="#eccodestypeoflevellevel" title="Link to this heading">#</a></h2>
+<p>CMA-GFS 的 GRIB2 文件所有要素使用的 typeOfLevel 如下：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.utils.capture</span><span class="w"> </span><span class="kn">import</span> <span class="n">capture_output</span>
+
+<span class="k">with</span> <span class="n">capture_output</span><span class="p">()</span> <span class="k">as</span> <span class="n">captured</span><span class="p">:</span>
+    <span class="o">!</span>module<span class="w"> </span>load<span class="w"> </span>eccodes/2.29.0/intel<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>grib_ls<span class="w"> </span>-p<span class="w"> </span>typeOfLevel<span class="w"> </span><span class="s2">&quot;{gfs_grib2_orig_file_path}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span>+3<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-n<span class="w"> </span>-3<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">captured</span><span class="o">.</span><span class="n">stdout</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      4 atmosphere  
+      8 depthBelowLandLayer 
+      4 entireAtmosphere 
+     29 heightAboveGround 
+      3 heightAboveGroundLayer 
+    748 isobaricInhPa 
+     12 isobaricInPa 
+      2 meanSea     
+      6 nominalTop  
+     45 surface     
+</pre></div>
+</div>
+</div>
+</div>
+<p>使用 typeOfLevel 和对应的 level 值可以加载要素场：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_orig_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;u&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;heightAboveGround&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">field</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;u&#x27; (latitude: 1440, longitude: 2880)&gt; Size: 33MB
+array([[-2.63265869, -2.60265869, -2.57265869, ..., -2.66265869,
+        -2.64265869, -2.63265869],
+       [-1.47265869, -1.45265869, -1.43265869, ..., -1.51265869,
+        -1.49265869, -1.48265869],
+       [-1.31265869, -1.29265869, -1.27265869, ..., -1.34265869,
+        -1.33265869, -1.32265869],
+       ...,
+       [-4.52265869, -4.51265869, -4.49265869, ..., -4.58265869,
+        -4.56265869, -4.54265869],
+       [-4.00265869, -3.98265869, -3.96265869, ..., -4.06265869,
+        -4.04265869, -4.02265869],
+       [-4.83265869, -4.81265869, -4.79265869, ..., -4.87265869,
+        -4.86265869, -4.84265869]], shape=(1440, 2880))
+Coordinates:
+    time               datetime64[ns] 8B 2025-07-06
+    step               timedelta64[ns] 8B 1 days
+    valid_time         datetime64[ns] 8B 2025-07-07
+    heightAboveGround  int64 8B 100
+  * latitude           (latitude) float64 12kB 89.94 89.81 ... -89.81 -89.94
+  * longitude          (longitude) float64 23kB 0.0 0.125 0.25 ... 359.8 359.9
+Attributes: (12/17)
+    GRIB_edition:             2
+    GRIB_centre:              babj
+    GRIB_subCentre:           0
+    GRIB_tablesVersion:       4
+    GRIB_localTablesVersion:  0
+    GRIB_dataType:            fc
+    ...                       ...
+    GRIB_stepType:            instant
+    GRIB_stepUnits:           1
+    GRIB_stepRange:           24
+    GRIB_endStep:int:         24
+    GRIB_count:               49
+    long_name:                discipline=0 parmcat=2 parm=2</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'u'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1440</li><li><span class='xr-has-index'>longitude</span>: 2880</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-da9ef2a9-80fc-4735-a94e-e9323cfd0800' class='xr-array-in' type='checkbox' checked><label for='section-da9ef2a9-80fc-4735-a94e-e9323cfd0800' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-2.633 -2.603 -2.573 -2.553 -2.533 ... -4.893 -4.873 -4.863 -4.843</span></div><div class='xr-array-data'><pre>array([[-2.63265869, -2.60265869, -2.57265869, ..., -2.66265869,
+        -2.64265869, -2.63265869],
+       [-1.47265869, -1.45265869, -1.43265869, ..., -1.51265869,
+        -1.49265869, -1.48265869],
+       [-1.31265869, -1.29265869, -1.27265869, ..., -1.34265869,
+        -1.33265869, -1.32265869],
+       ...,
+       [-4.52265869, -4.51265869, -4.49265869, ..., -4.58265869,
+        -4.56265869, -4.54265869],
+       [-4.00265869, -3.98265869, -3.96265869, ..., -4.06265869,
+        -4.04265869, -4.02265869],
+       [-4.83265869, -4.81265869, -4.79265869, ..., -4.87265869,
+        -4.86265869, -4.84265869]], shape=(1440, 2880))</pre></div></div></li><li class='xr-section-item'><input id='section-0f01fe21-d632-49b8-a6e8-acf3b2967176' class='xr-section-summary-in' type='checkbox'  checked><label for='section-0f01fe21-d632-49b8-a6e8-acf3b2967176' class='xr-section-summary' >Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2025-07-06</div><input id='attrs-0a6e3550-b855-4150-bda1-c525c96b521a' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-0a6e3550-b855-4150-bda1-c525c96b521a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0f66fa52-e79a-476f-8ddb-2bdbdefdab70' class='xr-var-data-in' type='checkbox'><label for='data-0f66fa52-e79a-476f-8ddb-2bdbdefdab70' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2025-07-06T00:00:00.000000000&#x27;, dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>step</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>timedelta64[ns]</div><div class='xr-var-preview xr-preview'>1 days</div><input id='attrs-56f6d89b-9ecb-450d-846e-2c1a0daa4ad5' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-56f6d89b-9ecb-450d-846e-2c1a0daa4ad5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-03f43542-989e-4ec0-99d7-bcaf233e78f3' class='xr-var-data-in' type='checkbox'><label for='data-03f43542-989e-4ec0-99d7-bcaf233e78f3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(86400000000000, dtype=&#x27;timedelta64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2025-07-07</div><input id='attrs-f447e26a-40a2-4235-b47d-5741b95239a7' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-f447e26a-40a2-4235-b47d-5741b95239a7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d0531a71-6915-4d2d-8265-f081cc01a267' class='xr-var-data-in' type='checkbox'><label for='data-d0531a71-6915-4d2d-8265-f081cc01a267' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2025-07-07T00:00:00.000000000&#x27;, dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>heightAboveGround</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>100</div><input id='attrs-18647a2f-af21-4db4-929b-794f520082ed' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-18647a2f-af21-4db4-929b-794f520082ed' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b0397b41-4ec5-498b-bd0e-504459033ee3' class='xr-var-data-in' type='checkbox'><label for='data-b0397b41-4ec5-498b-bd0e-504459033ee3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(100)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>89.94 89.81 89.69 ... -89.81 -89.94</div><input id='attrs-d9be36f0-e92b-4810-a06e-a6199ae49808' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d9be36f0-e92b-4810-a06e-a6199ae49808' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-379b4e97-c0dc-4757-bd53-fa76770f2722' class='xr-var-data-in' type='checkbox'><label for='data-379b4e97-c0dc-4757-bd53-fa76770f2722' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([ 89.9375,  89.8125,  89.6875, ..., -89.6875, -89.8125, -89.9375],
+      shape=(1440,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.125 0.25 ... 359.8 359.9</div><input id='attrs-278b0685-ad97-4853-9900-e132da255252' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-278b0685-ad97-4853-9900-e132da255252' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5f6964cf-6d52-4fcb-8ae9-3c31f5275dda' class='xr-var-data-in' type='checkbox'><label for='data-5f6964cf-6d52-4fcb-8ae9-3c31f5275dda' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd></dl></div><div class='xr-var-data'><pre>array([0.00000e+00, 1.25000e-01, 2.50000e-01, ..., 3.59625e+02, 3.59750e+02,
+       3.59875e+02], shape=(2880,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4b2e7c92-f02c-4b05-be06-04d9fc04e655' class='xr-section-summary-in' type='checkbox'  ><label for='section-4b2e7c92-f02c-4b05-be06-04d9fc04e655' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-00d2f71d-c017-48ff-ab19-718a6d5cba11' class='xr-index-data-in' type='checkbox'/><label for='index-00d2f71d-c017-48ff-ab19-718a6d5cba11' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 89.9375,  89.8125,  89.6875,  89.5625,  89.4375,  89.3125,  89.1875,
+        89.0625,  88.9375,  88.8125,
+       ...
+       -88.8125, -88.9375, -89.0625, -89.1875, -89.3125, -89.4375, -89.5625,
+       -89.6875, -89.8125, -89.9375],
+      dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1440))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-e6344cb6-4035-4c2a-aa9d-8a85d0fdef77' class='xr-index-data-in' type='checkbox'/><label for='index-e6344cb6-4035-4c2a-aa9d-8a85d0fdef77' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([    0.0,   0.125,    0.25,   0.375,     0.5,   0.625,    0.75,   0.875,
+           1.0,   1.125,
+       ...
+        358.75, 358.875,   359.0, 359.125,  359.25, 359.375,   359.5, 359.625,
+        359.75, 359.875],
+      dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=2880))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-85f58d96-cbd3-4604-a9cb-0e33c1acf658' class='xr-section-summary-in' type='checkbox'  ><label for='section-85f58d96-cbd3-4604-a9cb-0e33c1acf658' class='xr-section-summary' >Attributes: <span>(17)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>GRIB_edition :</span></dt><dd>2</dd><dt><span>GRIB_centre :</span></dt><dd>babj</dd><dt><span>GRIB_subCentre :</span></dt><dd>0</dd><dt><span>GRIB_tablesVersion :</span></dt><dd>4</dd><dt><span>GRIB_localTablesVersion :</span></dt><dd>0</dd><dt><span>GRIB_dataType :</span></dt><dd>fc</dd><dt><span>GRIB_dataDate :</span></dt><dd>20250706</dd><dt><span>GRIB_dataTime :</span></dt><dd>0</dd><dt><span>GRIB_validityDate :</span></dt><dd>20250707</dd><dt><span>GRIB_validityTime :</span></dt><dd>0</dd><dt><span>GRIB_step :</span></dt><dd>24</dd><dt><span>GRIB_stepType :</span></dt><dd>instant</dd><dt><span>GRIB_stepUnits :</span></dt><dd>1</dd><dt><span>GRIB_stepRange :</span></dt><dd>24</dd><dt><span>GRIB_endStep:int :</span></dt><dd>24</dd><dt><span>GRIB_count :</span></dt><dd>49</dd><dt><span>long_name :</span></dt><dd>discipline=0 parmcat=2 parm=2</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_orig_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;isobaricInhPa&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">850</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x1533e8b5f230&gt;
+</pre></div>
+</div>
+<img alt="../../_images/35b2dd2a5a878f0a365ee88b9d558a2f8347fbd7e422571ba095bc5737ff9be1.png" src="../../_images/35b2dd2a5a878f0a365ee88b9d558a2f8347fbd7e422571ba095bc5737ff9be1.png" />
+</div>
+</div>
+</section>
+<section id="grib-key">
+<h2>使用GRIB Key<a class="headerlink" href="#grib-key" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">level_type</span></code> 和 <code class="docutils literal notranslate"><span class="pre">level</span></code> 均支持使用字典类型的 GRIB Key 进行查询。</p>
+<p>ecCodes 不识别 CEMC 模式面要素场的层次类型，可以直接使用 <code class="docutils literal notranslate"><span class="pre">typeOfFirstFixedSurface:int=131</span></code> 进行查询。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_modelvar_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;typeOfFirstFixedSurface:int&quot;</span><span class="p">:</span> <span class="mi">131</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">field</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;GRIB_count&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1428
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>上述代码显式指定 <code class="docutils literal notranslate"><span class="pre">typeOfFirstFixedSurface</span></code> 的值类型为 int，否则需要使用默认的字符串格式。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_modelvar_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;typeOfFirstFixedSurface&quot;</span><span class="p">:</span> <span class="s2">&quot;131&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">field</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;GRIB_count&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1428
+</pre></div>
+</div>
+</div>
+</div>
+<p>modelvar 文件中所有要素场都是同一个层次类型，可以省略 <code class="docutils literal notranslate"><span class="pre">level_type</span></code> 参数。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_modelvar_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">field</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;GRIB_count&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1428
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reki">
+<h2>使用reki内置的层次类型<a class="headerlink" href="#reki" title="Link to this heading">#</a></h2>
+<p>reki 内置几种层次类型，用于简化查询条件。</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>reki层次类型</p></th>
+<th class="head"><p>描述</p></th>
+<th class="head"><p>等价ecCodes类型</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pl</p></td>
+<td><p>等压面层，单位 hPa</p></td>
+<td><p>typeOfFirstFixedSurface:int=100</p></td>
+</tr>
+<tr class="row-odd"><td><p>sfc</p></td>
+<td><p>地面层</p></td>
+<td><p>typeOfLevel=surface</p></td>
+</tr>
+<tr class="row-even"><td><p>ml</p></td>
+<td><p>模式面层</p></td>
+<td><p>typeOfFirstFixedSurface:int=131</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="pl">
+<h3>pl<a class="headerlink" href="#pl" title="Link to this heading">#</a></h3>
+<p>pl 用于查询等压面层，单位 hPa，支持浮点数。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_orig_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;pl&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">850</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x1533e86487d0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/35b2dd2a5a878f0a365ee88b9d558a2f8347fbd7e422571ba095bc5737ff9be1.png" src="../../_images/35b2dd2a5a878f0a365ee88b9d558a2f8347fbd7e422571ba095bc5737ff9be1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_orig_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;pl&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x1533e88a2600&gt;
+</pre></div>
+</div>
+<img alt="../../_images/4ae6cd0c77949c3385ec3ed231f77373a6d9e76d6481b668df6218c9c797a9f2.png" src="../../_images/4ae6cd0c77949c3385ec3ed231f77373a6d9e76d6481b668df6218c9c797a9f2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_orig_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;pl&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x1533e843e7b0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/e59807a682994b11f2c577e002caec1996466875338c90a9fa1a4b38b7deae6d.png" src="../../_images/e59807a682994b11f2c577e002caec1996466875338c90a9fa1a4b38b7deae6d.png" />
+</div>
+</div>
+</section>
+<section id="sfc">
+<h3>sfc<a class="headerlink" href="#sfc" title="Link to this heading">#</a></h3>
+<p>sfc 用于查询地面层要素场，仅支持 typeOfLevel=”surface” 的要素场。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_orig_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;sfc&quot;</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x1533e8602510&gt;
+</pre></div>
+</div>
+<img alt="../../_images/9eb33754087e7d8c11acaf8c57602a0e54855777eef7da071570be5528b63e28.png" src="../../_images/9eb33754087e7d8c11acaf8c57602a0e54855777eef7da071570be5528b63e28.png" />
+</div>
+</div>
+</section>
+<section id="ml">
+<h3>ml<a class="headerlink" href="#ml" title="Link to this heading">#</a></h3>
+<p>ml 用于检索模式面数据，正如之前提到的，模式面数据文件中只有一种层次类型，因此可以省略 level_type 参数。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_modelvar_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;ml&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x1533e83dfda0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/befacc6e9a46fe2230cda175a8350dcb10fccb6e02f76a98856e9ab9892699c6.png" src="../../_images/befacc6e9a46fe2230cda175a8350dcb10fccb6e02f76a98856e9ab9892699c6.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="id2">
+<h2>使用reki内置的层次<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>reki 内置两个层次值键值 <code class="docutils literal notranslate"><span class="pre">first_level</span></code> 和 <code class="docutils literal notranslate"><span class="pre">second_level</span></code>，可以用于定位有两个层次定义的要素场。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_orig_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;depthBelowLandLayer&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;first_level&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="s2">&quot;second_level&quot;</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x1533e82887d0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/8a9ff73f3f8cb459327fde1bce1f904cb069d3860f32da7376d86bb3029189e8.png" src="../../_images/8a9ff73f3f8cb459327fde1bce1f904cb069d3860f32da7376d86bb3029189e8.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./format/grib2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="parameter.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">要素名</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="grib_key.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GRIB KEY参数</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eccodestypeoflevellevel">ecCodes的typeOfLevel和level</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grib-key">使用GRIB Key</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reki">使用reki内置的层次类型</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pl">pl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sfc">sfc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ml">ml</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">使用reki内置的层次</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By cmec-oper
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

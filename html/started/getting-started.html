@@ -1,0 +1,2302 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>开始使用 &#8212; CEMC Data Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'started/getting-started';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="气象超算本地文件" href="../source/local/hpc2023-local.html" />
+    <link rel="prev" title="cedarkit数据指南" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CEMC Data Guide</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    cedarkit数据指南
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">快速开始</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">开始使用</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">数据来源</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../source/local/hpc2023-local.html">气象超算本地文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../source/local/config.html">配置文件</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">数据格式</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../format/grib2/index.html">GRIB2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../format/grib2/parameter.html">要素名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../format/grib2/level.html">层次</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../format/grib2/grib_key.html">GRIB KEY参数</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cemc-oper/data-notebook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cemc-oper/data-notebook/issues/new?title=Issue%20on%20page%20%2Fstarted/getting-started.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/started/getting-started.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>开始使用</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">本地文件查找</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grib2">读取 GRIB2 文件</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">基本方法</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">层次类型</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">更多筛选条件</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eccodes">ecCodes 接口</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>开始使用<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>本节介绍 reki 库的主要功能。</p>
+<p>首先导入需要使用的一些库。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">eccodes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>生成起报时次和预报时效。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s2">&quot;D&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">start_time_label</span> <span class="o">=</span> <span class="n">start_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">%H&quot;</span><span class="p">)</span>
+<span class="n">forecast_time_label</span> <span class="o">=</span> <span class="s2">&quot;24h&quot;</span>
+<span class="n">forecast_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="n">forecast_time_label</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;start_time:&quot;</span><span class="p">,</span> <span class="n">start_time</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;start_time_label:&quot;</span><span class="p">,</span> <span class="n">start_time_label</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;forecast_time:&quot;</span><span class="p">,</span> <span class="n">forecast_time</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;forecast_time_label:&quot;</span><span class="p">,</span> <span class="n">forecast_time_label</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>start_time: 2025-07-06 00:00:00+00:00
+start_time_label: 2025070600
+forecast_time: 1 days 00:00:00
+forecast_time_label: 24h
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id2">
+<h2>本地文件查找<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>reki 内置了 CMA 国家级气象超算子系统 1 (CMA-HPC2023-SC1) 共享文件系统 (/g3/COMMONDATA) 中业务系统产品文件路径。</p>
+<p>下面示例获取 CMA-GFS 系统原始分辨率 GRIB2 文件路径。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">reki.data_finder</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_local_file</span>
+
+<span class="n">gfs_grib2_file_path</span> <span class="o">=</span> <span class="n">find_local_file</span><span class="p">(</span>
+    <span class="s2">&quot;cma_gfs_gmf/grib2/orig&quot;</span><span class="p">,</span>
+    <span class="n">start_time</span><span class="o">=</span><span class="n">start_time</span><span class="p">,</span>
+    <span class="n">forecast_time</span><span class="o">=</span><span class="n">forecast_time</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">gfs_grib2_file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/g3/COMMONDATA/OPER/CEMC/GFS_GMF/Prod-grib/2025070600/ORIG/gmf.gra.2025070600024.grb2&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">find_local_file</span></code> 函数支持一些参数来定义更精确的文件查找条件。
+比如 <code class="docutils literal notranslate"><span class="pre">number</span></code> 参数表示集合预报成员编号。</p>
+<p>下面示例获取 CMA-GEPS 系统第 2 个集合成员 024 时效的原始分辨率 GRIB2 文件路径。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geps_grib2_file_path</span> <span class="o">=</span> <span class="n">find_local_file</span><span class="p">(</span>
+    <span class="s2">&quot;cma_geps/grib2/orig&quot;</span><span class="p">,</span>
+    <span class="n">start_time</span><span class="o">=</span><span class="n">start_time_label</span><span class="p">,</span>
+    <span class="n">forecast_time</span><span class="o">=</span><span class="n">forecast_time_label</span><span class="p">,</span>
+    <span class="n">number</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">geps_grib2_file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/g3/COMMONDATA/OPER/CEMC/GEPS/Prod-grib/2025070600/grib2/gef.gra.002.2025070600024.grb2&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>reki 也内置了模式输出的一些中间文件。</p>
+<p>下面示例获取 CMA-GFS 系统 240 时效的模式面二进制数据文件路径。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gfs_modelvar_file_path</span> <span class="o">=</span> <span class="n">find_local_file</span><span class="p">(</span>
+    <span class="s2">&quot;cma_gfs_gmf/bin/modelvar&quot;</span><span class="p">,</span>
+    <span class="n">start_time</span><span class="o">=</span><span class="n">start_time</span><span class="p">,</span>
+    <span class="n">forecast_time</span><span class="o">=</span><span class="s2">&quot;240h&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">gfs_modelvar_file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/g3/COMMONDATA/OPER/CEMC/GFS_GMF/Fcst-long/2025070600/modelvar2025070600_240&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>reki 内置的配置文件请查看 <code class="docutils literal notranslate"><span class="pre">reki/data_finder/conf</span></code> 目录。</p>
+</section>
+<section id="grib2">
+<h2>读取 GRIB2 文件<a class="headerlink" href="#grib2" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>基本方法<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>reki 使用 eccodes 从 GRIB2 文件中检索要素场，并返回 <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> 对象。</p>
+<p>下面示例从 CMA-GFS 的 GRIB2 产品文件中加载 850hPa 温度场。其中：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code> 参数表示要素名称，<code class="docutils literal notranslate"><span class="pre">t</span></code> 代表温度</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">level_type</span></code> 参数表示层次类型，<code class="docutils literal notranslate"><span class="pre">pl</span></code> 代表等压面层，单位 hPa</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">level</span></code> 参数表示层次值</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">reki.format.grib.eccodes</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_field_from_file</span>
+
+<span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;pl&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">850</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">field</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;t&#x27; (latitude: 1440, longitude: 2880)&gt; Size: 33MB
+array([[269.00310547, 269.00310547, 269.00310547, ..., 269.00310547,
+        269.00310547, 269.00310547],
+       [268.97310547, 268.97310547, 268.97310547, ..., 268.97310547,
+        268.97310547, 268.97310547],
+       [268.99310547, 268.99310547, 268.99310547, ..., 268.99310547,
+        268.99310547, 268.99310547],
+       ...,
+       [230.29310547, 230.27310547, 230.28310547, ..., 230.65310547,
+        230.54310547, 230.38310547],
+       [230.60310547, 230.60310547, 230.60310547, ..., 230.58310547,
+        230.59310547, 230.60310547],
+       [230.56310547, 230.56310547, 230.56310547, ..., 230.56310547,
+        230.56310547, 230.56310547]], shape=(1440, 2880))
+Coordinates:
+    time        datetime64[ns] 8B 2025-07-06
+    step        timedelta64[ns] 8B 1 days
+    valid_time  datetime64[ns] 8B 2025-07-07
+    pl          float64 8B 850.0
+  * latitude    (latitude) float64 12kB 89.94 89.81 89.69 ... -89.81 -89.94
+  * longitude   (longitude) float64 23kB 0.0 0.125 0.25 ... 359.6 359.8 359.9
+Attributes: (12/17)
+    GRIB_edition:             2
+    GRIB_centre:              babj
+    GRIB_subCentre:           0
+    GRIB_tablesVersion:       4
+    GRIB_localTablesVersion:  0
+    GRIB_dataType:            fc
+    ...                       ...
+    GRIB_stepType:            instant
+    GRIB_stepUnits:           1
+    GRIB_stepRange:           24
+    GRIB_endStep:int:         24
+    GRIB_count:               109
+    long_name:                discipline=0 parmcat=0 parm=0</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'t'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1440</li><li><span class='xr-has-index'>longitude</span>: 2880</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-5514879d-e849-4f10-a4f6-e5d61c59bece' class='xr-array-in' type='checkbox' checked><label for='section-5514879d-e849-4f10-a4f6-e5d61c59bece' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>269.0 269.0 269.0 269.0 269.0 269.0 ... 230.6 230.6 230.6 230.6 230.6</span></div><div class='xr-array-data'><pre>array([[269.00310547, 269.00310547, 269.00310547, ..., 269.00310547,
+        269.00310547, 269.00310547],
+       [268.97310547, 268.97310547, 268.97310547, ..., 268.97310547,
+        268.97310547, 268.97310547],
+       [268.99310547, 268.99310547, 268.99310547, ..., 268.99310547,
+        268.99310547, 268.99310547],
+       ...,
+       [230.29310547, 230.27310547, 230.28310547, ..., 230.65310547,
+        230.54310547, 230.38310547],
+       [230.60310547, 230.60310547, 230.60310547, ..., 230.58310547,
+        230.59310547, 230.60310547],
+       [230.56310547, 230.56310547, 230.56310547, ..., 230.56310547,
+        230.56310547, 230.56310547]], shape=(1440, 2880))</pre></div></div></li><li class='xr-section-item'><input id='section-088347cb-0401-4177-b1d9-430b3fd6ce0f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-088347cb-0401-4177-b1d9-430b3fd6ce0f' class='xr-section-summary' >Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2025-07-06</div><input id='attrs-c5c1edc2-9939-445b-84fe-3082799fb9c9' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-c5c1edc2-9939-445b-84fe-3082799fb9c9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-68e9c703-baff-4821-8eb0-323f2fc5ee93' class='xr-var-data-in' type='checkbox'><label for='data-68e9c703-baff-4821-8eb0-323f2fc5ee93' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2025-07-06T00:00:00.000000000&#x27;, dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>step</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>timedelta64[ns]</div><div class='xr-var-preview xr-preview'>1 days</div><input id='attrs-a93b25aa-2e98-4a56-b580-db6f69673764' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-a93b25aa-2e98-4a56-b580-db6f69673764' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b34db540-9b60-4188-accf-584c83a6d2c0' class='xr-var-data-in' type='checkbox'><label for='data-b34db540-9b60-4188-accf-584c83a6d2c0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(86400000000000, dtype=&#x27;timedelta64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2025-07-07</div><input id='attrs-9bd81f6d-c4c2-4202-9c58-10fc8db276d2' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9bd81f6d-c4c2-4202-9c58-10fc8db276d2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-34b75bee-b041-4ba3-a661-fc75133472e5' class='xr-var-data-in' type='checkbox'><label for='data-34b75bee-b041-4ba3-a661-fc75133472e5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2025-07-07T00:00:00.000000000&#x27;, dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>pl</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>850.0</div><input id='attrs-b4e1bda5-f91a-4183-a073-948fba094c21' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b4e1bda5-f91a-4183-a073-948fba094c21' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b91eb4f7-fbe4-4ced-990b-b17295d4c255' class='xr-var-data-in' type='checkbox'><label for='data-b91eb4f7-fbe4-4ced-990b-b17295d4c255' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(850.)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>89.94 89.81 89.69 ... -89.81 -89.94</div><input id='attrs-7adaad4f-4185-48ff-bf6d-e1b6300f96ac' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7adaad4f-4185-48ff-bf6d-e1b6300f96ac' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-47612e65-cd89-467a-a84b-802ec3259d49' class='xr-var-data-in' type='checkbox'><label for='data-47612e65-cd89-467a-a84b-802ec3259d49' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([ 89.9375,  89.8125,  89.6875, ..., -89.6875, -89.8125, -89.9375],
+      shape=(1440,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.125 0.25 ... 359.8 359.9</div><input id='attrs-90e12c9f-4a68-42e0-be12-2200970b259e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-90e12c9f-4a68-42e0-be12-2200970b259e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c94e7fe1-0f1c-447c-b6ab-b4256459e3c6' class='xr-var-data-in' type='checkbox'><label for='data-c94e7fe1-0f1c-447c-b6ab-b4256459e3c6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd></dl></div><div class='xr-var-data'><pre>array([0.00000e+00, 1.25000e-01, 2.50000e-01, ..., 3.59625e+02, 3.59750e+02,
+       3.59875e+02], shape=(2880,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-1d766390-081b-4c96-a7d9-6883e0747c72' class='xr-section-summary-in' type='checkbox'  ><label for='section-1d766390-081b-4c96-a7d9-6883e0747c72' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-a2aa3e48-c7ae-4815-8921-06feeae5cc44' class='xr-index-data-in' type='checkbox'/><label for='index-a2aa3e48-c7ae-4815-8921-06feeae5cc44' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 89.9375,  89.8125,  89.6875,  89.5625,  89.4375,  89.3125,  89.1875,
+        89.0625,  88.9375,  88.8125,
+       ...
+       -88.8125, -88.9375, -89.0625, -89.1875, -89.3125, -89.4375, -89.5625,
+       -89.6875, -89.8125, -89.9375],
+      dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1440))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-27a6f7cf-dbdd-4da1-b09e-52da113a14fe' class='xr-index-data-in' type='checkbox'/><label for='index-27a6f7cf-dbdd-4da1-b09e-52da113a14fe' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([    0.0,   0.125,    0.25,   0.375,     0.5,   0.625,    0.75,   0.875,
+           1.0,   1.125,
+       ...
+        358.75, 358.875,   359.0, 359.125,  359.25, 359.375,   359.5, 359.625,
+        359.75, 359.875],
+      dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=2880))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-24d80075-9637-473d-afd0-c716d54c82e9' class='xr-section-summary-in' type='checkbox'  ><label for='section-24d80075-9637-473d-afd0-c716d54c82e9' class='xr-section-summary' >Attributes: <span>(17)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>GRIB_edition :</span></dt><dd>2</dd><dt><span>GRIB_centre :</span></dt><dd>babj</dd><dt><span>GRIB_subCentre :</span></dt><dd>0</dd><dt><span>GRIB_tablesVersion :</span></dt><dd>4</dd><dt><span>GRIB_localTablesVersion :</span></dt><dd>0</dd><dt><span>GRIB_dataType :</span></dt><dd>fc</dd><dt><span>GRIB_dataDate :</span></dt><dd>20250706</dd><dt><span>GRIB_dataTime :</span></dt><dd>0</dd><dt><span>GRIB_validityDate :</span></dt><dd>20250707</dd><dt><span>GRIB_validityTime :</span></dt><dd>0</dd><dt><span>GRIB_step :</span></dt><dd>24</dd><dt><span>GRIB_stepType :</span></dt><dd>instant</dd><dt><span>GRIB_stepUnits :</span></dt><dd>1</dd><dt><span>GRIB_stepRange :</span></dt><dd>24</dd><dt><span>GRIB_endStep:int :</span></dt><dd>24</dd><dt><span>GRIB_count :</span></dt><dd>109</dd><dt><span>long_name :</span></dt><dd>discipline=0 parmcat=0 parm=0</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<p>可以使用 xarray 提供的一系列功能对要素场进行分析。比如使用 <code class="docutils literal notranslate"><span class="pre">xarray.DataArray.plot()</span></code> 函数实现快速绘图。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">field</span> <span class="o">-</span> <span class="mf">273.15</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x146bc6230140&gt;
+</pre></div>
+</div>
+<img alt="../_images/35b2dd2a5a878f0a365ee88b9d558a2f8347fbd7e422571ba095bc5737ff9be1.png" src="../_images/35b2dd2a5a878f0a365ee88b9d558a2f8347fbd7e422571ba095bc5737ff9be1.png" />
+</div>
+</div>
+</section>
+<section id="id4">
+<h3>层次类型<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>reki 支持从模式面数据中加载要素场。</p>
+<p>下面代码从 CMA-GFS 的模式面 GRIB2 数据中加载第 10 层 u 分量，其中 <code class="docutils literal notranslate"><span class="pre">ml</span></code> 表示模式面。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gfs_model_grib2_file_path</span> <span class="o">=</span> <span class="n">find_local_file</span><span class="p">(</span>
+    <span class="s2">&quot;cma_gfs_gmf/grib2/modelvar&quot;</span><span class="p">,</span>
+    <span class="n">start_time</span><span class="o">=</span><span class="n">start_time</span><span class="p">,</span>
+    <span class="n">forecast_time</span><span class="o">=</span><span class="n">forecast_time</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">gfs_model_grib2_file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/g3/COMMONDATA/OPER/CEMC/GFS_GMF/Prod-grib/2025070600/MODELVAR/modelvar2025070600024.grb2&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_model_grib2_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;u&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;ml&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">field</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;u&#x27; (latitude: 1440, longitude: 2880)&gt; Size: 33MB
+array([[2.07848145, 2.10848145, 2.13848145, ..., 2.01848145, 2.03848145,
+        2.05848145],
+       [2.40848145, 2.42848145, 2.45848145, ..., 2.33848145, 2.36848145,
+        2.38848145],
+       [2.44848145, 2.46848145, 2.48848145, ..., 2.37848145, 2.40848145,
+        2.42848145],
+       ...,
+       [0.59848145, 0.61848145, 0.64848145, ..., 0.52848145, 0.54848145,
+        0.57848145],
+       [1.25848145, 1.27848145, 1.30848145, ..., 1.18848145, 1.20848145,
+        1.23848145],
+       [1.50848145, 1.53848145, 1.56848145, ..., 1.42848145, 1.45848145,
+        1.48848145]], shape=(1440, 2880))
+Coordinates:
+    time        datetime64[ns] 8B 2025-07-06
+    step        timedelta64[ns] 8B 1 days
+    valid_time  datetime64[ns] 8B 2025-07-07
+    ml          int64 8B 10
+  * latitude    (latitude) float64 12kB 89.94 89.81 89.69 ... -89.81 -89.94
+  * longitude   (longitude) float64 23kB 0.0 0.125 0.25 ... 359.6 359.8 359.9
+Attributes: (12/17)
+    GRIB_edition:             2
+    GRIB_centre:              babj
+    GRIB_subCentre:           0
+    GRIB_tablesVersion:       4
+    GRIB_localTablesVersion:  0
+    GRIB_dataType:            fc
+    ...                       ...
+    GRIB_stepType:            instant
+    GRIB_stepUnits:           1
+    GRIB_stepRange:           24
+    GRIB_endStep:int:         24
+    GRIB_count:               187
+    long_name:                discipline=0 parmcat=2 parm=2</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'u'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1440</li><li><span class='xr-has-index'>longitude</span>: 2880</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-759b9e95-c1fe-4a75-9ae5-da9a6cf710f6' class='xr-array-in' type='checkbox' checked><label for='section-759b9e95-c1fe-4a75-9ae5-da9a6cf710f6' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>2.078 2.108 2.138 2.158 2.188 2.218 ... 1.378 1.408 1.428 1.458 1.488</span></div><div class='xr-array-data'><pre>array([[2.07848145, 2.10848145, 2.13848145, ..., 2.01848145, 2.03848145,
+        2.05848145],
+       [2.40848145, 2.42848145, 2.45848145, ..., 2.33848145, 2.36848145,
+        2.38848145],
+       [2.44848145, 2.46848145, 2.48848145, ..., 2.37848145, 2.40848145,
+        2.42848145],
+       ...,
+       [0.59848145, 0.61848145, 0.64848145, ..., 0.52848145, 0.54848145,
+        0.57848145],
+       [1.25848145, 1.27848145, 1.30848145, ..., 1.18848145, 1.20848145,
+        1.23848145],
+       [1.50848145, 1.53848145, 1.56848145, ..., 1.42848145, 1.45848145,
+        1.48848145]], shape=(1440, 2880))</pre></div></div></li><li class='xr-section-item'><input id='section-ae529285-3ee8-4087-98f4-cd88eb696baf' class='xr-section-summary-in' type='checkbox'  checked><label for='section-ae529285-3ee8-4087-98f4-cd88eb696baf' class='xr-section-summary' >Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2025-07-06</div><input id='attrs-174fe19f-fb69-4cad-9051-2a632e4eb598' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-174fe19f-fb69-4cad-9051-2a632e4eb598' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e0f40349-5b0c-4571-851f-0bd1d76d29d2' class='xr-var-data-in' type='checkbox'><label for='data-e0f40349-5b0c-4571-851f-0bd1d76d29d2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2025-07-06T00:00:00.000000000&#x27;, dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>step</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>timedelta64[ns]</div><div class='xr-var-preview xr-preview'>1 days</div><input id='attrs-fe5390d2-e15c-4b5f-9508-ea04751cccc6' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-fe5390d2-e15c-4b5f-9508-ea04751cccc6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a913a0ad-b2a0-4479-b2a4-4d1393f38788' class='xr-var-data-in' type='checkbox'><label for='data-a913a0ad-b2a0-4479-b2a4-4d1393f38788' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(86400000000000, dtype=&#x27;timedelta64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2025-07-07</div><input id='attrs-076e54ee-8d7a-442c-bbd0-1f3d7b113044' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-076e54ee-8d7a-442c-bbd0-1f3d7b113044' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0079c4bb-621b-4511-b783-36c0a4fe4dab' class='xr-var-data-in' type='checkbox'><label for='data-0079c4bb-621b-4511-b783-36c0a4fe4dab' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2025-07-07T00:00:00.000000000&#x27;, dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>ml</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>10</div><input id='attrs-35154599-6bb8-4bc3-b374-fbf533f43148' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-35154599-6bb8-4bc3-b374-fbf533f43148' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a0fa4bbb-6bc2-4ca9-b56d-1503c912ea04' class='xr-var-data-in' type='checkbox'><label for='data-a0fa4bbb-6bc2-4ca9-b56d-1503c912ea04' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(10)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>89.94 89.81 89.69 ... -89.81 -89.94</div><input id='attrs-f2ca355a-0897-4922-87ec-9958abc1b91b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f2ca355a-0897-4922-87ec-9958abc1b91b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-eebf8253-21c8-4ef4-b0ca-d7e32d28cd71' class='xr-var-data-in' type='checkbox'><label for='data-eebf8253-21c8-4ef4-b0ca-d7e32d28cd71' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([ 89.9375,  89.8125,  89.6875, ..., -89.6875, -89.8125, -89.9375],
+      shape=(1440,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.125 0.25 ... 359.8 359.9</div><input id='attrs-00983ae5-fd05-4368-bfa1-35f76ec2d05b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-00983ae5-fd05-4368-bfa1-35f76ec2d05b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-02b91185-1012-454c-9911-ae3bfbf93fcb' class='xr-var-data-in' type='checkbox'><label for='data-02b91185-1012-454c-9911-ae3bfbf93fcb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd></dl></div><div class='xr-var-data'><pre>array([0.00000e+00, 1.25000e-01, 2.50000e-01, ..., 3.59625e+02, 3.59750e+02,
+       3.59875e+02], shape=(2880,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-70997922-5fc1-491a-8c16-6dde27b55cfb' class='xr-section-summary-in' type='checkbox'  ><label for='section-70997922-5fc1-491a-8c16-6dde27b55cfb' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-215fc5e0-4bad-45a8-a173-4cd0a4453d77' class='xr-index-data-in' type='checkbox'/><label for='index-215fc5e0-4bad-45a8-a173-4cd0a4453d77' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 89.9375,  89.8125,  89.6875,  89.5625,  89.4375,  89.3125,  89.1875,
+        89.0625,  88.9375,  88.8125,
+       ...
+       -88.8125, -88.9375, -89.0625, -89.1875, -89.3125, -89.4375, -89.5625,
+       -89.6875, -89.8125, -89.9375],
+      dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1440))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-482daf9c-64f6-477e-a70e-ac55f7c7c7aa' class='xr-index-data-in' type='checkbox'/><label for='index-482daf9c-64f6-477e-a70e-ac55f7c7c7aa' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([    0.0,   0.125,    0.25,   0.375,     0.5,   0.625,    0.75,   0.875,
+           1.0,   1.125,
+       ...
+        358.75, 358.875,   359.0, 359.125,  359.25, 359.375,   359.5, 359.625,
+        359.75, 359.875],
+      dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=2880))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-aee66dc9-704c-4458-bfab-46251edc50ba' class='xr-section-summary-in' type='checkbox'  ><label for='section-aee66dc9-704c-4458-bfab-46251edc50ba' class='xr-section-summary' >Attributes: <span>(17)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>GRIB_edition :</span></dt><dd>2</dd><dt><span>GRIB_centre :</span></dt><dd>babj</dd><dt><span>GRIB_subCentre :</span></dt><dd>0</dd><dt><span>GRIB_tablesVersion :</span></dt><dd>4</dd><dt><span>GRIB_localTablesVersion :</span></dt><dd>0</dd><dt><span>GRIB_dataType :</span></dt><dd>fc</dd><dt><span>GRIB_dataDate :</span></dt><dd>20250706</dd><dt><span>GRIB_dataTime :</span></dt><dd>0</dd><dt><span>GRIB_validityDate :</span></dt><dd>20250707</dd><dt><span>GRIB_validityTime :</span></dt><dd>0</dd><dt><span>GRIB_step :</span></dt><dd>24</dd><dt><span>GRIB_stepType :</span></dt><dd>instant</dd><dt><span>GRIB_stepUnits :</span></dt><dd>1</dd><dt><span>GRIB_stepRange :</span></dt><dd>24</dd><dt><span>GRIB_endStep:int :</span></dt><dd>24</dd><dt><span>GRIB_count :</span></dt><dd>187</dd><dt><span>long_name :</span></dt><dd>discipline=0 parmcat=2 parm=2</dd></dl></div></li></ul></div></div></div></div>
+</div>
+</section>
+<section id="id5">
+<h3>更多筛选条件<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">load_field_from_file</span></code> 函数的部分参数支持使用 ecCodes 的 GRIB Key 作为值，支持的参数包括：</p>
+<ul class="simple">
+<li><p>parameter</p></li>
+<li><p>level_type</p></li>
+<li><p>level</p></li>
+</ul>
+<p>同时也支持将 GRIB Key 直接作为参数传递。</p>
+<p>下面代码通过字典形式的 <code class="docutils literal notranslate"><span class="pre">parameter</span></code> 参数加载 850hPa 雷达反射率场。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;discipline&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;parameterCategory&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+        <span class="s2">&quot;parameterNumber&quot;</span><span class="p">:</span> <span class="mi">225</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;pl&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">850</span>
+<span class="p">)</span>
+<span class="n">field</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;0_16_225&#x27; (latitude: 1440, longitude: 2880)&gt; Size: 33MB
+array([[-30., -30., -30., ..., -30., -30., -30.],
+       [-30., -30., -30., ..., -30., -30., -30.],
+       [-30., -30., -30., ..., -30., -30., -30.],
+       ...,
+       [-30., -30., -30., ..., -30., -30., -30.],
+       [-30., -30., -30., ..., -30., -30., -30.],
+       [-30., -30., -30., ..., -30., -30., -30.]], shape=(1440, 2880))
+Coordinates:
+    time        datetime64[ns] 8B 2025-07-06
+    step        timedelta64[ns] 8B 1 days
+    valid_time  datetime64[ns] 8B 2025-07-07
+    pl          float64 8B 850.0
+  * latitude    (latitude) float64 12kB 89.94 89.81 89.69 ... -89.81 -89.94
+  * longitude   (longitude) float64 23kB 0.0 0.125 0.25 ... 359.6 359.8 359.9
+Attributes: (12/17)
+    GRIB_edition:             2
+    GRIB_centre:              babj
+    GRIB_subCentre:           0
+    GRIB_tablesVersion:       4
+    GRIB_localTablesVersion:  1
+    GRIB_dataType:            fc
+    ...                       ...
+    GRIB_stepType:            instant
+    GRIB_stepUnits:           1
+    GRIB_stepRange:           24
+    GRIB_endStep:int:         24
+    GRIB_count:               790
+    long_name:                discipline=0 parmcat=16 parm=225</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'0_16_225'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1440</li><li><span class='xr-has-index'>longitude</span>: 2880</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-dd85209c-871b-4d56-8d2c-4c614a1a050f' class='xr-array-in' type='checkbox' checked><label for='section-dd85209c-871b-4d56-8d2c-4c614a1a050f' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-30.0 -30.0 -30.0 -30.0 -30.0 -30.0 ... -30.0 -30.0 -30.0 -30.0 -30.0</span></div><div class='xr-array-data'><pre>array([[-30., -30., -30., ..., -30., -30., -30.],
+       [-30., -30., -30., ..., -30., -30., -30.],
+       [-30., -30., -30., ..., -30., -30., -30.],
+       ...,
+       [-30., -30., -30., ..., -30., -30., -30.],
+       [-30., -30., -30., ..., -30., -30., -30.],
+       [-30., -30., -30., ..., -30., -30., -30.]], shape=(1440, 2880))</pre></div></div></li><li class='xr-section-item'><input id='section-daaa7e2c-b6f0-44fd-ac28-0e692460f9a7' class='xr-section-summary-in' type='checkbox'  checked><label for='section-daaa7e2c-b6f0-44fd-ac28-0e692460f9a7' class='xr-section-summary' >Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2025-07-06</div><input id='attrs-b0c27b02-878a-40ea-90c3-c09343481354' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b0c27b02-878a-40ea-90c3-c09343481354' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7e009ab2-de77-4390-b44e-ff16edea19f6' class='xr-var-data-in' type='checkbox'><label for='data-7e009ab2-de77-4390-b44e-ff16edea19f6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2025-07-06T00:00:00.000000000&#x27;, dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>step</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>timedelta64[ns]</div><div class='xr-var-preview xr-preview'>1 days</div><input id='attrs-f48e224b-29b3-45d0-a754-877d2df0d6e6' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-f48e224b-29b3-45d0-a754-877d2df0d6e6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-19e61135-7b42-446b-9589-ab2819502339' class='xr-var-data-in' type='checkbox'><label for='data-19e61135-7b42-446b-9589-ab2819502339' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(86400000000000, dtype=&#x27;timedelta64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2025-07-07</div><input id='attrs-dc4eee74-8c07-489e-8950-dcce2e9b784b' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-dc4eee74-8c07-489e-8950-dcce2e9b784b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8c8280ef-2994-485b-8b66-f1fd300ff334' class='xr-var-data-in' type='checkbox'><label for='data-8c8280ef-2994-485b-8b66-f1fd300ff334' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2025-07-07T00:00:00.000000000&#x27;, dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>pl</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>850.0</div><input id='attrs-b494d8f2-51e8-4a49-9a1a-34b54237a0ed' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b494d8f2-51e8-4a49-9a1a-34b54237a0ed' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1dce8d76-ea5c-4441-85c3-6a2ee2f70f8f' class='xr-var-data-in' type='checkbox'><label for='data-1dce8d76-ea5c-4441-85c3-6a2ee2f70f8f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(850.)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>89.94 89.81 89.69 ... -89.81 -89.94</div><input id='attrs-9521b54b-2ef3-457e-a2fd-b08e31a57be5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9521b54b-2ef3-457e-a2fd-b08e31a57be5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0b8eea94-0e33-438a-a7df-f49fe7661c64' class='xr-var-data-in' type='checkbox'><label for='data-0b8eea94-0e33-438a-a7df-f49fe7661c64' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([ 89.9375,  89.8125,  89.6875, ..., -89.6875, -89.8125, -89.9375],
+      shape=(1440,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.125 0.25 ... 359.8 359.9</div><input id='attrs-59329c4c-4574-441f-9a8b-ef252e2c36c2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-59329c4c-4574-441f-9a8b-ef252e2c36c2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cd5ce33d-caf8-4cef-8218-31187a503441' class='xr-var-data-in' type='checkbox'><label for='data-cd5ce33d-caf8-4cef-8218-31187a503441' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd></dl></div><div class='xr-var-data'><pre>array([0.00000e+00, 1.25000e-01, 2.50000e-01, ..., 3.59625e+02, 3.59750e+02,
+       3.59875e+02], shape=(2880,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-6379f591-b62d-43fd-8bd9-d3a33249e179' class='xr-section-summary-in' type='checkbox'  ><label for='section-6379f591-b62d-43fd-8bd9-d3a33249e179' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-58c306e1-56ec-41cb-a97c-3307f0d0a016' class='xr-index-data-in' type='checkbox'/><label for='index-58c306e1-56ec-41cb-a97c-3307f0d0a016' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 89.9375,  89.8125,  89.6875,  89.5625,  89.4375,  89.3125,  89.1875,
+        89.0625,  88.9375,  88.8125,
+       ...
+       -88.8125, -88.9375, -89.0625, -89.1875, -89.3125, -89.4375, -89.5625,
+       -89.6875, -89.8125, -89.9375],
+      dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1440))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-b9a24d2b-7863-4bd6-8d15-26cb42a4e3a4' class='xr-index-data-in' type='checkbox'/><label for='index-b9a24d2b-7863-4bd6-8d15-26cb42a4e3a4' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([    0.0,   0.125,    0.25,   0.375,     0.5,   0.625,    0.75,   0.875,
+           1.0,   1.125,
+       ...
+        358.75, 358.875,   359.0, 359.125,  359.25, 359.375,   359.5, 359.625,
+        359.75, 359.875],
+      dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=2880))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-636bde0f-af9a-493d-bdae-37db5f202733' class='xr-section-summary-in' type='checkbox'  ><label for='section-636bde0f-af9a-493d-bdae-37db5f202733' class='xr-section-summary' >Attributes: <span>(17)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>GRIB_edition :</span></dt><dd>2</dd><dt><span>GRIB_centre :</span></dt><dd>babj</dd><dt><span>GRIB_subCentre :</span></dt><dd>0</dd><dt><span>GRIB_tablesVersion :</span></dt><dd>4</dd><dt><span>GRIB_localTablesVersion :</span></dt><dd>1</dd><dt><span>GRIB_dataType :</span></dt><dd>fc</dd><dt><span>GRIB_dataDate :</span></dt><dd>20250706</dd><dt><span>GRIB_dataTime :</span></dt><dd>0</dd><dt><span>GRIB_validityDate :</span></dt><dd>20250707</dd><dt><span>GRIB_validityTime :</span></dt><dd>0</dd><dt><span>GRIB_step :</span></dt><dd>24</dd><dt><span>GRIB_stepType :</span></dt><dd>instant</dd><dt><span>GRIB_stepUnits :</span></dt><dd>1</dd><dt><span>GRIB_stepRange :</span></dt><dd>24</dd><dt><span>GRIB_endStep:int :</span></dt><dd>24</dd><dt><span>GRIB_count :</span></dt><dd>790</dd><dt><span>long_name :</span></dt><dd>discipline=0 parmcat=16 parm=225</dd></dl></div></li></ul></div></div></div></div>
+</div>
+</section>
+<section id="eccodes">
+<h3>ecCodes 接口<a class="headerlink" href="#eccodes" title="Link to this heading">#</a></h3>
+<p>reki 支持返回 ecCode Python API 的 GRIB message。</p>
+<p>下面代码加载 850hPa 位势高度场。首先获取 GRIB message。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">reki.format.grib.eccodes</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_message_from_file</span>
+
+<span class="n">message</span> <span class="o">=</span> <span class="n">load_message_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;gh&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;pl&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">850</span>
+<span class="p">)</span>
+<span class="n">message</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>93851980695296
+</pre></div>
+</div>
+</div>
+</div>
+<p>读取经纬度格点数和数据值，将数据重组成二维数组。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="n">eccodes</span><span class="o">.</span><span class="n">codes_get_double_array</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">)</span>
+<span class="n">ni</span> <span class="o">=</span> <span class="n">eccodes</span><span class="o">.</span><span class="n">codes_get_long</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="s2">&quot;Ni&quot;</span><span class="p">)</span>
+<span class="n">nj</span> <span class="o">=</span> <span class="n">eccodes</span><span class="o">.</span><span class="n">codes_get_long</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="s2">&quot;Nj&quot;</span><span class="p">)</span>
+<span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">nj</span><span class="p">,</span> <span class="n">ni</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1314.56464844, 1314.66464844, 1314.66464844, ..., 1314.56464844,
+        1314.56464844, 1314.56464844],
+       [1315.86464844, 1315.86464844, 1315.86464844, ..., 1315.76464844,
+        1315.76464844, 1315.76464844],
+       [1316.86464844, 1316.86464844, 1316.86464844, ..., 1316.76464844,
+        1316.76464844, 1316.76464844],
+       ...,
+       [1312.36464844, 1312.46464844, 1312.36464844, ..., 1310.06464844,
+        1310.66464844, 1311.76464844],
+       [1311.76464844, 1311.76464844, 1311.76464844, ..., 1311.86464844,
+        1311.86464844, 1311.76464844],
+       [1312.96464844, 1312.96464844, 1312.96464844, ..., 1312.96464844,
+        1312.96464844, 1312.96464844]], shape=(1440, 2880))
+</pre></div>
+</div>
+</div>
+</div>
+<p>释放 GRIB 消息对象</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eccodes</span><span class="o">.</span><span class="n">codes_release</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./started"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">cedarkit数据指南</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../source/local/hpc2023-local.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">气象超算本地文件</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">本地文件查找</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grib2">读取 GRIB2 文件</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">基本方法</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">层次类型</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">更多筛选条件</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eccodes">ecCodes 接口</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By cmec-oper
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
