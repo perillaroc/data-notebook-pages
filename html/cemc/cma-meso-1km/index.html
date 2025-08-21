@@ -1,0 +1,1743 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CMA-MESO 1KM &#8212; CEMC Data Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cemc/cma-meso-1km/index';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MESO要素清单：1-10" href="param-set-01.html" />
+    <link rel="prev" title="GFS要素清单：851-861" href="../cma-gfs/param-set-11.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CEMC Data Guide</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    cedarkit数据指南
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">快速开始</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../started/getting-started.html">开始使用</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">数据来源</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../source/local/hpc2023-local.html">气象超算本地文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/local/config.html">配置文件</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">数据格式</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../format/grib2/index.html">GRIB2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../format/grib2/parameter.html">要素名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../format/grib2/level.html">层次</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../format/grib2/grib_key.html">GRIB KEY参数</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CEMC数据</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cma-gfs/index.html">CMA-GFS</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-01.html">GFS要素清单：1-5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-02.html">GFS要素清单：6-21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-03.html">GFS要素清单：22-45</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-04.html">GFS要素清单：46-63</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-05.html">GFS要素清单：64-223</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-06.html">GFS要素清单：224-463</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-07.html">GFS要素清单：454-471</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-08.html">GFS要素清单：472-773</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-09.html">GFS要素清单：774-784</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-10.html">GFS要素清单：785-850</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-11.html">GFS要素清单：851-861</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">CMA-MESO 1KM</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="param-set-01.html">MESO要素清单：1-10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-02.html">MESO要素清单：11-21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-03.html">MESO要素清单：22-30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-04.html">MESO要素清单：31-48</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-05.html">MESO要素清单：49-153</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-06.html">MESO要素清单：154-279</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-07.html">MESO要素清单：280-323</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="param-set-08.html">MESO要素清单：324-358</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="param-set-09.html">MESO要素清单：359-368</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="param-set-10.html">MESO要素清单：369-402</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cemc-oper/data-notebook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cemc-oper/data-notebook/issues/new?title=Issue%20on%20page%20%2Fcemc/cma-meso-1km/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/cemc/cma-meso-1km/index.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>CMA-MESO 1KM</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">要素列表</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cma-meso-1km">
+<h1>CMA-MESO 1KM<a class="headerlink" href="#cma-meso-1km" title="Link to this heading">#</a></h1>
+<p>CMA-MESO 基础 GRIB2 数据文件有 402 个要素场。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">reki.data_finder</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_local_file</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">reki.format.grib.eccodes</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_field_from_file</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s2">&quot;D&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">start_time_label</span> <span class="o">=</span> <span class="n">start_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">%H&quot;</span><span class="p">)</span>
+<span class="n">forecast_time_label</span> <span class="o">=</span> <span class="s2">&quot;24h&quot;</span>
+<span class="n">forecast_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="n">forecast_time_label</span><span class="p">)</span>
+
+<span class="n">meso_grib2_orig_file_path</span> <span class="o">=</span> <span class="n">find_local_file</span><span class="p">(</span>
+    <span class="s2">&quot;cma_meso_1km/grib2/orig&quot;</span><span class="p">,</span>
+    <span class="n">start_time</span><span class="o">=</span><span class="n">start_time</span><span class="p">,</span>
+    <span class="n">forecast_time</span><span class="o">=</span><span class="n">forecast_time</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">meso_grib2_orig_file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/g3/COMMONDATA/OPER/CEMC/MESO_1KM/Prod-grib/2025081900/ORIG/rmf.hgra.2025081900024.grb2&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id1">
+<h2>要素列表<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>使用 ecCodes 打印 CMA-GFS 基础 GRIB2 数据的要素列表。</p>
+<div class="cell tag_scroll-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.utils.capture</span><span class="w"> </span><span class="kn">import</span> <span class="n">capture_output</span>
+
+<span class="k">with</span> <span class="n">capture_output</span><span class="p">()</span> <span class="k">as</span> <span class="n">captured</span><span class="p">:</span>
+    <span class="o">!</span>module<span class="w"> </span>load<span class="w"> </span>eccodes/2.29.0/intel<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>grib_ls<span class="w"> </span>-P<span class="w"> </span>count<span class="w"> </span><span class="s2">&quot;{meso_grib2_orig_file_path}&quot;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null
+
+<span class="nb">print</span><span class="p">(</span><span class="n">captured</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/g3/COMMONDATA/OPER/CEMC/MESO_1KM/Prod-grib/2025081900/ORIG/rmf.hgra.2025081900024.grb2
+count        edition      centre       date         dataType     gridType     typeOfLevel  level        stepRange    shortName    packingType  
+1            2            babj         20250819     fc           regular_ll   surface      0            0-24         unknown      grid_jpeg   
+2            2            babj         20250819     fc           regular_ll   surface      0            0-24         asnow        grid_jpeg   
+3            2            babj         20250819     fc           regular_ll   surface      0            24           t            grid_jpeg   
+4            2            babj         20250819     fc           regular_ll   surface      0            0-24         str          grid_jpeg   
+5            2            babj         20250819     fc           regular_ll   surface      0            0-24         ssr          grid_jpeg   
+6            2            babj         20250819     fc           regular_ll   surface      0            24           orog         grid_jpeg   
+7            2            babj         20250819     fc           regular_ll   heightAboveGround  2            24           2sh          grid_jpeg   
+8            2            babj         20250819     fc           regular_ll   heightAboveGround  2            24           2t           grid_jpeg   
+9            2            babj         20250819     fc           regular_ll   heightAboveGround  10           24           10u          grid_jpeg   
+10           2            babj         20250819     fc           regular_ll   heightAboveGround  10           24           10v          grid_jpeg   
+11           2            babj         20250819     fc           regular_ll   entireAtmosphere  0            24           tcc          grid_jpeg   
+12           2            babj         20250819     fc           regular_ll   entireAtmosphere  0            24           lcc          grid_jpeg   
+13           2            babj         20250819     fc           regular_ll   entireAtmosphere  0            24           mcc          grid_jpeg   
+14           2            babj         20250819     fc           regular_ll   entireAtmosphere  0            24           hcc          grid_jpeg   
+15           2            babj         20250819     fc           regular_ll   atmosphere   0            24           unknown      grid_jpeg   
+16           2            babj         20250819     fc           regular_ll   atmosphere   0            24           unknown      grid_jpeg   
+17           2            babj         20250819     fc           regular_ll   surface      0            24           blh          grid_jpeg   
+18           2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+19           2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         0-24         wz           grid_jpeg   
+20           2            babj         20250819     fc           regular_ll   heightAboveGround  10           0-24         10u          grid_jpeg   
+21           2            babj         20250819     fc           regular_ll   heightAboveGround  10           0-24         10v          grid_jpeg   
+22           2            babj         20250819     fc           regular_ll   surface      0            0-24         unknown      grid_jpeg   
+23           2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+24           2            babj         20250819     fc           regular_ll   heightAboveGroundLayer  5000         0-24         unknown      grid_jpeg   
+25           2            babj         20250819     fc           regular_ll   surface      0            0-24         unknown      grid_jpeg   
+26           2            babj         20250819     fc           regular_ll   heightAboveGroundLayer  600          24           unknown      grid_jpeg   
+27           2            babj         20250819     fc           regular_ll   heightAboveGroundLayer  600          24           unknown      grid_jpeg   
+28           2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+29           2            babj         20250819     fc           regular_ll   surface      0            24           sp           grid_jpeg   
+30           2            babj         20250819     fc           regular_ll   meanSea      0            24           prmsl        grid_jpeg   
+31           2            babj         20250819     fc           regular_ll   heightAboveGround  30           24           u            grid_jpeg   
+32           2            babj         20250819     fc           regular_ll   heightAboveGround  50           24           u            grid_jpeg   
+33           2            babj         20250819     fc           regular_ll   heightAboveGround  70           24           u            grid_jpeg   
+34           2            babj         20250819     fc           regular_ll   heightAboveGround  100          24           100u         grid_jpeg   
+35           2            babj         20250819     fc           regular_ll   heightAboveGround  120          24           u            grid_jpeg   
+36           2            babj         20250819     fc           regular_ll   heightAboveGround  140          24           u            grid_jpeg   
+37           2            babj         20250819     fc           regular_ll   heightAboveGround  160          24           u            grid_jpeg   
+38           2            babj         20250819     fc           regular_ll   heightAboveGround  180          24           u            grid_jpeg   
+39           2            babj         20250819     fc           regular_ll   heightAboveGround  200          24           200u         grid_jpeg   
+40           2            babj         20250819     fc           regular_ll   heightAboveGround  30           24           v            grid_jpeg   
+41           2            babj         20250819     fc           regular_ll   heightAboveGround  50           24           v            grid_jpeg   
+42           2            babj         20250819     fc           regular_ll   heightAboveGround  70           24           v            grid_jpeg   
+43           2            babj         20250819     fc           regular_ll   heightAboveGround  100          24           100v         grid_jpeg   
+44           2            babj         20250819     fc           regular_ll   heightAboveGround  120          24           v            grid_jpeg   
+45           2            babj         20250819     fc           regular_ll   heightAboveGround  140          24           v            grid_jpeg   
+46           2            babj         20250819     fc           regular_ll   heightAboveGround  160          24           v            grid_jpeg   
+47           2            babj         20250819     fc           regular_ll   heightAboveGround  180          24           v            grid_jpeg   
+48           2            babj         20250819     fc           regular_ll   heightAboveGround  200          24           200v         grid_jpeg   
+49           2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           gh           grid_jpeg   
+50           2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           gh           grid_jpeg   
+51           2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           gh           grid_jpeg   
+52           2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           gh           grid_jpeg   
+53           2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           gh           grid_jpeg   
+54           2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           gh           grid_jpeg   
+55           2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           gh           grid_jpeg   
+56           2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           gh           grid_jpeg   
+57           2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           gh           grid_jpeg   
+58           2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           gh           grid_jpeg   
+59           2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           gh           grid_jpeg   
+60           2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           gh           grid_jpeg   
+61           2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           gh           grid_jpeg   
+62           2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           gh           grid_jpeg   
+63           2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           gh           grid_jpeg   
+64           2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           gh           grid_jpeg   
+65           2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           gh           grid_jpeg   
+66           2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           gh           grid_jpeg   
+67           2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           gh           grid_jpeg   
+68           2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           gh           grid_jpeg   
+69           2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           gh           grid_jpeg   
+70           2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           t            grid_jpeg   
+71           2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           t            grid_jpeg   
+72           2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           t            grid_jpeg   
+73           2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           t            grid_jpeg   
+74           2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           t            grid_jpeg   
+75           2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           t            grid_jpeg   
+76           2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           t            grid_jpeg   
+77           2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           t            grid_jpeg   
+78           2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           t            grid_jpeg   
+79           2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           t            grid_jpeg   
+80           2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           t            grid_jpeg   
+81           2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           t            grid_jpeg   
+82           2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           t            grid_jpeg   
+83           2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           t            grid_jpeg   
+84           2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           t            grid_jpeg   
+85           2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           t            grid_jpeg   
+86           2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           t            grid_jpeg   
+87           2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           t            grid_jpeg   
+88           2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           t            grid_jpeg   
+89           2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           t            grid_jpeg   
+90           2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           t            grid_jpeg   
+91           2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           u            grid_jpeg   
+92           2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           u            grid_jpeg   
+93           2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           u            grid_jpeg   
+94           2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           u            grid_jpeg   
+95           2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           u            grid_jpeg   
+96           2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           u            grid_jpeg   
+97           2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           u            grid_jpeg   
+98           2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           u            grid_jpeg   
+99           2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           u            grid_jpeg   
+100          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           u            grid_jpeg   
+101          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           u            grid_jpeg   
+102          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           u            grid_jpeg   
+103          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           u            grid_jpeg   
+104          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           u            grid_jpeg   
+105          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           u            grid_jpeg   
+106          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           u            grid_jpeg   
+107          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           u            grid_jpeg   
+108          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           u            grid_jpeg   
+109          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           u            grid_jpeg   
+110          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           u            grid_jpeg   
+111          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           u            grid_jpeg   
+112          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           v            grid_jpeg   
+113          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           v            grid_jpeg   
+114          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           v            grid_jpeg   
+115          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           v            grid_jpeg   
+116          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           v            grid_jpeg   
+117          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           v            grid_jpeg   
+118          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           v            grid_jpeg   
+119          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           v            grid_jpeg   
+120          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           v            grid_jpeg   
+121          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           v            grid_jpeg   
+122          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           v            grid_jpeg   
+123          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           v            grid_jpeg   
+124          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           v            grid_jpeg   
+125          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           v            grid_jpeg   
+126          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           v            grid_jpeg   
+127          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           v            grid_jpeg   
+128          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           v            grid_jpeg   
+129          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           v            grid_jpeg   
+130          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           v            grid_jpeg   
+131          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           v            grid_jpeg   
+132          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           v            grid_jpeg   
+133          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           wz           grid_jpeg   
+134          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           wz           grid_jpeg   
+135          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           wz           grid_jpeg   
+136          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           wz           grid_jpeg   
+137          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           wz           grid_jpeg   
+138          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           wz           grid_jpeg   
+139          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           wz           grid_jpeg   
+140          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           wz           grid_jpeg   
+141          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           wz           grid_jpeg   
+142          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           wz           grid_jpeg   
+143          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           wz           grid_jpeg   
+144          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           wz           grid_jpeg   
+145          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           wz           grid_jpeg   
+146          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           wz           grid_jpeg   
+147          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           wz           grid_jpeg   
+148          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           wz           grid_jpeg   
+149          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           wz           grid_jpeg   
+150          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           wz           grid_jpeg   
+151          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           wz           grid_jpeg   
+152          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           wz           grid_jpeg   
+153          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           wz           grid_jpeg   
+154          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           q            grid_jpeg   
+155          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           q            grid_jpeg   
+156          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           q            grid_jpeg   
+157          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           q            grid_jpeg   
+158          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           q            grid_jpeg   
+159          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           q            grid_jpeg   
+160          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           q            grid_jpeg   
+161          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           q            grid_jpeg   
+162          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           q            grid_jpeg   
+163          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           q            grid_jpeg   
+164          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           q            grid_jpeg   
+165          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           q            grid_jpeg   
+166          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           q            grid_jpeg   
+167          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           q            grid_jpeg   
+168          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           q            grid_jpeg   
+169          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           q            grid_jpeg   
+170          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           q            grid_jpeg   
+171          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           q            grid_jpeg   
+172          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           q            grid_jpeg   
+173          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           q            grid_jpeg   
+174          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           q            grid_jpeg   
+175          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           clwmr        grid_jpeg   
+176          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           clwmr        grid_jpeg   
+177          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           clwmr        grid_jpeg   
+178          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           clwmr        grid_jpeg   
+179          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           clwmr        grid_jpeg   
+180          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           clwmr        grid_jpeg   
+181          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           clwmr        grid_jpeg   
+182          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           clwmr        grid_jpeg   
+183          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           clwmr        grid_jpeg   
+184          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           clwmr        grid_jpeg   
+185          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           clwmr        grid_jpeg   
+186          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           clwmr        grid_jpeg   
+187          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           clwmr        grid_jpeg   
+188          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           clwmr        grid_jpeg   
+189          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           clwmr        grid_jpeg   
+190          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           clwmr        grid_jpeg   
+191          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           clwmr        grid_jpeg   
+192          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           clwmr        grid_jpeg   
+193          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           clwmr        grid_jpeg   
+194          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           clwmr        grid_jpeg   
+195          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           clwmr        grid_jpeg   
+196          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           rwmr         grid_jpeg   
+197          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           rwmr         grid_jpeg   
+198          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           rwmr         grid_jpeg   
+199          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           rwmr         grid_jpeg   
+200          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           rwmr         grid_jpeg   
+201          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           rwmr         grid_jpeg   
+202          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           rwmr         grid_jpeg   
+203          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           rwmr         grid_jpeg   
+204          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           rwmr         grid_jpeg   
+205          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           rwmr         grid_jpeg   
+206          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           rwmr         grid_jpeg   
+207          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           rwmr         grid_jpeg   
+208          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           rwmr         grid_jpeg   
+209          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           rwmr         grid_jpeg   
+210          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           rwmr         grid_jpeg   
+211          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           rwmr         grid_jpeg   
+212          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           rwmr         grid_jpeg   
+213          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           rwmr         grid_jpeg   
+214          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           rwmr         grid_jpeg   
+215          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           rwmr         grid_jpeg   
+216          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           rwmr         grid_jpeg   
+217          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           icmr         grid_jpeg   
+218          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           icmr         grid_jpeg   
+219          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           icmr         grid_jpeg   
+220          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           icmr         grid_jpeg   
+221          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           icmr         grid_jpeg   
+222          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           icmr         grid_jpeg   
+223          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           icmr         grid_jpeg   
+224          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           icmr         grid_jpeg   
+225          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           icmr         grid_jpeg   
+226          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           icmr         grid_jpeg   
+227          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           icmr         grid_jpeg   
+228          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           icmr         grid_jpeg   
+229          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           icmr         grid_jpeg   
+230          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           icmr         grid_jpeg   
+231          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           icmr         grid_jpeg   
+232          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           icmr         grid_jpeg   
+233          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           icmr         grid_jpeg   
+234          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           icmr         grid_jpeg   
+235          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           icmr         grid_jpeg   
+236          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           icmr         grid_jpeg   
+237          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           icmr         grid_jpeg   
+238          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           snmr         grid_jpeg   
+239          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           snmr         grid_jpeg   
+240          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           snmr         grid_jpeg   
+241          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           snmr         grid_jpeg   
+242          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           snmr         grid_jpeg   
+243          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           snmr         grid_jpeg   
+244          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           snmr         grid_jpeg   
+245          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           snmr         grid_jpeg   
+246          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           snmr         grid_jpeg   
+247          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           snmr         grid_jpeg   
+248          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           snmr         grid_jpeg   
+249          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           snmr         grid_jpeg   
+250          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           snmr         grid_jpeg   
+251          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           snmr         grid_jpeg   
+252          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           snmr         grid_jpeg   
+253          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           snmr         grid_jpeg   
+254          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           snmr         grid_jpeg   
+255          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           snmr         grid_jpeg   
+256          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           snmr         grid_jpeg   
+257          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           snmr         grid_jpeg   
+258          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           snmr         grid_jpeg   
+259          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           grle         grid_jpeg   
+260          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           grle         grid_jpeg   
+261          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           grle         grid_jpeg   
+262          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           grle         grid_jpeg   
+263          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           grle         grid_jpeg   
+264          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           grle         grid_jpeg   
+265          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           grle         grid_jpeg   
+266          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           grle         grid_jpeg   
+267          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           grle         grid_jpeg   
+268          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           grle         grid_jpeg   
+269          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           grle         grid_jpeg   
+270          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           grle         grid_jpeg   
+271          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           grle         grid_jpeg   
+272          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           grle         grid_jpeg   
+273          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           grle         grid_jpeg   
+274          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           grle         grid_jpeg   
+275          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           grle         grid_jpeg   
+276          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           grle         grid_jpeg   
+277          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           grle         grid_jpeg   
+278          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           grle         grid_jpeg   
+279          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           grle         grid_jpeg   
+280          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           ccl          grid_jpeg   
+281          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           ccl          grid_jpeg   
+282          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           ccl          grid_jpeg   
+283          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           ccl          grid_jpeg   
+284          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           ccl          grid_jpeg   
+285          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           ccl          grid_jpeg   
+286          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           ccl          grid_jpeg   
+287          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           ccl          grid_jpeg   
+288          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           ccl          grid_jpeg   
+289          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           ccl          grid_jpeg   
+290          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           ccl          grid_jpeg   
+291          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           ccl          grid_jpeg   
+292          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           ccl          grid_jpeg   
+293          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           ccl          grid_jpeg   
+294          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           ccl          grid_jpeg   
+295          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           ccl          grid_jpeg   
+296          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           ccl          grid_jpeg   
+297          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           ccl          grid_jpeg   
+298          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           ccl          grid_jpeg   
+299          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           ccl          grid_jpeg   
+300          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           ccl          grid_jpeg   
+301          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           r            grid_jpeg   
+302          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           r            grid_jpeg   
+303          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           r            grid_jpeg   
+304          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           r            grid_jpeg   
+305          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           r            grid_jpeg   
+306          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           r            grid_jpeg   
+307          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           r            grid_jpeg   
+308          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           r            grid_jpeg   
+309          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           r            grid_jpeg   
+310          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           r            grid_jpeg   
+311          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           r            grid_jpeg   
+312          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           r            grid_jpeg   
+313          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           r            grid_jpeg   
+314          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           r            grid_jpeg   
+315          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           r            grid_jpeg   
+316          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           r            grid_jpeg   
+317          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           r            grid_jpeg   
+318          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           r            grid_jpeg   
+319          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           r            grid_jpeg   
+320          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           r            grid_jpeg   
+321          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           r            grid_jpeg   
+322          2            babj         20250819     fc           regular_ll   heightAboveGround  2            24           2r           grid_jpeg   
+323          2            babj         20250819     fc           regular_ll   heightAboveGround  2            24           2d           grid_jpeg   
+324          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           d            grid_jpeg   
+325          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           d            grid_jpeg   
+326          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           d            grid_jpeg   
+327          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           d            grid_jpeg   
+328          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           d            grid_jpeg   
+329          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           unknown      grid_jpeg   
+330          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           unknown      grid_jpeg   
+331          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           unknown      grid_jpeg   
+332          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           dpt          grid_jpeg   
+333          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           dpt          grid_jpeg   
+334          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           dpt          grid_jpeg   
+335          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           dpt          grid_jpeg   
+336          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           dpt          grid_jpeg   
+337          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           dpt          grid_jpeg   
+338          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           dpt          grid_jpeg   
+339          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           dpt          grid_jpeg   
+340          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           dpt          grid_jpeg   
+341          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           dpt          grid_jpeg   
+342          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           dpt          grid_jpeg   
+343          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           dpt          grid_jpeg   
+344          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           dpt          grid_jpeg   
+345          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           dpt          grid_jpeg   
+346          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           dpt          grid_jpeg   
+347          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           dpt          grid_jpeg   
+348          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           dpt          grid_jpeg   
+349          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           dpt          grid_jpeg   
+350          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           dpt          grid_jpeg   
+351          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           dpt          grid_jpeg   
+352          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           dpt          grid_jpeg   
+353          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           unknown      grid_jpeg   
+354          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           unknown      grid_jpeg   
+355          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           unknown      grid_jpeg   
+356          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           papt         grid_jpeg   
+357          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           papt         grid_jpeg   
+358          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           papt         grid_jpeg   
+359          2            babj         20250819     fc           regular_ll   meanSea      0            24           kx           grid_jpeg   
+360          2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+361          2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+362          2            babj         20250819     fc           regular_ll   surface      0            24           pli          grid_jpeg   
+363          2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+364          2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+365          2            babj         20250819     fc           regular_ll   heightAboveGroundLayer  1000         24           vwsh         grid_jpeg   
+366          2            babj         20250819     fc           regular_ll   heightAboveGroundLayer  3000         24           vwsh         grid_jpeg   
+367          2            babj         20250819     fc           regular_ll   heightAboveGroundLayer  6000         24           vwsh         grid_jpeg   
+368          2            babj         20250819     fc           regular_ll   surface      0            24           bli          grid_jpeg   
+369          2            babj         20250819     fc           regular_ll   isobaricInhPa  1000         24           unknown      grid_jpeg   
+370          2            babj         20250819     fc           regular_ll   isobaricInhPa  975          24           unknown      grid_jpeg   
+371          2            babj         20250819     fc           regular_ll   isobaricInhPa  950          24           unknown      grid_jpeg   
+372          2            babj         20250819     fc           regular_ll   isobaricInhPa  925          24           unknown      grid_jpeg   
+373          2            babj         20250819     fc           regular_ll   isobaricInhPa  900          24           unknown      grid_jpeg   
+374          2            babj         20250819     fc           regular_ll   isobaricInhPa  850          24           unknown      grid_jpeg   
+375          2            babj         20250819     fc           regular_ll   isobaricInhPa  800          24           unknown      grid_jpeg   
+376          2            babj         20250819     fc           regular_ll   isobaricInhPa  750          24           unknown      grid_jpeg   
+377          2            babj         20250819     fc           regular_ll   isobaricInhPa  700          24           unknown      grid_jpeg   
+378          2            babj         20250819     fc           regular_ll   isobaricInhPa  650          24           unknown      grid_jpeg   
+379          2            babj         20250819     fc           regular_ll   isobaricInhPa  600          24           unknown      grid_jpeg   
+380          2            babj         20250819     fc           regular_ll   isobaricInhPa  550          24           unknown      grid_jpeg   
+381          2            babj         20250819     fc           regular_ll   isobaricInhPa  500          24           unknown      grid_jpeg   
+382          2            babj         20250819     fc           regular_ll   isobaricInhPa  450          24           unknown      grid_jpeg   
+383          2            babj         20250819     fc           regular_ll   isobaricInhPa  400          24           unknown      grid_jpeg   
+384          2            babj         20250819     fc           regular_ll   isobaricInhPa  350          24           unknown      grid_jpeg   
+385          2            babj         20250819     fc           regular_ll   isobaricInhPa  300          24           unknown      grid_jpeg   
+386          2            babj         20250819     fc           regular_ll   isobaricInhPa  250          24           unknown      grid_jpeg   
+387          2            babj         20250819     fc           regular_ll   isobaricInhPa  200          24           unknown      grid_jpeg   
+388          2            babj         20250819     fc           regular_ll   isobaricInhPa  150          24           unknown      grid_jpeg   
+389          2            babj         20250819     fc           regular_ll   isobaricInhPa  100          24           unknown      grid_jpeg   
+390          2            babj         20250819     fc           regular_ll   heightAboveGroundLayer  1000         24           hlcy         grid_jpeg   
+391          2            babj         20250819     fc           regular_ll   heightAboveGroundLayer  3000         24           hlcy         grid_jpeg   
+392          2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+393          2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+394          2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+395          2            babj         20250819     fc           regular_ll   atmosphere   0            24           pwat         grid_jpeg   
+396          2            babj         20250819     fc           regular_ll   surface      0            24           vis          grid_jpeg   
+397          2            babj         20250819     fc           regular_ll   heightAboveGround  10           24           i10fg        grid_jpeg   
+398          2            babj         20250819     fc           regular_ll   surface      0            24           ptype        grid_jpeg   
+399          2            babj         20250819     fc           regular_ll   surface      0            24           cdct         grid_jpeg   
+400          2            babj         20250819     fc           regular_ll   surface      0            24           cdcb         grid_jpeg   
+401          2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+402          2            babj         20250819     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+402 of 402 messages in /g3/COMMONDATA/OPER/CEMC/MESO_1KM/Prod-grib/2025081900/ORIG/rmf.hgra.2025081900024.grb2
+
+402 of 402 total messages in 1 files
+</pre></div>
+</div>
+</div>
+</div>
+<p>使用 wgrib2 打印 CMA-GFS 基础 GRIB2 数据的要素列表。</p>
+<div class="cell tag_scroll-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.utils.capture</span><span class="w"> </span><span class="kn">import</span> <span class="n">capture_output</span>
+
+<span class="k">with</span> <span class="n">capture_output</span><span class="p">()</span> <span class="k">as</span> <span class="n">captured</span><span class="p">:</span>
+    <span class="o">!</span>module<span class="w"> </span>load<span class="w"> </span>wgrib2/3.1.1/intel<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>wgrib2<span class="w"> </span><span class="s2">&quot;{meso_grib2_orig_file_path}&quot;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null
+
+<span class="nb">print</span><span class="p">(</span><span class="n">captured</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1:0:d=2025081900:APCP:surface:0-1 day acc fcst:
+2:50279578:d=2025081900:ASNOW:surface:0-1 day acc fcst:
+3:65983447:d=2025081900:TMP:surface:1440 min fcst:
+4:90426682:d=2025081900:NLWRF:surface:0-1 day acc fcst:
+5:131059945:d=2025081900:NSWRF:surface:0-1 day acc fcst:
+6:159562819:d=2025081900:HGT:surface:1440 min fcst:
+7:176258125:d=2025081900:SPFH:2 m above ground:1440 min fcst:
+8:196870283:d=2025081900:TMP:2 m above ground:1440 min fcst:
+9:220159127:d=2025081900:UGRD:10 m above ground:1440 min fcst:
+10:256212593:d=2025081900:VGRD:10 m above ground:1440 min fcst:
+11:291512896:d=2025081900:TCDC:atmos col:1440 min fcst:
+12:327990784:d=2025081900:LCDC:atmos col:1440 min fcst:
+13:372520594:d=2025081900:MCDC:atmos col:1440 min fcst:
+14:401245733:d=2025081900:HCDC:atmos col:1440 min fcst:
+15:419897033:d=2025081900:TCIWV:entire atmosphere:1440 min fcst:
+16:444186141:d=2025081900:TCOLI:entire atmosphere:1440 min fcst:
+17:462325616:d=2025081900:HPBL:surface:1440 min fcst:
+18:500837326:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=224:surface:1440 min fcst:
+19:520584327:d=2025081900:DZDT:1000 mb:0-1 day max fcst:
+20:552713137:d=2025081900:UGRD:10 m above ground:0-1 day max fcst:
+21:593751753:d=2025081900:VGRD:10 m above ground:0-1 day max fcst:
+22:634763678:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=224:surface:0-1 day max fcst:
+23:650376280:d=2025081900:RETOP:surface:1440 min fcst:
+24:664061479:d=2025081900:UPHL:5000-2000 m above ground:0-1 day max fcst:
+25:670191477:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=1 parm=241:surface:0-1 day max fcst:
+26:678188783:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=2 parm=237:600-0 m above ground:1440 min fcst:
+27:713816735:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=2 parm=238:600-0 m above ground:1440 min fcst:
+28:767290911:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=226:surface:1440 min fcst:
+29:787449722:d=2025081900:PRES:surface:1440 min fcst:
+30:813217548:d=2025081900:PRMSL:mean sea level:1440 min fcst:
+31:841415555:d=2025081900:UGRD:30 m above ground:1440 min fcst:
+32:877673911:d=2025081900:UGRD:50 m above ground:1440 min fcst:
+33:913896079:d=2025081900:UGRD:70 m above ground:1440 min fcst:
+34:949942814:d=2025081900:UGRD:100 m above ground:1440 min fcst:
+35:985918586:d=2025081900:UGRD:120 m above ground:1440 min fcst:
+36:1021815792:d=2025081900:UGRD:140 m above ground:1440 min fcst:
+37:1057637696:d=2025081900:UGRD:160 m above ground:1440 min fcst:
+38:1093343001:d=2025081900:UGRD:180 m above ground:1440 min fcst:
+39:1128794356:d=2025081900:UGRD:200 m above ground:1440 min fcst:
+40:1164047839:d=2025081900:VGRD:30 m above ground:1440 min fcst:
+41:1199486303:d=2025081900:VGRD:50 m above ground:1440 min fcst:
+42:1234873210:d=2025081900:VGRD:70 m above ground:1440 min fcst:
+43:1270068758:d=2025081900:VGRD:100 m above ground:1440 min fcst:
+44:1305175018:d=2025081900:VGRD:120 m above ground:1440 min fcst:
+45:1340198574:d=2025081900:VGRD:140 m above ground:1440 min fcst:
+46:1375143036:d=2025081900:VGRD:160 m above ground:1440 min fcst:
+47:1409960064:d=2025081900:VGRD:180 m above ground:1440 min fcst:
+48:1444513049:d=2025081900:VGRD:200 m above ground:1440 min fcst:
+49:1478863445:d=2025081900:HGT:1000 mb:1440 min fcst:
+50:1502073969:d=2025081900:HGT:975 mb:1440 min fcst:
+51:1523761783:d=2025081900:HGT:950 mb:1440 min fcst:
+52:1544232126:d=2025081900:HGT:925 mb:1440 min fcst:
+53:1563685953:d=2025081900:HGT:900 mb:1440 min fcst:
+54:1582170484:d=2025081900:HGT:850 mb:1440 min fcst:
+55:1599120649:d=2025081900:HGT:800 mb:1440 min fcst:
+56:1614913531:d=2025081900:HGT:750 mb:1440 min fcst:
+57:1629908742:d=2025081900:HGT:700 mb:1440 min fcst:
+58:1644361577:d=2025081900:HGT:650 mb:1440 min fcst:
+59:1658294757:d=2025081900:HGT:600 mb:1440 min fcst:
+60:1671706436:d=2025081900:HGT:550 mb:1440 min fcst:
+61:1684645849:d=2025081900:HGT:500 mb:1440 min fcst:
+62:1697144268:d=2025081900:HGT:450 mb:1440 min fcst:
+63:1709357485:d=2025081900:HGT:400 mb:1440 min fcst:
+64:1721557853:d=2025081900:HGT:350 mb:1440 min fcst:
+65:1734020040:d=2025081900:HGT:300 mb:1440 min fcst:
+66:1740537569:d=2025081900:HGT:250 mb:1440 min fcst:
+67:1747269229:d=2025081900:HGT:200 mb:1440 min fcst:
+68:1753989649:d=2025081900:HGT:150 mb:1440 min fcst:
+69:1760871028:d=2025081900:HGT:100 mb:1440 min fcst:
+70:1774047363:d=2025081900:TMP:1000 mb:1440 min fcst:
+71:1805729802:d=2025081900:TMP:975 mb:1440 min fcst:
+72:1836976523:d=2025081900:TMP:950 mb:1440 min fcst:
+73:1868363727:d=2025081900:TMP:925 mb:1440 min fcst:
+74:1899842897:d=2025081900:TMP:900 mb:1440 min fcst:
+75:1930605987:d=2025081900:TMP:850 mb:1440 min fcst:
+76:1959949737:d=2025081900:TMP:800 mb:1440 min fcst:
+77:1987650369:d=2025081900:TMP:750 mb:1440 min fcst:
+78:2014293144:d=2025081900:TMP:700 mb:1440 min fcst:
+79:2040203800:d=2025081900:TMP:650 mb:1440 min fcst:
+80:2065295868:d=2025081900:TMP:600 mb:1440 min fcst:
+81:2089460997:d=2025081900:TMP:550 mb:1440 min fcst:
+82:2112895642:d=2025081900:TMP:500 mb:1440 min fcst:
+83:2135226252:d=2025081900:TMP:450 mb:1440 min fcst:
+84:2156584608:d=2025081900:TMP:400 mb:1440 min fcst:
+85:2177150258:d=2025081900:TMP:350 mb:1440 min fcst:
+86:2196952411:d=2025081900:TMP:300 mb:1440 min fcst:
+87:2216018983:d=2025081900:TMP:250 mb:1440 min fcst:
+88:2236413571:d=2025081900:TMP:200 mb:1440 min fcst:
+89:2257502500:d=2025081900:TMP:150 mb:1440 min fcst:
+90:2278247890:d=2025081900:TMP:100 mb:1440 min fcst:
+91:2297608637:d=2025081900:UGRD:1000 mb:1440 min fcst:
+92:2333765574:d=2025081900:UGRD:975 mb:1440 min fcst:
+93:2369276602:d=2025081900:UGRD:950 mb:1440 min fcst:
+94:2404826520:d=2025081900:UGRD:925 mb:1440 min fcst:
+95:2440214599:d=2025081900:UGRD:900 mb:1440 min fcst:
+96:2474956029:d=2025081900:UGRD:850 mb:1440 min fcst:
+97:2508060295:d=2025081900:UGRD:800 mb:1440 min fcst:
+98:2539729993:d=2025081900:UGRD:750 mb:1440 min fcst:
+99:2570328526:d=2025081900:UGRD:700 mb:1440 min fcst:
+100:2600073425:d=2025081900:UGRD:650 mb:1440 min fcst:
+101:2628987042:d=2025081900:UGRD:600 mb:1440 min fcst:
+102:2657158942:d=2025081900:UGRD:550 mb:1440 min fcst:
+103:2684578811:d=2025081900:UGRD:500 mb:1440 min fcst:
+104:2711111476:d=2025081900:UGRD:450 mb:1440 min fcst:
+105:2737062853:d=2025081900:UGRD:400 mb:1440 min fcst:
+106:2762842878:d=2025081900:UGRD:350 mb:1440 min fcst:
+107:2776587144:d=2025081900:UGRD:300 mb:1440 min fcst:
+108:2790517408:d=2025081900:UGRD:250 mb:1440 min fcst:
+109:2804660119:d=2025081900:UGRD:200 mb:1440 min fcst:
+110:2818607506:d=2025081900:UGRD:150 mb:1440 min fcst:
+111:2831842502:d=2025081900:UGRD:100 mb:1440 min fcst:
+112:2854367028:d=2025081900:VGRD:1000 mb:1440 min fcst:
+113:2889753677:d=2025081900:VGRD:975 mb:1440 min fcst:
+114:2924369961:d=2025081900:VGRD:950 mb:1440 min fcst:
+115:2959167913:d=2025081900:VGRD:925 mb:1440 min fcst:
+116:2993844130:d=2025081900:VGRD:900 mb:1440 min fcst:
+117:3027949532:d=2025081900:VGRD:850 mb:1440 min fcst:
+118:3060638419:d=2025081900:VGRD:800 mb:1440 min fcst:
+119:3091891823:d=2025081900:VGRD:750 mb:1440 min fcst:
+120:3122038787:d=2025081900:VGRD:700 mb:1440 min fcst:
+121:3151375091:d=2025081900:VGRD:650 mb:1440 min fcst:
+122:3179866582:d=2025081900:VGRD:600 mb:1440 min fcst:
+123:3207625132:d=2025081900:VGRD:550 mb:1440 min fcst:
+124:3234653818:d=2025081900:VGRD:500 mb:1440 min fcst:
+125:3260770323:d=2025081900:VGRD:450 mb:1440 min fcst:
+126:3286269040:d=2025081900:VGRD:400 mb:1440 min fcst:
+127:3311625126:d=2025081900:VGRD:350 mb:1440 min fcst:
+128:3337314791:d=2025081900:VGRD:300 mb:1440 min fcst:
+129:3351041228:d=2025081900:VGRD:250 mb:1440 min fcst:
+130:3364955633:d=2025081900:VGRD:200 mb:1440 min fcst:
+131:3378740588:d=2025081900:VGRD:150 mb:1440 min fcst:
+132:3403236200:d=2025081900:VGRD:100 mb:1440 min fcst:
+133:3424830528:d=2025081900:DZDT:1000 mb:1440 min fcst:
+134:3449273926:d=2025081900:DZDT:975 mb:1440 min fcst:
+135:3476293206:d=2025081900:DZDT:950 mb:1440 min fcst:
+136:3504237663:d=2025081900:DZDT:925 mb:1440 min fcst:
+137:3532458331:d=2025081900:DZDT:900 mb:1440 min fcst:
+138:3560613093:d=2025081900:DZDT:850 mb:1440 min fcst:
+139:3588453073:d=2025081900:DZDT:800 mb:1440 min fcst:
+140:3615776647:d=2025081900:DZDT:750 mb:1440 min fcst:
+141:3642398281:d=2025081900:DZDT:700 mb:1440 min fcst:
+142:3668361985:d=2025081900:DZDT:650 mb:1440 min fcst:
+143:3693767121:d=2025081900:DZDT:600 mb:1440 min fcst:
+144:3718759319:d=2025081900:DZDT:550 mb:1440 min fcst:
+145:3743589413:d=2025081900:DZDT:500 mb:1440 min fcst:
+146:3768243031:d=2025081900:DZDT:450 mb:1440 min fcst:
+147:3792772881:d=2025081900:DZDT:400 mb:1440 min fcst:
+148:3817088423:d=2025081900:DZDT:350 mb:1440 min fcst:
+149:3841133761:d=2025081900:DZDT:300 mb:1440 min fcst:
+150:3865298446:d=2025081900:DZDT:250 mb:1440 min fcst:
+151:3890832853:d=2025081900:DZDT:200 mb:1440 min fcst:
+152:3917460265:d=2025081900:DZDT:150 mb:1440 min fcst:
+153:3942104704:d=2025081900:DZDT:100 mb:1440 min fcst:
+154:3962088948:d=2025081900:SPFH:1000 mb:1440 min fcst:
+155:3980352565:d=2025081900:SPFH:975 mb:1440 min fcst:
+156:3998181357:d=2025081900:SPFH:950 mb:1440 min fcst:
+157:4016079921:d=2025081900:SPFH:925 mb:1440 min fcst:
+158:4034227719:d=2025081900:SPFH:900 mb:1440 min fcst:
+159:4052167620:d=2025081900:SPFH:850 mb:1440 min fcst:
+160:4069438225:d=2025081900:SPFH:800 mb:1440 min fcst:
+161:4086103719:d=2025081900:SPFH:750 mb:1440 min fcst:
+162:4102413606:d=2025081900:SPFH:700 mb:1440 min fcst:
+163:4118258553:d=2025081900:SPFH:650 mb:1440 min fcst:
+164:4133324168:d=2025081900:SPFH:600 mb:1440 min fcst:
+165:4147231965:d=2025081900:SPFH:550 mb:1440 min fcst:
+166:4160247619:d=2025081900:SPFH:500 mb:1440 min fcst:
+167:4183441286:d=2025081900:SPFH:450 mb:1440 min fcst:
+168:4204320245:d=2025081900:SPFH:400 mb:1440 min fcst:
+169:4222998436:d=2025081900:SPFH:350 mb:1440 min fcst:
+170:4239335901:d=2025081900:SPFH:300 mb:1440 min fcst:
+171:4253160954:d=2025081900:SPFH:250 mb:1440 min fcst:
+172:4264288757:d=2025081900:SPFH:200 mb:1440 min fcst:
+173:4281481515:d=2025081900:SPFH:150 mb:1440 min fcst:
+174:4300201304:d=2025081900:SPFH:100 mb:1440 min fcst:
+175:4307635917:d=2025081900:CLMR:1000 mb:1440 min fcst:
+176:4309157676:d=2025081900:CLMR:975 mb:1440 min fcst:
+177:4311458306:d=2025081900:CLMR:950 mb:1440 min fcst:
+178:4315738247:d=2025081900:CLMR:925 mb:1440 min fcst:
+179:4321598837:d=2025081900:CLMR:900 mb:1440 min fcst:
+180:4327353755:d=2025081900:CLMR:850 mb:1440 min fcst:
+181:4332348094:d=2025081900:CLMR:800 mb:1440 min fcst:
+182:4336694787:d=2025081900:CLMR:750 mb:1440 min fcst:
+183:4340841753:d=2025081900:CLMR:700 mb:1440 min fcst:
+184:4344968162:d=2025081900:CLMR:650 mb:1440 min fcst:
+185:4348711357:d=2025081900:CLMR:600 mb:1440 min fcst:
+186:4352289872:d=2025081900:CLMR:550 mb:1440 min fcst:
+187:4355146904:d=2025081900:CLMR:500 mb:1440 min fcst:
+188:4357074641:d=2025081900:CLMR:450 mb:1440 min fcst:
+189:4358841774:d=2025081900:CLMR:400 mb:1440 min fcst:
+190:4360425349:d=2025081900:CLMR:350 mb:1440 min fcst:
+191:4361560712:d=2025081900:CLMR:300 mb:1440 min fcst:
+192:4362166530:d=2025081900:CLMR:250 mb:1440 min fcst:
+193:4362251012:d=2025081900:CLMR:200 mb:1440 min fcst:
+194:4362273456:d=2025081900:CLMR:150 mb:1440 min fcst:
+195:4362278199:d=2025081900:CLMR:100 mb:1440 min fcst:
+196:4362278380:d=2025081900:RWMR:1000 mb:1440 min fcst:
+197:4367202942:d=2025081900:RWMR:975 mb:1440 min fcst:
+198:4372383973:d=2025081900:RWMR:950 mb:1440 min fcst:
+199:4377790569:d=2025081900:RWMR:925 mb:1440 min fcst:
+200:4383338259:d=2025081900:RWMR:900 mb:1440 min fcst:
+201:4388839087:d=2025081900:RWMR:850 mb:1440 min fcst:
+202:4393977608:d=2025081900:RWMR:800 mb:1440 min fcst:
+203:4398861239:d=2025081900:RWMR:750 mb:1440 min fcst:
+204:4403576917:d=2025081900:RWMR:700 mb:1440 min fcst:
+205:4408104109:d=2025081900:RWMR:650 mb:1440 min fcst:
+206:4412255238:d=2025081900:RWMR:600 mb:1440 min fcst:
+207:4416077391:d=2025081900:RWMR:550 mb:1440 min fcst:
+208:4419309064:d=2025081900:RWMR:500 mb:1440 min fcst:
+209:4421893398:d=2025081900:RWMR:450 mb:1440 min fcst:
+210:4424367618:d=2025081900:RWMR:400 mb:1440 min fcst:
+211:4426793635:d=2025081900:RWMR:350 mb:1440 min fcst:
+212:4428891343:d=2025081900:RWMR:300 mb:1440 min fcst:
+213:4430457116:d=2025081900:RWMR:250 mb:1440 min fcst:
+214:4431586831:d=2025081900:RWMR:200 mb:1440 min fcst:
+215:4432340682:d=2025081900:RWMR:150 mb:1440 min fcst:
+216:4432658264:d=2025081900:RWMR:100 mb:1440 min fcst:
+217:4432666328:d=2025081900:ICMR:1000 mb:1440 min fcst:
+218:4432689872:d=2025081900:ICMR:975 mb:1440 min fcst:
+219:4432713316:d=2025081900:ICMR:950 mb:1440 min fcst:
+220:4432736631:d=2025081900:ICMR:925 mb:1440 min fcst:
+221:4432759824:d=2025081900:ICMR:900 mb:1440 min fcst:
+222:4432782959:d=2025081900:ICMR:850 mb:1440 min fcst:
+223:4432805847:d=2025081900:ICMR:800 mb:1440 min fcst:
+224:4432831186:d=2025081900:ICMR:750 mb:1440 min fcst:
+225:4432996540:d=2025081900:ICMR:700 mb:1440 min fcst:
+226:4433286410:d=2025081900:ICMR:650 mb:1440 min fcst:
+227:4433685374:d=2025081900:ICMR:600 mb:1440 min fcst:
+228:4434117457:d=2025081900:ICMR:550 mb:1440 min fcst:
+229:4434619376:d=2025081900:ICMR:500 mb:1440 min fcst:
+230:4435302679:d=2025081900:ICMR:450 mb:1440 min fcst:
+231:4436127287:d=2025081900:ICMR:400 mb:1440 min fcst:
+232:4437404698:d=2025081900:ICMR:350 mb:1440 min fcst:
+233:4439310649:d=2025081900:ICMR:300 mb:1440 min fcst:
+234:4442385023:d=2025081900:ICMR:250 mb:1440 min fcst:
+235:4446247217:d=2025081900:ICMR:200 mb:1440 min fcst:
+236:4449654187:d=2025081900:ICMR:150 mb:1440 min fcst:
+237:4451460729:d=2025081900:ICMR:100 mb:1440 min fcst:
+238:4451609044:d=2025081900:SNMR:1000 mb:1440 min fcst:
+239:4451727611:d=2025081900:SNMR:975 mb:1440 min fcst:
+240:4451845748:d=2025081900:SNMR:950 mb:1440 min fcst:
+241:4451963429:d=2025081900:SNMR:925 mb:1440 min fcst:
+242:4452080693:d=2025081900:SNMR:900 mb:1440 min fcst:
+243:4452197507:d=2025081900:SNMR:850 mb:1440 min fcst:
+244:4452314803:d=2025081900:SNMR:800 mb:1440 min fcst:
+245:4452482323:d=2025081900:SNMR:750 mb:1440 min fcst:
+246:4452772765:d=2025081900:SNMR:700 mb:1440 min fcst:
+247:4453302423:d=2025081900:SNMR:650 mb:1440 min fcst:
+248:4454057343:d=2025081900:SNMR:600 mb:1440 min fcst:
+249:4455380707:d=2025081900:SNMR:550 mb:1440 min fcst:
+250:4456408528:d=2025081900:SNMR:500 mb:1440 min fcst:
+251:4458551669:d=2025081900:SNMR:450 mb:1440 min fcst:
+252:4460640942:d=2025081900:SNMR:400 mb:1440 min fcst:
+253:4462948155:d=2025081900:SNMR:350 mb:1440 min fcst:
+254:4465642007:d=2025081900:SNMR:300 mb:1440 min fcst:
+255:4466995666:d=2025081900:SNMR:250 mb:1440 min fcst:
+256:4468239922:d=2025081900:SNMR:200 mb:1440 min fcst:
+257:4470293302:d=2025081900:SNMR:150 mb:1440 min fcst:
+258:4471221915:d=2025081900:SNMR:100 mb:1440 min fcst:
+259:4471238778:d=2025081900:GRLE:1000 mb:1440 min fcst:
+260:4471597312:d=2025081900:GRLE:975 mb:1440 min fcst:
+261:4471955752:d=2025081900:GRLE:950 mb:1440 min fcst:
+262:4472316826:d=2025081900:GRLE:925 mb:1440 min fcst:
+263:4472684187:d=2025081900:GRLE:900 mb:1440 min fcst:
+264:4473063232:d=2025081900:GRLE:850 mb:1440 min fcst:
+265:4473489201:d=2025081900:GRLE:800 mb:1440 min fcst:
+266:4474035500:d=2025081900:GRLE:750 mb:1440 min fcst:
+267:4474787961:d=2025081900:GRLE:700 mb:1440 min fcst:
+268:4475845512:d=2025081900:GRLE:650 mb:1440 min fcst:
+269:4477272791:d=2025081900:GRLE:600 mb:1440 min fcst:
+270:4479311648:d=2025081900:GRLE:550 mb:1440 min fcst:
+271:4481954802:d=2025081900:GRLE:500 mb:1440 min fcst:
+272:4484627852:d=2025081900:GRLE:450 mb:1440 min fcst:
+273:4487237935:d=2025081900:GRLE:400 mb:1440 min fcst:
+274:4489733737:d=2025081900:GRLE:350 mb:1440 min fcst:
+275:4492022175:d=2025081900:GRLE:300 mb:1440 min fcst:
+276:4494064033:d=2025081900:GRLE:250 mb:1440 min fcst:
+277:4495536976:d=2025081900:GRLE:200 mb:1440 min fcst:
+278:4496407057:d=2025081900:GRLE:150 mb:1440 min fcst:
+279:4496683950:d=2025081900:GRLE:100 mb:1440 min fcst:
+280:4496694191:d=2025081900:CDCC:1000 mb:1440 min fcst:
+281:4508357534:d=2025081900:CDCC:975 mb:1440 min fcst:
+282:4527329233:d=2025081900:CDCC:950 mb:1440 min fcst:
+283:4550691690:d=2025081900:CDCC:925 mb:1440 min fcst:
+284:4576080659:d=2025081900:CDCC:900 mb:1440 min fcst:
+285:4602284110:d=2025081900:CDCC:850 mb:1440 min fcst:
+286:4628700834:d=2025081900:CDCC:800 mb:1440 min fcst:
+287:4654105891:d=2025081900:CDCC:750 mb:1440 min fcst:
+288:4677486503:d=2025081900:CDCC:700 mb:1440 min fcst:
+289:4697837307:d=2025081900:CDCC:650 mb:1440 min fcst:
+290:4714548802:d=2025081900:CDCC:600 mb:1440 min fcst:
+291:4729370381:d=2025081900:CDCC:550 mb:1440 min fcst:
+292:4742423287:d=2025081900:CDCC:500 mb:1440 min fcst:
+293:4754800625:d=2025081900:CDCC:450 mb:1440 min fcst:
+294:4765691648:d=2025081900:CDCC:400 mb:1440 min fcst:
+295:4775121581:d=2025081900:CDCC:350 mb:1440 min fcst:
+296:4784489157:d=2025081900:CDCC:300 mb:1440 min fcst:
+297:4794495000:d=2025081900:CDCC:250 mb:1440 min fcst:
+298:4803519814:d=2025081900:CDCC:200 mb:1440 min fcst:
+299:4813305514:d=2025081900:CDCC:150 mb:1440 min fcst:
+300:4822814879:d=2025081900:CDCC:100 mb:1440 min fcst:
+301:4823147012:d=2025081900:RH:1000 mb:1440 min fcst:
+302:4853930246:d=2025081900:RH:975 mb:1440 min fcst:
+303:4884501067:d=2025081900:RH:950 mb:1440 min fcst:
+304:4915484539:d=2025081900:RH:925 mb:1440 min fcst:
+305:4946891279:d=2025081900:RH:900 mb:1440 min fcst:
+306:4978235087:d=2025081900:RH:850 mb:1440 min fcst:
+307:5009419640:d=2025081900:RH:800 mb:1440 min fcst:
+308:5040335535:d=2025081900:RH:750 mb:1440 min fcst:
+309:5071404476:d=2025081900:RH:700 mb:1440 min fcst:
+310:5102561900:d=2025081900:RH:650 mb:1440 min fcst:
+311:5133373869:d=2025081900:RH:600 mb:1440 min fcst:
+312:5163322874:d=2025081900:RH:550 mb:1440 min fcst:
+313:5192832367:d=2025081900:RH:500 mb:1440 min fcst:
+314:5221641526:d=2025081900:RH:450 mb:1440 min fcst:
+315:5249562271:d=2025081900:RH:400 mb:1440 min fcst:
+316:5276679477:d=2025081900:RH:350 mb:1440 min fcst:
+317:5303809314:d=2025081900:RH:300 mb:1440 min fcst:
+318:5331867634:d=2025081900:RH:250 mb:1440 min fcst:
+319:5361617990:d=2025081900:RH:200 mb:1440 min fcst:
+320:5391049800:d=2025081900:RH:150 mb:1440 min fcst:
+321:5414447809:d=2025081900:RH:100 mb:1440 min fcst:
+322:5430211649:d=2025081900:RH:2 m above ground:1440 min fcst:
+323:5465427541:d=2025081900:DPT:2 m above ground:1440 min fcst:
+324:5490171616:d=2025081900:RELD:1000 mb:1440 min fcst:
+325:5512600708:d=2025081900:RELD:925 mb:1440 min fcst:
+326:5533819078:d=2025081900:RELD:850 mb:1440 min fcst:
+327:5553096870:d=2025081900:RELD:700 mb:1440 min fcst:
+328:5569590190:d=2025081900:RELD:500 mb:1440 min fcst:
+329:5583450091:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=0 parm=224:850 mb:1440 min fcst:
+330:5605169441:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=0 parm=224:700 mb:1440 min fcst:
+331:5624587189:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=0 parm=224:500 mb:1440 min fcst:
+332:5632911150:d=2025081900:DPT:1000 mb:1440 min fcst:
+333:5670765256:d=2025081900:DPT:975 mb:1440 min fcst:
+334:5708403766:d=2025081900:DPT:950 mb:1440 min fcst:
+335:5746149020:d=2025081900:DPT:925 mb:1440 min fcst:
+336:5784179762:d=2025081900:DPT:900 mb:1440 min fcst:
+337:5822184127:d=2025081900:DPT:850 mb:1440 min fcst:
+338:5859922308:d=2025081900:DPT:800 mb:1440 min fcst:
+339:5897511561:d=2025081900:DPT:750 mb:1440 min fcst:
+340:5935272666:d=2025081900:DPT:700 mb:1440 min fcst:
+341:5973326851:d=2025081900:DPT:650 mb:1440 min fcst:
+342:6011523995:d=2025081900:DPT:600 mb:1440 min fcst:
+343:6049392569:d=2025081900:DPT:550 mb:1440 min fcst:
+344:6087103492:d=2025081900:DPT:500 mb:1440 min fcst:
+345:6124596072:d=2025081900:DPT:450 mb:1440 min fcst:
+346:6161870863:d=2025081900:DPT:400 mb:1440 min fcst:
+347:6198391387:d=2025081900:DPT:350 mb:1440 min fcst:
+348:6234619811:d=2025081900:DPT:300 mb:1440 min fcst:
+349:6270943652:d=2025081900:DPT:250 mb:1440 min fcst:
+350:6307896144:d=2025081900:DPT:200 mb:1440 min fcst:
+351:6345464400:d=2025081900:DPT:150 mb:1440 min fcst:
+352:6378627138:d=2025081900:DPT:100 mb:1440 min fcst:
+353:6406742082:d=2025081900:DEPR:850 mb:1440 min fcst:
+354:6443838798:d=2025081900:DEPR:700 mb:1440 min fcst:
+355:6480870432:d=2025081900:DEPR:500 mb:1440 min fcst:
+356:6516653546:d=2025081900:EPOT:850 mb:1440 min fcst:
+357:6539749883:d=2025081900:EPOT:700 mb:1440 min fcst:
+358:6576509815:d=2025081900:EPOT:500 mb:1440 min fcst:
+359:6607551325:d=2025081900:KX:mean sea level:1440 min fcst:
+360:6633873297:d=2025081900:CAPE:surface:1440 min fcst:
+361:6657009104:d=2025081900:CIN:surface:1440 min fcst:
+362:6677439250:d=2025081900:PLI:surface:1440 min fcst:
+363:6721948940:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=1 parm=228:surface:1440 min fcst:
+364:6751926598:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=7 parm=224:surface:1440 min fcst:
+365:6793432856:d=2025081900:VWSH:1000-0 m above ground:1440 min fcst:
+366:6831069216:d=2025081900:VWSH:3000-0 m above ground:1440 min fcst:
+367:6867619690:d=2025081900:VWSH:6000-0 m above ground:1440 min fcst:
+368:6903958192:d=2025081900:BLI:surface:1440 min fcst:
+369:6945976496:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:1000 mb:1440 min fcst:
+370:6958517043:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:975 mb:1440 min fcst:
+371:6971605836:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:950 mb:1440 min fcst:
+372:6985151898:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:925 mb:1440 min fcst:
+373:6998950005:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:900 mb:1440 min fcst:
+374:7012589341:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:850 mb:1440 min fcst:
+375:7025661887:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:800 mb:1440 min fcst:
+376:7038556764:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:750 mb:1440 min fcst:
+377:7051490506:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:700 mb:1440 min fcst:
+378:7064364074:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:650 mb:1440 min fcst:
+379:7076928399:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:600 mb:1440 min fcst:
+380:7089365601:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:550 mb:1440 min fcst:
+381:7101306824:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:500 mb:1440 min fcst:
+382:7112077407:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:450 mb:1440 min fcst:
+383:7122355496:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:400 mb:1440 min fcst:
+384:7132363771:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:350 mb:1440 min fcst:
+385:7142043202:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:300 mb:1440 min fcst:
+386:7151469034:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:250 mb:1440 min fcst:
+387:7162643466:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:200 mb:1440 min fcst:
+388:7170289514:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:150 mb:1440 min fcst:
+389:7173286165:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=16 parm=225:100 mb:1440 min fcst:
+390:7173329176:d=2025081900:HLCY:1000-0 m above ground:1440 min fcst:
+391:7189530859:d=2025081900:HLCY:3000-0 m above ground:1440 min fcst:
+392:7209175161:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=1 parm=239:surface:1440 min fcst:
+393:7225457010:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=3 parm=225:surface:1440 min fcst:
+394:7252745044:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=3 parm=226:surface:1440 min fcst:
+395:7274089755:d=2025081900:PWAT:entire atmosphere:1440 min fcst:
+396:7298378863:d=2025081900:VIS:surface:1440 min fcst:
+397:7306977444:d=2025081900:GUST:10 m above ground:1440 min fcst:
+398:7348747861:d=2025081900:PTYPE:surface:1440 min fcst:
+399:7356165923:d=2025081900:CDCTOP:surface:1440 min fcst:
+400:7380541168:d=2025081900:CDCB:surface:1440 min fcst:
+401:7407570209:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=4 parm=228:surface:1440 min fcst:
+402:7457793003:d=2025081900:var discipline=0 center=38 local_table=1 parmcat=4 parm=227:surface:1440 min fcst:
+</pre></div>
+</div>
+</div>
+</div>
+<p>对 wgrib2 输出信息进行分组展示。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>本节代码由 ChatGPT 生成。</p>
+</div>
+<div class="cell tag_scroll-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">textwrap</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.utils.capture</span><span class="w"> </span><span class="kn">import</span> <span class="n">capture_output</span>
+
+<span class="k">with</span> <span class="n">capture_output</span><span class="p">()</span> <span class="k">as</span> <span class="n">captured</span><span class="p">:</span>
+    <span class="o">!</span>module<span class="w"> </span>load<span class="w"> </span>wgrib2/3.1.1/intel<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>wgrib2<span class="w"> </span><span class="s2">&quot;{meso_grib2_orig_file_path}&quot;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null
+
+<span class="n">text</span> <span class="o">=</span> <span class="n">captured</span><span class="o">.</span><span class="n">stdout</span>
+
+<span class="n">lines</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="n">grouped</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+<span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(\d+):\d+:d=\d+:([^:]+):([^:]+):([^:]+):?$&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+        <span class="n">index</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">fcst</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+        <span class="n">grouped</span><span class="p">[(</span><span class="n">param</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">fcst</span><span class="o">.</span><span class="n">strip</span><span class="p">())]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">level</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="nb">int</span><span class="p">(</span><span class="n">index</span><span class="p">)))</span>
+
+<span class="n">WRAP_WIDTH</span> <span class="o">=</span> <span class="mi">80</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">fcst</span><span class="p">),</span> <span class="n">level_index_list</span> <span class="ow">in</span> <span class="n">grouped</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">level_index_list</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">level_strs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">level</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">)&quot;</span> <span class="k">for</span> <span class="n">level</span><span class="p">,</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">level_index_list</span><span class="p">]</span>
+    <span class="n">full_line</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">level_strs</span><span class="p">)</span>
+    <span class="n">wrapped</span> <span class="o">=</span> <span class="n">textwrap</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">full_line</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">WRAP_WIDTH</span><span class="p">,</span> <span class="n">subsequent_indent</span><span class="o">=</span><span class="s1">&#39;  &#39;</span><span class="p">,</span> <span class="n">initial_indent</span><span class="o">=</span><span class="s1">&#39;  &#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">param</span><span class="si">}</span><span class="s2"> @ </span><span class="si">{</span><span class="n">fcst</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="si">{</span><span class="n">wrapped</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>APCP @ 0-1 day acc fcst:
+  surface (1)
+
+ASNOW @ 0-1 day acc fcst:
+  surface (2)
+
+TMP @ 1440 min fcst:
+  surface (3), 2 m above ground (8), 1000 mb (70), 975 mb (71), 950 mb (72), 925
+  mb (73), 900 mb (74), 850 mb (75), 800 mb (76), 750 mb (77), 700 mb (78), 650
+  mb (79), 600 mb (80), 550 mb (81), 500 mb (82), 450 mb (83), 400 mb (84), 350
+  mb (85), 300 mb (86), 250 mb (87), 200 mb (88), 150 mb (89), 100 mb (90)
+
+NLWRF @ 0-1 day acc fcst:
+  surface (4)
+
+NSWRF @ 0-1 day acc fcst:
+  surface (5)
+
+HGT @ 1440 min fcst:
+  surface (6), 1000 mb (49), 975 mb (50), 950 mb (51), 925 mb (52), 900 mb (53),
+  850 mb (54), 800 mb (55), 750 mb (56), 700 mb (57), 650 mb (58), 600 mb (59),
+  550 mb (60), 500 mb (61), 450 mb (62), 400 mb (63), 350 mb (64), 300 mb (65),
+  250 mb (66), 200 mb (67), 150 mb (68), 100 mb (69)
+
+SPFH @ 1440 min fcst:
+  2 m above ground (7), 1000 mb (154), 975 mb (155), 950 mb (156), 925 mb (157),
+  900 mb (158), 850 mb (159), 800 mb (160), 750 mb (161), 700 mb (162), 650 mb
+  (163), 600 mb (164), 550 mb (165), 500 mb (166), 450 mb (167), 400 mb (168),
+  350 mb (169), 300 mb (170), 250 mb (171), 200 mb (172), 150 mb (173), 100 mb
+  (174)
+
+UGRD @ 1440 min fcst:
+  10 m above ground (9), 30 m above ground (31), 50 m above ground (32), 70 m
+  above ground (33), 100 m above ground (34), 120 m above ground (35), 140 m
+  above ground (36), 160 m above ground (37), 180 m above ground (38), 200 m
+  above ground (39), 1000 mb (91), 975 mb (92), 950 mb (93), 925 mb (94), 900 mb
+  (95), 850 mb (96), 800 mb (97), 750 mb (98), 700 mb (99), 650 mb (100), 600 mb
+  (101), 550 mb (102), 500 mb (103), 450 mb (104), 400 mb (105), 350 mb (106),
+  300 mb (107), 250 mb (108), 200 mb (109), 150 mb (110), 100 mb (111)
+
+VGRD @ 1440 min fcst:
+  10 m above ground (10), 30 m above ground (40), 50 m above ground (41), 70 m
+  above ground (42), 100 m above ground (43), 120 m above ground (44), 140 m
+  above ground (45), 160 m above ground (46), 180 m above ground (47), 200 m
+  above ground (48), 1000 mb (112), 975 mb (113), 950 mb (114), 925 mb (115),
+  900 mb (116), 850 mb (117), 800 mb (118), 750 mb (119), 700 mb (120), 650 mb
+  (121), 600 mb (122), 550 mb (123), 500 mb (124), 450 mb (125), 400 mb (126),
+  350 mb (127), 300 mb (128), 250 mb (129), 200 mb (130), 150 mb (131), 100 mb
+  (132)
+
+TCDC @ 1440 min fcst:
+  atmos col (11)
+
+LCDC @ 1440 min fcst:
+  atmos col (12)
+
+MCDC @ 1440 min fcst:
+  atmos col (13)
+
+HCDC @ 1440 min fcst:
+  atmos col (14)
+
+TCIWV @ 1440 min fcst:
+  entire atmosphere (15)
+
+TCOLI @ 1440 min fcst:
+  entire atmosphere (16)
+
+HPBL @ 1440 min fcst:
+  surface (17)
+
+var discipline=0 center=38 local_table=1 parmcat=16 parm=224 @ 1440 min fcst:
+  surface (18)
+
+DZDT @ 0-1 day max fcst:
+  1000 mb (19)
+
+UGRD @ 0-1 day max fcst:
+  10 m above ground (20)
+
+VGRD @ 0-1 day max fcst:
+  10 m above ground (21)
+
+var discipline=0 center=38 local_table=1 parmcat=16 parm=224 @ 0-1 day max fcst:
+  surface (22)
+
+RETOP @ 1440 min fcst:
+  surface (23)
+
+UPHL @ 0-1 day max fcst:
+  5000-2000 m above ground (24)
+
+var discipline=0 center=38 local_table=1 parmcat=1 parm=241 @ 0-1 day max fcst:
+  surface (25)
+
+var discipline=0 center=38 local_table=1 parmcat=2 parm=237 @ 1440 min fcst:
+  600-0 m above ground (26)
+
+var discipline=0 center=38 local_table=1 parmcat=2 parm=238 @ 1440 min fcst:
+  600-0 m above ground (27)
+
+var discipline=0 center=38 local_table=1 parmcat=16 parm=226 @ 1440 min fcst:
+  surface (28)
+
+PRES @ 1440 min fcst:
+  surface (29)
+
+PRMSL @ 1440 min fcst:
+  mean sea level (30)
+
+DZDT @ 1440 min fcst:
+  1000 mb (133), 975 mb (134), 950 mb (135), 925 mb (136), 900 mb (137), 850 mb
+  (138), 800 mb (139), 750 mb (140), 700 mb (141), 650 mb (142), 600 mb (143),
+  550 mb (144), 500 mb (145), 450 mb (146), 400 mb (147), 350 mb (148), 300 mb
+  (149), 250 mb (150), 200 mb (151), 150 mb (152), 100 mb (153)
+
+CLMR @ 1440 min fcst:
+  1000 mb (175), 975 mb (176), 950 mb (177), 925 mb (178), 900 mb (179), 850 mb
+  (180), 800 mb (181), 750 mb (182), 700 mb (183), 650 mb (184), 600 mb (185),
+  550 mb (186), 500 mb (187), 450 mb (188), 400 mb (189), 350 mb (190), 300 mb
+  (191), 250 mb (192), 200 mb (193), 150 mb (194), 100 mb (195)
+
+RWMR @ 1440 min fcst:
+  1000 mb (196), 975 mb (197), 950 mb (198), 925 mb (199), 900 mb (200), 850 mb
+  (201), 800 mb (202), 750 mb (203), 700 mb (204), 650 mb (205), 600 mb (206),
+  550 mb (207), 500 mb (208), 450 mb (209), 400 mb (210), 350 mb (211), 300 mb
+  (212), 250 mb (213), 200 mb (214), 150 mb (215), 100 mb (216)
+
+ICMR @ 1440 min fcst:
+  1000 mb (217), 975 mb (218), 950 mb (219), 925 mb (220), 900 mb (221), 850 mb
+  (222), 800 mb (223), 750 mb (224), 700 mb (225), 650 mb (226), 600 mb (227),
+  550 mb (228), 500 mb (229), 450 mb (230), 400 mb (231), 350 mb (232), 300 mb
+  (233), 250 mb (234), 200 mb (235), 150 mb (236), 100 mb (237)
+
+SNMR @ 1440 min fcst:
+  1000 mb (238), 975 mb (239), 950 mb (240), 925 mb (241), 900 mb (242), 850 mb
+  (243), 800 mb (244), 750 mb (245), 700 mb (246), 650 mb (247), 600 mb (248),
+  550 mb (249), 500 mb (250), 450 mb (251), 400 mb (252), 350 mb (253), 300 mb
+  (254), 250 mb (255), 200 mb (256), 150 mb (257), 100 mb (258)
+
+GRLE @ 1440 min fcst:
+  1000 mb (259), 975 mb (260), 950 mb (261), 925 mb (262), 900 mb (263), 850 mb
+  (264), 800 mb (265), 750 mb (266), 700 mb (267), 650 mb (268), 600 mb (269),
+  550 mb (270), 500 mb (271), 450 mb (272), 400 mb (273), 350 mb (274), 300 mb
+  (275), 250 mb (276), 200 mb (277), 150 mb (278), 100 mb (279)
+
+CDCC @ 1440 min fcst:
+  1000 mb (280), 975 mb (281), 950 mb (282), 925 mb (283), 900 mb (284), 850 mb
+  (285), 800 mb (286), 750 mb (287), 700 mb (288), 650 mb (289), 600 mb (290),
+  550 mb (291), 500 mb (292), 450 mb (293), 400 mb (294), 350 mb (295), 300 mb
+  (296), 250 mb (297), 200 mb (298), 150 mb (299), 100 mb (300)
+
+RH @ 1440 min fcst:
+  1000 mb (301), 975 mb (302), 950 mb (303), 925 mb (304), 900 mb (305), 850 mb
+  (306), 800 mb (307), 750 mb (308), 700 mb (309), 650 mb (310), 600 mb (311),
+  550 mb (312), 500 mb (313), 450 mb (314), 400 mb (315), 350 mb (316), 300 mb
+  (317), 250 mb (318), 200 mb (319), 150 mb (320), 100 mb (321), 2 m above
+  ground (322)
+
+DPT @ 1440 min fcst:
+  2 m above ground (323), 1000 mb (332), 975 mb (333), 950 mb (334), 925 mb
+  (335), 900 mb (336), 850 mb (337), 800 mb (338), 750 mb (339), 700 mb (340),
+  650 mb (341), 600 mb (342), 550 mb (343), 500 mb (344), 450 mb (345), 400 mb
+  (346), 350 mb (347), 300 mb (348), 250 mb (349), 200 mb (350), 150 mb (351),
+  100 mb (352)
+
+RELD @ 1440 min fcst:
+  1000 mb (324), 925 mb (325), 850 mb (326), 700 mb (327), 500 mb (328)
+
+var discipline=0 center=38 local_table=1 parmcat=0 parm=224 @ 1440 min fcst:
+  850 mb (329), 700 mb (330), 500 mb (331)
+
+DEPR @ 1440 min fcst:
+  850 mb (353), 700 mb (354), 500 mb (355)
+
+EPOT @ 1440 min fcst:
+  850 mb (356), 700 mb (357), 500 mb (358)
+
+KX @ 1440 min fcst:
+  mean sea level (359)
+
+CAPE @ 1440 min fcst:
+  surface (360)
+
+CIN @ 1440 min fcst:
+  surface (361)
+
+PLI @ 1440 min fcst:
+  surface (362)
+
+var discipline=0 center=38 local_table=1 parmcat=1 parm=228 @ 1440 min fcst:
+  surface (363)
+
+var discipline=0 center=38 local_table=1 parmcat=7 parm=224 @ 1440 min fcst:
+  surface (364)
+
+VWSH @ 1440 min fcst:
+  1000-0 m above ground (365), 3000-0 m above ground (366), 6000-0 m above
+  ground (367)
+
+BLI @ 1440 min fcst:
+  surface (368)
+
+var discipline=0 center=38 local_table=1 parmcat=16 parm=225 @ 1440 min fcst:
+  1000 mb (369), 975 mb (370), 950 mb (371), 925 mb (372), 900 mb (373), 850 mb
+  (374), 800 mb (375), 750 mb (376), 700 mb (377), 650 mb (378), 600 mb (379),
+  550 mb (380), 500 mb (381), 450 mb (382), 400 mb (383), 350 mb (384), 300 mb
+  (385), 250 mb (386), 200 mb (387), 150 mb (388), 100 mb (389)
+
+HLCY @ 1440 min fcst:
+  1000-0 m above ground (390), 3000-0 m above ground (391)
+
+var discipline=0 center=38 local_table=1 parmcat=1 parm=239 @ 1440 min fcst:
+  surface (392)
+
+var discipline=0 center=38 local_table=1 parmcat=3 parm=225 @ 1440 min fcst:
+  surface (393)
+
+var discipline=0 center=38 local_table=1 parmcat=3 parm=226 @ 1440 min fcst:
+  surface (394)
+
+PWAT @ 1440 min fcst:
+  entire atmosphere (395)
+
+VIS @ 1440 min fcst:
+  surface (396)
+
+GUST @ 1440 min fcst:
+  10 m above ground (397)
+
+PTYPE @ 1440 min fcst:
+  surface (398)
+
+CDCTOP @ 1440 min fcst:
+  surface (399)
+
+CDCB @ 1440 min fcst:
+  surface (400)
+
+var discipline=0 center=38 local_table=1 parmcat=4 parm=228 @ 1440 min fcst:
+  surface (401)
+
+var discipline=0 center=38 local_table=1 parmcat=4 parm=227 @ 1440 min fcst:
+  surface (402)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./cemc/cma-meso-1km"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../cma-gfs/param-set-11.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GFS要素清单：851-861</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="param-set-01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">MESO要素清单：1-10</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">要素列表</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By cmec-oper
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
