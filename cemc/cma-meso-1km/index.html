@@ -1,0 +1,989 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CMA-MESO 1KM &#8212; CEMC Data Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cemc/cma-meso-1km/index';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MESO要素清单：1-10" href="param-set-01.html" />
+    <link rel="prev" title="GFS要素清单：851-861" href="../cma-gfs/param-set-11.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CEMC Data Guide</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    CEMC数据指南
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">快速开始</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../started/getting-started.html">开始使用</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CEMC数据</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cma-gfs/index.html">CMA-GFS</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-01.html">GFS要素清单：1-5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-02.html">GFS要素清单：6-21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-03.html">GFS要素清单：22-45</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-04.html">GFS要素清单：46-63</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-05.html">GFS要素清单：64-223</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-06.html">GFS要素清单：224-463</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-07.html">GFS要素清单：454-471</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-08.html">GFS要素清单：472-773</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-09.html">GFS要素清单：774-784</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-10.html">GFS要素清单：785-850</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cma-gfs/param-set-11.html">GFS要素清单：851-861</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">CMA-MESO 1KM</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="param-set-01.html">MESO要素清单：1-10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-02.html">MESO要素清单：11-21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-03.html">MESO要素清单：22-30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-04.html">MESO要素清单：31-48</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-05.html">MESO要素清单：49-153</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-06.html">MESO要素清单：154-279</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-07.html">MESO要素清单：280-323</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-08.html">MESO要素清单：324-358</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-09.html">MESO要素清单：359-368</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param-set-10.html">MESO要素清单：369-402</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cemc-oper/data-notebook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cemc-oper/data-notebook/issues/new?title=Issue%20on%20page%20%2Fcemc/cma-meso-1km/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/cemc/cma-meso-1km/index.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>CMA-MESO 1KM</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">要素列表</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cma-meso-1km">
+<h1>CMA-MESO 1KM<a class="headerlink" href="#cma-meso-1km" title="Link to this heading">#</a></h1>
+<p>CMA-MESO 基础 GRIB2 数据文件有 402 个要素场。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">reki.format.grib.eccodes</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_field_from_file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/wangdp/project/cedarkit/notebook-project/notebook-devel/ref/data-notebook-project/data-notebook/.venv/lib/python3.14/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.42.0 or higher is recommended. You are running version 2.34.1
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">data_notebook.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_data_file</span>
+
+<span class="n">meso_grib2_orig_file_path</span> <span class="o">=</span> <span class="n">get_data_file</span><span class="p">(</span><span class="s2">&quot;cma-meso-1km&quot;</span><span class="p">)</span>
+<span class="n">meso_grib2_orig_file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/home/wangdp/project/cedarkit/notebook-project/notebook-devel/ref/data-notebook-project/data-notebook/data/cma-meso-1km/grib2/orig/Z_NAFP_C_BABJ_20260725000000_P_CEMC-CMA-MESO-1KM-ORIG-02400.grb2&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id1">
+<h2>要素列表<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>使用 ecCodes 打印 CMA-GFS 基础 GRIB2 数据的要素列表。</p>
+<div class="cell tag_scroll-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.utils.capture</span><span class="w"> </span><span class="kn">import</span> <span class="n">capture_output</span>
+
+<span class="k">with</span> <span class="n">capture_output</span><span class="p">()</span> <span class="k">as</span> <span class="n">captured</span><span class="p">:</span>
+    <span class="o">!</span>grib_ls<span class="w"> </span>-P<span class="w"> </span>count<span class="w"> </span><span class="s2">&quot;{meso_grib2_orig_file_path}&quot;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null
+
+<span class="nb">print</span><span class="p">(</span><span class="n">captured</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/wangdp/project/cedarkit/notebook-project/notebook-devel/ref/data-notebook-project/data-notebook/data/cma-meso-1km/grib2/orig/Z_NAFP_C_BABJ_20260725000000_P_CEMC-CMA-MESO-1KM-ORIG-02400.grb2
+count        edition      centre       date         dataType     gridType     typeOfLevel  level        stepRange    shortName    packingType  
+1            2            babj         20260725     fc           regular_ll   surface      0            0-24         unknown      grid_jpeg   
+2            2            babj         20260725     fc           regular_ll   surface      0            0-24         unknown      grid_jpeg   
+3            2            babj         20260725     fc           regular_ll   surface      0            24           t            grid_jpeg   
+4            2            babj         20260725     fc           regular_ll   surface      0            0-24         str          grid_jpeg   
+5            2            babj         20260725     fc           regular_ll   surface      0            0-24         ssr          grid_jpeg   
+6            2            babj         20260725     fc           regular_ll   surface      0            24           orog         grid_jpeg   
+7            2            babj         20260725     fc           regular_ll   heightAboveGround  2            24           2sh          grid_jpeg   
+8            2            babj         20260725     fc           regular_ll   heightAboveGround  2            24           2t           grid_jpeg   
+9            2            babj         20260725     fc           regular_ll   heightAboveGround  10           24           10u          grid_jpeg   
+10           2            babj         20260725     fc           regular_ll   heightAboveGround  10           24           10v          grid_jpeg   
+11           2            babj         20260725     fc           regular_ll   entireAtmosphere  0            24           tcc          grid_jpeg   
+12           2            babj         20260725     fc           regular_ll   entireAtmosphere  0            24           lcc          grid_jpeg   
+13           2            babj         20260725     fc           regular_ll   entireAtmosphere  0            24           mcc          grid_jpeg   
+14           2            babj         20260725     fc           regular_ll   entireAtmosphere  0            24           hcc          grid_jpeg   
+15           2            babj         20260725     fc           regular_ll   atmosphere   0            24           unknown      grid_jpeg   
+16           2            babj         20260725     fc           regular_ll   atmosphere   0            24           unknown      grid_jpeg   
+17           2            babj         20260725     fc           regular_ll   surface      0            24           blh          grid_jpeg   
+18           2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+19           2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         23-24        wz           grid_jpeg   
+20           2            babj         20260725     fc           regular_ll   heightAboveGround  10           23-24        10u          grid_jpeg   
+21           2            babj         20260725     fc           regular_ll   heightAboveGround  10           23-24        10v          grid_jpeg   
+22           2            babj         20260725     fc           regular_ll   surface      0            23-24        unknown      grid_jpeg   
+23           2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+24           2            babj         20260725     fc           regular_ll   heightAboveGroundLayer  5000         0-24         unknown      grid_jpeg   
+25           2            babj         20260725     fc           regular_ll   surface      0            23-24        unknown      grid_jpeg   
+26           2            babj         20260725     fc           regular_ll   heightAboveGroundLayer  600          24           unknown      grid_jpeg   
+27           2            babj         20260725     fc           regular_ll   heightAboveGroundLayer  600          24           unknown      grid_jpeg   
+28           2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+29           2            babj         20260725     fc           regular_ll   surface      0            24           sp           grid_jpeg   
+30           2            babj         20260725     fc           regular_ll   meanSea      0            24           prmsl        grid_jpeg   
+31           2            babj         20260725     fc           regular_ll   heightAboveGround  30           24           u            grid_jpeg   
+32           2            babj         20260725     fc           regular_ll   heightAboveGround  50           24           u            grid_jpeg   
+33           2            babj         20260725     fc           regular_ll   heightAboveGround  70           24           u            grid_jpeg   
+34           2            babj         20260725     fc           regular_ll   heightAboveGround  100          24           100u         grid_jpeg   
+35           2            babj         20260725     fc           regular_ll   heightAboveGround  120          24           u            grid_jpeg   
+36           2            babj         20260725     fc           regular_ll   heightAboveGround  140          24           u            grid_jpeg   
+37           2            babj         20260725     fc           regular_ll   heightAboveGround  160          24           u            grid_jpeg   
+38           2            babj         20260725     fc           regular_ll   heightAboveGround  180          24           u            grid_jpeg   
+39           2            babj         20260725     fc           regular_ll   heightAboveGround  200          24           200u         grid_jpeg   
+40           2            babj         20260725     fc           regular_ll   heightAboveGround  30           24           v            grid_jpeg   
+41           2            babj         20260725     fc           regular_ll   heightAboveGround  50           24           v            grid_jpeg   
+42           2            babj         20260725     fc           regular_ll   heightAboveGround  70           24           v            grid_jpeg   
+43           2            babj         20260725     fc           regular_ll   heightAboveGround  100          24           100v         grid_jpeg   
+44           2            babj         20260725     fc           regular_ll   heightAboveGround  120          24           v            grid_jpeg   
+45           2            babj         20260725     fc           regular_ll   heightAboveGround  140          24           v            grid_jpeg   
+46           2            babj         20260725     fc           regular_ll   heightAboveGround  160          24           v            grid_jpeg   
+47           2            babj         20260725     fc           regular_ll   heightAboveGround  180          24           v            grid_jpeg   
+48           2            babj         20260725     fc           regular_ll   heightAboveGround  200          24           200v         grid_jpeg   
+49           2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           gh           grid_jpeg   
+50           2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           gh           grid_jpeg   
+51           2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           gh           grid_jpeg   
+52           2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           gh           grid_jpeg   
+53           2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           gh           grid_jpeg   
+54           2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           gh           grid_jpeg   
+55           2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           gh           grid_jpeg   
+56           2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           gh           grid_jpeg   
+57           2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           gh           grid_jpeg   
+58           2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           gh           grid_jpeg   
+59           2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           gh           grid_jpeg   
+60           2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           gh           grid_jpeg   
+61           2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           gh           grid_jpeg   
+62           2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           gh           grid_jpeg   
+63           2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           gh           grid_jpeg   
+64           2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           gh           grid_jpeg   
+65           2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           gh           grid_jpeg   
+66           2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           gh           grid_jpeg   
+67           2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           gh           grid_jpeg   
+68           2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           gh           grid_jpeg   
+69           2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           gh           grid_jpeg   
+70           2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           t            grid_jpeg   
+71           2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           t            grid_jpeg   
+72           2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           t            grid_jpeg   
+73           2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           t            grid_jpeg   
+74           2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           t            grid_jpeg   
+75           2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           t            grid_jpeg   
+76           2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           t            grid_jpeg   
+77           2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           t            grid_jpeg   
+78           2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           t            grid_jpeg   
+79           2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           t            grid_jpeg   
+80           2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           t            grid_jpeg   
+81           2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           t            grid_jpeg   
+82           2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           t            grid_jpeg   
+83           2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           t            grid_jpeg   
+84           2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           t            grid_jpeg   
+85           2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           t            grid_jpeg   
+86           2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           t            grid_jpeg   
+87           2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           t            grid_jpeg   
+88           2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           t            grid_jpeg   
+89           2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           t            grid_jpeg   
+90           2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           t            grid_jpeg   
+91           2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           u            grid_jpeg   
+92           2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           u            grid_jpeg   
+93           2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           u            grid_jpeg   
+94           2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           u            grid_jpeg   
+95           2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           u            grid_jpeg   
+96           2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           u            grid_jpeg   
+97           2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           u            grid_jpeg   
+98           2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           u            grid_jpeg   
+99           2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           u            grid_jpeg   
+100          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           u            grid_jpeg   
+101          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           u            grid_jpeg   
+102          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           u            grid_jpeg   
+103          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           u            grid_jpeg   
+104          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           u            grid_jpeg   
+105          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           u            grid_jpeg   
+106          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           u            grid_jpeg   
+107          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           u            grid_jpeg   
+108          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           u            grid_jpeg   
+109          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           u            grid_jpeg   
+110          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           u            grid_jpeg   
+111          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           u            grid_jpeg   
+112          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           v            grid_jpeg   
+113          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           v            grid_jpeg   
+114          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           v            grid_jpeg   
+115          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           v            grid_jpeg   
+116          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           v            grid_jpeg   
+117          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           v            grid_jpeg   
+118          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           v            grid_jpeg   
+119          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           v            grid_jpeg   
+120          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           v            grid_jpeg   
+121          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           v            grid_jpeg   
+122          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           v            grid_jpeg   
+123          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           v            grid_jpeg   
+124          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           v            grid_jpeg   
+125          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           v            grid_jpeg   
+126          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           v            grid_jpeg   
+127          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           v            grid_jpeg   
+128          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           v            grid_jpeg   
+129          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           v            grid_jpeg   
+130          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           v            grid_jpeg   
+131          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           v            grid_jpeg   
+132          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           v            grid_jpeg   
+133          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           wz           grid_jpeg   
+134          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           wz           grid_jpeg   
+135          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           wz           grid_jpeg   
+136          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           wz           grid_jpeg   
+137          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           wz           grid_jpeg   
+138          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           wz           grid_jpeg   
+139          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           wz           grid_jpeg   
+140          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           wz           grid_jpeg   
+141          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           wz           grid_jpeg   
+142          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           wz           grid_jpeg   
+143          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           wz           grid_jpeg   
+144          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           wz           grid_jpeg   
+145          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           wz           grid_jpeg   
+146          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           wz           grid_jpeg   
+147          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           wz           grid_jpeg   
+148          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           wz           grid_jpeg   
+149          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           wz           grid_jpeg   
+150          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           wz           grid_jpeg   
+151          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           wz           grid_jpeg   
+152          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           wz           grid_jpeg   
+153          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           wz           grid_jpeg   
+154          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           q            grid_jpeg   
+155          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           q            grid_jpeg   
+156          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           q            grid_jpeg   
+157          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           q            grid_jpeg   
+158          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           q            grid_jpeg   
+159          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           q            grid_jpeg   
+160          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           q            grid_jpeg   
+161          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           q            grid_jpeg   
+162          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           q            grid_jpeg   
+163          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           q            grid_jpeg   
+164          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           q            grid_jpeg   
+165          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           q            grid_jpeg   
+166          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           q            grid_jpeg   
+167          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           q            grid_jpeg   
+168          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           q            grid_jpeg   
+169          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           q            grid_jpeg   
+170          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           q            grid_jpeg   
+171          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           q            grid_jpeg   
+172          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           q            grid_jpeg   
+173          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           q            grid_jpeg   
+174          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           q            grid_jpeg   
+175          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           clwmr        grid_jpeg   
+176          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           clwmr        grid_jpeg   
+177          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           clwmr        grid_jpeg   
+178          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           clwmr        grid_jpeg   
+179          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           clwmr        grid_jpeg   
+180          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           clwmr        grid_jpeg   
+181          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           clwmr        grid_jpeg   
+182          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           clwmr        grid_jpeg   
+183          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           clwmr        grid_jpeg   
+184          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           clwmr        grid_jpeg   
+185          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           clwmr        grid_jpeg   
+186          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           clwmr        grid_jpeg   
+187          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           clwmr        grid_jpeg   
+188          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           clwmr        grid_jpeg   
+189          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           clwmr        grid_jpeg   
+190          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           clwmr        grid_jpeg   
+191          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           clwmr        grid_jpeg   
+192          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           clwmr        grid_jpeg   
+193          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           clwmr        grid_jpeg   
+194          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           clwmr        grid_jpeg   
+195          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           clwmr        grid_jpeg   
+196          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           rwmr         grid_jpeg   
+197          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           rwmr         grid_jpeg   
+198          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           rwmr         grid_jpeg   
+199          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           rwmr         grid_jpeg   
+200          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           rwmr         grid_jpeg   
+201          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           rwmr         grid_jpeg   
+202          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           rwmr         grid_jpeg   
+203          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           rwmr         grid_jpeg   
+204          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           rwmr         grid_jpeg   
+205          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           rwmr         grid_jpeg   
+206          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           rwmr         grid_jpeg   
+207          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           rwmr         grid_jpeg   
+208          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           rwmr         grid_jpeg   
+209          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           rwmr         grid_jpeg   
+210          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           rwmr         grid_jpeg   
+211          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           rwmr         grid_jpeg   
+212          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           rwmr         grid_jpeg   
+213          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           rwmr         grid_jpeg   
+214          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           rwmr         grid_jpeg   
+215          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           rwmr         grid_jpeg   
+216          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           rwmr         grid_jpeg   
+217          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           icmr         grid_jpeg   
+218          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           icmr         grid_jpeg   
+219          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           icmr         grid_jpeg   
+220          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           icmr         grid_jpeg   
+221          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           icmr         grid_jpeg   
+222          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           icmr         grid_jpeg   
+223          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           icmr         grid_jpeg   
+224          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           icmr         grid_jpeg   
+225          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           icmr         grid_jpeg   
+226          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           icmr         grid_jpeg   
+227          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           icmr         grid_jpeg   
+228          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           icmr         grid_jpeg   
+229          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           icmr         grid_jpeg   
+230          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           icmr         grid_jpeg   
+231          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           icmr         grid_jpeg   
+232          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           icmr         grid_jpeg   
+233          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           icmr         grid_jpeg   
+234          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           icmr         grid_jpeg   
+235          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           icmr         grid_jpeg   
+236          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           icmr         grid_jpeg   
+237          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           icmr         grid_jpeg   
+238          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           snmr         grid_jpeg   
+239          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           snmr         grid_jpeg   
+240          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           snmr         grid_jpeg   
+241          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           snmr         grid_jpeg   
+242          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           snmr         grid_jpeg   
+243          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           snmr         grid_jpeg   
+244          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           snmr         grid_jpeg   
+245          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           snmr         grid_jpeg   
+246          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           snmr         grid_jpeg   
+247          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           snmr         grid_jpeg   
+248          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           snmr         grid_jpeg   
+249          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           snmr         grid_jpeg   
+250          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           snmr         grid_jpeg   
+251          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           snmr         grid_jpeg   
+252          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           snmr         grid_jpeg   
+253          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           snmr         grid_jpeg   
+254          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           snmr         grid_jpeg   
+255          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           snmr         grid_jpeg   
+256          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           snmr         grid_jpeg   
+257          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           snmr         grid_jpeg   
+258          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           snmr         grid_jpeg   
+259          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           grle         grid_jpeg   
+260          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           grle         grid_jpeg   
+261          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           grle         grid_jpeg   
+262          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           grle         grid_jpeg   
+263          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           grle         grid_jpeg   
+264          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           grle         grid_jpeg   
+265          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           grle         grid_jpeg   
+266          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           grle         grid_jpeg   
+267          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           grle         grid_jpeg   
+268          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           grle         grid_jpeg   
+269          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           grle         grid_jpeg   
+270          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           grle         grid_jpeg   
+271          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           grle         grid_jpeg   
+272          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           grle         grid_jpeg   
+273          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           grle         grid_jpeg   
+274          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           grle         grid_jpeg   
+275          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           grle         grid_jpeg   
+276          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           grle         grid_jpeg   
+277          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           grle         grid_jpeg   
+278          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           grle         grid_jpeg   
+279          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           grle         grid_jpeg   
+280          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           ccl          grid_jpeg   
+281          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           ccl          grid_jpeg   
+282          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           ccl          grid_jpeg   
+283          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           ccl          grid_jpeg   
+284          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           ccl          grid_jpeg   
+285          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           ccl          grid_jpeg   
+286          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           ccl          grid_jpeg   
+287          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           ccl          grid_jpeg   
+288          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           ccl          grid_jpeg   
+289          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           ccl          grid_jpeg   
+290          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           ccl          grid_jpeg   
+291          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           ccl          grid_jpeg   
+292          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           ccl          grid_jpeg   
+293          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           ccl          grid_jpeg   
+294          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           ccl          grid_jpeg   
+295          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           ccl          grid_jpeg   
+296          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           ccl          grid_jpeg   
+297          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           ccl          grid_jpeg   
+298          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           ccl          grid_jpeg   
+299          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           ccl          grid_jpeg   
+300          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           ccl          grid_jpeg   
+301          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           r            grid_jpeg   
+302          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           r            grid_jpeg   
+303          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           r            grid_jpeg   
+304          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           r            grid_jpeg   
+305          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           r            grid_jpeg   
+306          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           r            grid_jpeg   
+307          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           r            grid_jpeg   
+308          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           r            grid_jpeg   
+309          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           r            grid_jpeg   
+310          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           r            grid_jpeg   
+311          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           r            grid_jpeg   
+312          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           r            grid_jpeg   
+313          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           r            grid_jpeg   
+314          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           r            grid_jpeg   
+315          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           r            grid_jpeg   
+316          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           r            grid_jpeg   
+317          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           r            grid_jpeg   
+318          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           r            grid_jpeg   
+319          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           r            grid_jpeg   
+320          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           r            grid_jpeg   
+321          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           r            grid_jpeg   
+322          2            babj         20260725     fc           regular_ll   heightAboveGround  2            24           2r           grid_jpeg   
+323          2            babj         20260725     fc           regular_ll   heightAboveGround  2            24           2d           grid_jpeg   
+324          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           d            grid_jpeg   
+325          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           d            grid_jpeg   
+326          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           d            grid_jpeg   
+327          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           d            grid_jpeg   
+328          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           d            grid_jpeg   
+329          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           unknown      grid_jpeg   
+330          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           unknown      grid_jpeg   
+331          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           unknown      grid_jpeg   
+332          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           dpt          grid_jpeg   
+333          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           dpt          grid_jpeg   
+334          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           dpt          grid_jpeg   
+335          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           dpt          grid_jpeg   
+336          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           dpt          grid_jpeg   
+337          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           dpt          grid_jpeg   
+338          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           dpt          grid_jpeg   
+339          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           dpt          grid_jpeg   
+340          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           dpt          grid_jpeg   
+341          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           dpt          grid_jpeg   
+342          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           dpt          grid_jpeg   
+343          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           dpt          grid_jpeg   
+344          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           dpt          grid_jpeg   
+345          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           dpt          grid_jpeg   
+346          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           dpt          grid_jpeg   
+347          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           dpt          grid_jpeg   
+348          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           dpt          grid_jpeg   
+349          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           dpt          grid_jpeg   
+350          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           dpt          grid_jpeg   
+351          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           dpt          grid_jpeg   
+352          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           dpt          grid_jpeg   
+353          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           unknown      grid_jpeg   
+354          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           unknown      grid_jpeg   
+355          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           unknown      grid_jpeg   
+356          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           papt         grid_jpeg   
+357          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           papt         grid_jpeg   
+358          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           papt         grid_jpeg   
+359          2            babj         20260725     fc           regular_ll   meanSea      0            24           kx           grid_jpeg   
+360          2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+361          2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+362          2            babj         20260725     fc           regular_ll   surface      0            24           pli          grid_jpeg   
+363          2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+364          2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+365          2            babj         20260725     fc           regular_ll   heightAboveGroundLayer  1000         24           vwsh         grid_jpeg   
+366          2            babj         20260725     fc           regular_ll   heightAboveGroundLayer  3000         24           vwsh         grid_jpeg   
+367          2            babj         20260725     fc           regular_ll   heightAboveGroundLayer  6000         24           vwsh         grid_jpeg   
+368          2            babj         20260725     fc           regular_ll   surface      0            24           bli          grid_jpeg   
+369          2            babj         20260725     fc           regular_ll   isobaricInhPa  1000         24           unknown      grid_jpeg   
+370          2            babj         20260725     fc           regular_ll   isobaricInhPa  975          24           unknown      grid_jpeg   
+371          2            babj         20260725     fc           regular_ll   isobaricInhPa  950          24           unknown      grid_jpeg   
+372          2            babj         20260725     fc           regular_ll   isobaricInhPa  925          24           unknown      grid_jpeg   
+373          2            babj         20260725     fc           regular_ll   isobaricInhPa  900          24           unknown      grid_jpeg   
+374          2            babj         20260725     fc           regular_ll   isobaricInhPa  850          24           unknown      grid_jpeg   
+375          2            babj         20260725     fc           regular_ll   isobaricInhPa  800          24           unknown      grid_jpeg   
+376          2            babj         20260725     fc           regular_ll   isobaricInhPa  750          24           unknown      grid_jpeg   
+377          2            babj         20260725     fc           regular_ll   isobaricInhPa  700          24           unknown      grid_jpeg   
+378          2            babj         20260725     fc           regular_ll   isobaricInhPa  650          24           unknown      grid_jpeg   
+379          2            babj         20260725     fc           regular_ll   isobaricInhPa  600          24           unknown      grid_jpeg   
+380          2            babj         20260725     fc           regular_ll   isobaricInhPa  550          24           unknown      grid_jpeg   
+381          2            babj         20260725     fc           regular_ll   isobaricInhPa  500          24           unknown      grid_jpeg   
+382          2            babj         20260725     fc           regular_ll   isobaricInhPa  450          24           unknown      grid_jpeg   
+383          2            babj         20260725     fc           regular_ll   isobaricInhPa  400          24           unknown      grid_jpeg   
+384          2            babj         20260725     fc           regular_ll   isobaricInhPa  350          24           unknown      grid_jpeg   
+385          2            babj         20260725     fc           regular_ll   isobaricInhPa  300          24           unknown      grid_jpeg   
+386          2            babj         20260725     fc           regular_ll   isobaricInhPa  250          24           unknown      grid_jpeg   
+387          2            babj         20260725     fc           regular_ll   isobaricInhPa  200          24           unknown      grid_jpeg   
+388          2            babj         20260725     fc           regular_ll   isobaricInhPa  150          24           unknown      grid_jpeg   
+389          2            babj         20260725     fc           regular_ll   isobaricInhPa  100          24           unknown      grid_jpeg   
+390          2            babj         20260725     fc           regular_ll   heightAboveGroundLayer  1000         24           hlcy         grid_jpeg   
+391          2            babj         20260725     fc           regular_ll   heightAboveGroundLayer  3000         24           hlcy         grid_jpeg   
+392          2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+393          2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+394          2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+395          2            babj         20260725     fc           regular_ll   atmosphere   0            24           pwat         grid_jpeg   
+396          2            babj         20260725     fc           regular_ll   surface      0            24           vis          grid_jpeg   
+397          2            babj         20260725     fc           regular_ll   heightAboveGround  10           24           i10fg        grid_jpeg   
+398          2            babj         20260725     fc           regular_ll   surface      0            24           ptype        grid_jpeg   
+399          2            babj         20260725     fc           regular_ll   surface      0            24           cdct         grid_jpeg   
+400          2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+401          2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+402          2            babj         20260725     fc           regular_ll   surface      0            24           unknown      grid_jpeg   
+402 of 402 messages in /home/wangdp/project/cedarkit/notebook-project/notebook-devel/ref/data-notebook-project/data-notebook/data/cma-meso-1km/grib2/orig/Z_NAFP_C_BABJ_20260725000000_P_CEMC-CMA-MESO-1KM-ORIG-02400.grb2
+
+402 of 402 total messages in 1 files
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./cemc/cma-meso-1km"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../cma-gfs/param-set-11.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GFS要素清单：851-861</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="param-set-01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">MESO要素清单：1-10</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">要素列表</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By cmec-oper
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

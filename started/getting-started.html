@@ -1,0 +1,1886 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>开始使用 &#8212; CEMC Data Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'started/getting-started';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CMA-GFS" href="../cemc/cma-gfs/index.html" />
+    <link rel="prev" title="CEMC数据指南" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CEMC Data Guide</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    CEMC数据指南
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">快速开始</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">开始使用</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CEMC数据</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cemc/cma-gfs/index.html">CMA-GFS</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-gfs/param-set-01.html">GFS要素清单：1-5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-gfs/param-set-02.html">GFS要素清单：6-21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-gfs/param-set-03.html">GFS要素清单：22-45</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-gfs/param-set-04.html">GFS要素清单：46-63</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-gfs/param-set-05.html">GFS要素清单：64-223</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-gfs/param-set-06.html">GFS要素清单：224-463</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-gfs/param-set-07.html">GFS要素清单：454-471</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-gfs/param-set-08.html">GFS要素清单：472-773</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-gfs/param-set-09.html">GFS要素清单：774-784</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-gfs/param-set-10.html">GFS要素清单：785-850</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-gfs/param-set-11.html">GFS要素清单：851-861</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cemc/cma-meso-1km/index.html">CMA-MESO 1KM</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-meso-1km/param-set-01.html">MESO要素清单：1-10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-meso-1km/param-set-02.html">MESO要素清单：11-21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-meso-1km/param-set-03.html">MESO要素清单：22-30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-meso-1km/param-set-04.html">MESO要素清单：31-48</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-meso-1km/param-set-05.html">MESO要素清单：49-153</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-meso-1km/param-set-06.html">MESO要素清单：154-279</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-meso-1km/param-set-07.html">MESO要素清单：280-323</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-meso-1km/param-set-08.html">MESO要素清单：324-358</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-meso-1km/param-set-09.html">MESO要素清单：359-368</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cemc/cma-meso-1km/param-set-10.html">MESO要素清单：369-402</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cemc-oper/data-notebook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cemc-oper/data-notebook/issues/new?title=Issue%20on%20page%20%2Fstarted/getting-started.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/started/getting-started.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>开始使用</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">拷贝系统数据</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">本地数据目录</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">下载数据</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">本地数据文件</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reki-grib2">使用 reki 加载 GRIB2 数据</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">加载区域模式数据</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>开始使用<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>data-notebook 的示例使用项目本地数据目录 <code class="docutils literal notranslate"><span class="pre">data/</span></code> 中的数据文件，不直接访问 CMADAAS 挂载点。本节介绍：</p>
+<ul class="simple">
+<li><p>如何使用 <code class="docutils literal notranslate"><span class="pre">data-notebook</span></code> 命令将 CMADAAS 业务系统数据拷贝到本地数据目录；</p></li>
+<li><p>如何使用 reki 加载已下载的 GRIB2 数据。</p></li>
+</ul>
+<section id="id2">
+<h2>拷贝系统数据<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>本地数据目录<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>数据按系统分目录保存在项目根目录的 <code class="docutils literal notranslate"><span class="pre">data/</span></code> 目录下，每个系统目录中的 <code class="docutils literal notranslate"><span class="pre">metadata.yaml</span></code> 记录了数据文件信息（起报时次、预报时效、文件列表等）：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>data/
+├── cma-gfs/
+│   ├── metadata.yaml
+│   └── grib2/orig/Z_NAFP_C_BABJ_..._02400.grib2
+└── cma-meso-1km/
+    ├── metadata.yaml
+    └── grib2/orig/Z_NAFP_C_BABJ_..._02400.grb2
+</pre></div>
+</div>
+<p>目前支持的系统：</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>系统标识</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cma-gfs</span></code></p></td>
+<td><p>CMA-GFS 全球模式原始分辨率 GRIB2 产品</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cma-meso-1km</span></code></p></td>
+<td><p>CMA-MESO 1km 区域模式 GRIB2 产品</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id4">
+<h3>下载数据<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>数据下载为手动操作，需要在挂载了 CMADAAS（如 <code class="docutils literal notranslate"><span class="pre">/CMADAAS</span></code>）的环境中执行。下载命令使用 reki 的 <code class="docutils literal notranslate"><span class="pre">find_local_file</span></code> 在 CMADAAS 目录中定位文件，拷贝到本地 <code class="docutils literal notranslate"><span class="pre">data/&lt;system&gt;/</span></code> 目录，并生成 <code class="docutils literal notranslate"><span class="pre">metadata.yaml</span></code>。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 下载 CMA-GFS 数据（默认：当前 UTC 时间前 2 天的 00 时起报，24h 时效）</span>
+uv<span class="w"> </span>run<span class="w"> </span>data-notebook<span class="w"> </span>data<span class="w"> </span>download<span class="w"> </span>cma-gfs
+
+<span class="c1"># 下载 CMA-MESO 1km 数据</span>
+uv<span class="w"> </span>run<span class="w"> </span>data-notebook<span class="w"> </span>data<span class="w"> </span>download<span class="w"> </span>cma-meso-1km
+</pre></div>
+</div>
+<p>常用选项：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 指定起报时次（YYYYMMDDHH）和预报时效</span>
+uv<span class="w"> </span>run<span class="w"> </span>data-notebook<span class="w"> </span>data<span class="w"> </span>download<span class="w"> </span>cma-gfs<span class="w"> </span>--start-time<span class="w"> </span><span class="m">2026072500</span><span class="w"> </span>--forecast-time<span class="w"> </span>24h
+
+<span class="c1"># 指定 CMADAAS 挂载点（默认 /CMADAAS）</span>
+uv<span class="w"> </span>run<span class="w"> </span>data-notebook<span class="w"> </span>data<span class="w"> </span>download<span class="w"> </span>cma-gfs<span class="w"> </span>--storage-base<span class="w"> </span>/path/to/cmadaas
+
+<span class="c1"># 覆盖已存在的本地文件</span>
+uv<span class="w"> </span>run<span class="w"> </span>data-notebook<span class="w"> </span>data<span class="w"> </span>download<span class="w"> </span>cma-gfs<span class="w"> </span>--force
+</pre></div>
+</div>
+<p>查看已下载的数据：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>run<span class="w"> </span>data-notebook<span class="w"> </span>data<span class="w"> </span>list
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>数据根目录默认为项目根目录下的 <code class="docutils literal notranslate"><span class="pre">data/</span></code>，可用环境变量 <code class="docutils literal notranslate"><span class="pre">DATA_NOTEBOOK_DATA_ROOT</span></code> 覆盖。</p>
+</div>
+</section>
+</section>
+<section id="id5">
+<h2>本地数据文件<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Notebook 通过 <code class="docutils literal notranslate"><span class="pre">data_notebook.data</span></code> 模块访问本地数据。</p>
+<p>获取本地数据根目录：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">data_notebook.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_data_root</span>
+
+<span class="n">data_root</span> <span class="o">=</span> <span class="n">get_data_root</span><span class="p">()</span>
+<span class="n">data_root</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/home/wangdp/project/cedarkit/notebook-project/notebook-devel/ref/data-notebook-project/data-notebook/data&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">load_metadata</span></code> 函数读取系统目录中的 <code class="docutils literal notranslate"><span class="pre">metadata.yaml</span></code>，返回起报时次、预报时效和文件列表等数据信息：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">data_notebook.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_metadata</span>
+
+<span class="n">metadata</span> <span class="o">=</span> <span class="n">load_metadata</span><span class="p">(</span><span class="s2">&quot;cma-gfs&quot;</span><span class="p">)</span>
+<span class="n">metadata</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;system&#39;: &#39;cma-gfs&#39;,
+ &#39;description&#39;: &#39;CMA-GFS 全球模式原始分辨率 GRIB2 产品&#39;,
+ &#39;data_type&#39;: &#39;cma_gfs_gmf/grib2/orig&#39;,
+ &#39;source&#39;: {&#39;data_class&#39;: &#39;cmadaas&#39;, &#39;storage_base&#39;: &#39;/CMADAAS&#39;},
+ &#39;query&#39;: {&#39;start_time&#39;: &#39;2026072500&#39;, &#39;forecast_time&#39;: &#39;24h&#39;},
+ &#39;downloaded_at&#39;: &#39;2026-07-27T06:46:09+00:00&#39;,
+ &#39;files&#39;: [{&#39;path&#39;: &#39;grib2/orig/Z_NAFP_C_BABJ_20260725000000_P_NWPC-GRAPES-GFS-GLB-02400.grib2&#39;,
+   &#39;source_path&#39;: &#39;/CMADAAS/DATA/NAFP/NMC/GRAPES-GFS-GLB/2026/20260725/Z_NAFP_C_BABJ_20260725000000_P_NWPC-GRAPES-GFS-GLB-02400.grib2&#39;,
+   &#39;size&#39;: 1523461412}]}
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">get_data_file</span></code> 函数从 <code class="docutils literal notranslate"><span class="pre">metadata.yaml</span></code> 中获取数据文件的绝对路径。下面示例获取 CMA-GFS 系统原始分辨率 GRIB2 文件的本地路径：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">data_notebook.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_data_file</span>
+
+<span class="n">gfs_grib2_file_path</span> <span class="o">=</span> <span class="n">get_data_file</span><span class="p">(</span><span class="s2">&quot;cma-gfs&quot;</span><span class="p">)</span>
+<span class="n">gfs_grib2_file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/home/wangdp/project/cedarkit/notebook-project/notebook-devel/ref/data-notebook-project/data-notebook/data/cma-gfs/grib2/orig/Z_NAFP_C_BABJ_20260725000000_P_NWPC-GRAPES-GFS-GLB-02400.grib2&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reki-grib2">
+<h2>使用 reki 加载 GRIB2 数据<a class="headerlink" href="#reki-grib2" title="Link to this heading">#</a></h2>
+<p>reki 使用 ecCodes 从 GRIB2 文件中检索要素场，并返回 <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> 对象。</p>
+<p>下面示例从已下载的 CMA-GFS GRIB2 产品文件中加载 850hPa 温度场。其中：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code> 参数表示要素名称，<code class="docutils literal notranslate"><span class="pre">t</span></code> 代表温度</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">level_type</span></code> 参数表示层次类型，<code class="docutils literal notranslate"><span class="pre">pl</span></code> 代表等压面层，单位 hPa</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">level</span></code> 参数表示层次值</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">reki.format.grib.eccodes</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_field_from_file</span>
+
+<span class="n">field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">gfs_grib2_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;pl&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">850</span><span class="p">,</span>
+    <span class="n">lazy</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="n">field</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/wangdp/project/cedarkit/notebook-project/notebook-devel/ref/data-notebook-project/data-notebook/.venv/lib/python3.14/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.42.0 or higher is recommended. You are running version 2.34.1
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in notebooks */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+  line-height: 1.6;
+  padding-bottom: 4px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.xr-header {
+  border-bottom: solid 1px var(--xr-border-color);
+  margin-bottom: 4px;
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-obj-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type,
+.xr-group-box-contents > label {
+  color: var(--xr-font-color2);
+  display: block;
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item > input,
+.xr-group-box-contents > input,
+.xr-array-wrap > input {
+  display: block;
+  opacity: 0;
+  height: 0;
+  margin: 0;
+}
+
+.xr-section-item > input + label,
+.xr-var-item > input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item > input:enabled + label,
+.xr-var-item > input:enabled + label,
+.xr-array-wrap > input:enabled + label,
+.xr-group-box-contents > input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item > input:focus-visible + label,
+.xr-var-item > input:focus-visible + label,
+.xr-array-wrap > input:focus-visible + label,
+.xr-group-box-contents > input:focus-visible + label {
+  outline: auto;
+}
+
+.xr-section-item > input:enabled + label:hover,
+.xr-var-item > input:enabled + label:hover,
+.xr-array-wrap > input:enabled + label:hover,
+.xr-group-box-contents > input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.xr-section-summary > em {
+  font-weight: normal;
+}
+
+.xr-span-grid {
+  grid-column-end: -1;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.3em;
+}
+
+.xr-group-box-contents > input:checked + label > span {
+  display: inline-block;
+  padding-left: 0.6em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details,
+.xr-group-box-contents > label {
+  padding-top: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in ~ .xr-section-details {
+  display: none;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-children {
+  display: inline-grid;
+  grid-template-columns: 100%;
+  grid-column: 1 / -1;
+  padding-top: 4px;
+}
+
+.xr-group-box {
+  display: inline-grid;
+  grid-template-columns: 0px 30px auto;
+}
+
+.xr-group-box-vline {
+  grid-column-start: 1;
+  border-right: 0.2em solid;
+  border-color: var(--xr-border-color);
+  width: 0px;
+}
+
+.xr-group-box-hline {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  height: 1em;
+  width: 26px;
+  border-bottom: 0.2em solid;
+  border-color: var(--xr-border-color);
+}
+
+.xr-group-box-contents {
+  grid-column-start: 3;
+  padding-bottom: 4px;
+}
+
+.xr-group-box-contents > label::before {
+  content: "📂";
+  padding-right: 0.3em;
+}
+
+.xr-group-box-contents > input:checked + label::before {
+  content: "📁";
+}
+
+.xr-group-box-contents > input:checked + label {
+  padding-bottom: 0px;
+}
+
+.xr-group-box-contents > input:checked ~ .xr-sections {
+  display: none;
+}
+
+.xr-group-box-contents > input + label > span {
+  display: none;
+}
+
+.xr-group-box-ellipsis {
+  font-size: 1.4em;
+  font-weight: 900;
+  color: var(--xr-font-color2);
+  letter-spacing: 0.15em;
+  cursor: default;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;t&#x27; (latitude: 1440, longitude: 2880)&gt; Size: 33MB
+[4147200 values with dtype=float64]
+Coordinates:
+  * latitude    (latitude) float64 12kB 89.94 89.81 89.69 ... -89.81 -89.94
+  * longitude   (longitude) float64 23kB 0.0 0.125 0.25 ... 359.6 359.8 359.9
+    time        datetime64[us] 8B 2026-07-25
+    step        timedelta64[us] 8B 1 days
+    valid_time  datetime64[us] 8B 2026-07-26
+    pl          float64 8B 850.0
+Attributes: (12/24)
+    GRIB_edition:                         2
+    GRIB_centre:                          babj
+    GRIB_subCentre:                       0
+    GRIB_tablesVersion:                   4
+    GRIB_localTablesVersion:              0
+    GRIB_dataType:                        fc
+    ...                                   ...
+    GRIB_parameterCategory:               0
+    GRIB_parameterNumber:                 0
+    long_name:                            Temperature
+    cemc_name:                            t
+    eccodes_name:                         t
+    wgrib2_name:                          TMP</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-obj-name'>&#x27;t&#x27;</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1440</li><li><span class='xr-has-index'>longitude</span>: 2880</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-61534adf-5ede-4714-9c8c-abd103fa12f8' class='xr-array-in' type='checkbox' checked><label for='section-61534adf-5ede-4714-9c8c-abd103fa12f8' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[4147200 values with dtype=float64]</pre></div></div></li><li class='xr-section-item'><input id='section-642ef730-e9ff-4a46-a329-0d329e6f2564' class='xr-section-summary-in' type='checkbox' checked /><label for='section-642ef730-e9ff-4a46-a329-0d329e6f2564' class='xr-section-summary' title='Expand/collapse section'>Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>89.94 89.81 89.69 ... -89.81 -89.94</div><input id='attrs-998ebf21-7ea2-4ab9-9da7-73d35211e9dd' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-998ebf21-7ea2-4ab9-9da7-73d35211e9dd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-97aac8e1-070e-4995-90ea-5f6c185657cd' class='xr-var-data-in' type='checkbox'><label for='data-97aac8e1-070e-4995-90ea-5f6c185657cd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([ 89.9375,  89.8125,  89.6875, ..., -89.6875, -89.8125, -89.9375],
+      shape=(1440,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.125 0.25 ... 359.8 359.9</div><input id='attrs-f1fdbf32-691d-43e1-a96d-540e26679a16' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f1fdbf32-691d-43e1-a96d-540e26679a16' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fb36c9f0-a105-452b-9c3b-e5473f71773b' class='xr-var-data-in' type='checkbox'><label for='data-fb36c9f0-a105-452b-9c3b-e5473f71773b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd></dl></div><div class='xr-var-data'><pre>array([0.00000e+00, 1.25000e-01, 2.50000e-01, ..., 3.59625e+02, 3.59750e+02,
+       3.59875e+02], shape=(2880,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[us]</div><div class='xr-var-preview xr-preview'>2026-07-25</div><input id='attrs-9a4aa7e7-d442-4285-b72e-e0667262ed38' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9a4aa7e7-d442-4285-b72e-e0667262ed38' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-44ac98d7-5318-48ce-853b-4acfa241eb4a' class='xr-var-data-in' type='checkbox'><label for='data-44ac98d7-5318-48ce-853b-4acfa241eb4a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2026-07-25T00:00:00.000000&#x27;, dtype=&#x27;datetime64[us]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>step</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>timedelta64[us]</div><div class='xr-var-preview xr-preview'>1 days</div><input id='attrs-5f24c0a1-49da-40ea-bd35-c8e8790d8efa' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-5f24c0a1-49da-40ea-bd35-c8e8790d8efa' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0b5026c7-3ba4-4d3f-969f-ed567ac1d83a' class='xr-var-data-in' type='checkbox'><label for='data-0b5026c7-3ba4-4d3f-969f-ed567ac1d83a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(86400000000, dtype=&#x27;timedelta64[us]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[us]</div><div class='xr-var-preview xr-preview'>2026-07-26</div><input id='attrs-7a63385e-bc52-4e8a-b4cc-ff6ac80af560' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-7a63385e-bc52-4e8a-b4cc-ff6ac80af560' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5f9e8a8e-1f6d-420c-b9b8-9b5ffb892586' class='xr-var-data-in' type='checkbox'><label for='data-5f9e8a8e-1f6d-420c-b9b8-9b5ffb892586' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2026-07-26T00:00:00.000000&#x27;, dtype=&#x27;datetime64[us]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>pl</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>850.0</div><input id='attrs-0ccf97ef-0497-47a1-9866-6158827aa0f6' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-0ccf97ef-0497-47a1-9866-6158827aa0f6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-91d639b9-4e7c-495b-a604-c7b82ad48766' class='xr-var-data-in' type='checkbox'><label for='data-91d639b9-4e7c-495b-a604-c7b82ad48766' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(850.)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-66a73f18-2e35-4081-9321-7e81a2bfc9b1' class='xr-section-summary-in' type='checkbox' /><label for='section-66a73f18-2e35-4081-9321-7e81a2bfc9b1' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(24)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>GRIB_edition :</span></dt><dd>2</dd><dt><span>GRIB_centre :</span></dt><dd>babj</dd><dt><span>GRIB_subCentre :</span></dt><dd>0</dd><dt><span>GRIB_tablesVersion :</span></dt><dd>4</dd><dt><span>GRIB_localTablesVersion :</span></dt><dd>0</dd><dt><span>GRIB_dataType :</span></dt><dd>fc</dd><dt><span>GRIB_dataDate :</span></dt><dd>20260725</dd><dt><span>GRIB_dataTime :</span></dt><dd>0</dd><dt><span>GRIB_validityDate :</span></dt><dd>20260726</dd><dt><span>GRIB_validityTime :</span></dt><dd>0</dd><dt><span>GRIB_step :</span></dt><dd>24</dd><dt><span>GRIB_stepType :</span></dt><dd>instant</dd><dt><span>GRIB_stepUnits :</span></dt><dd>1</dd><dt><span>GRIB_stepRange :</span></dt><dd>24</dd><dt><span>GRIB_endStep:int :</span></dt><dd>24</dd><dt><span>GRIB_indicatorOfUnitOfTimeRange:int :</span></dt><dd>1</dd><dt><span>GRIB_count :</span></dt><dd>109</dd><dt><span>GRIB_discipline :</span></dt><dd>0</dd><dt><span>GRIB_parameterCategory :</span></dt><dd>0</dd><dt><span>GRIB_parameterNumber :</span></dt><dd>0</dd><dt><span>long_name :</span></dt><dd>Temperature</dd><dt><span>cemc_name :</span></dt><dd>t</dd><dt><span>eccodes_name :</span></dt><dd>t</dd><dt><span>wgrib2_name :</span></dt><dd>TMP</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<p>可以使用 xarray 提供的一系列功能对要素场进行分析。比如使用 <code class="docutils literal notranslate"><span class="pre">xarray.DataArray.plot()</span></code> 函数实现快速绘图：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">field</span> <span class="o">-</span> <span class="mf">273.15</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x757e09d530e0&gt;
+</pre></div>
+</div>
+<img alt="../_images/e41bcf05a18f13d05e1bb9c777bf3f09df67fbfb134a9703a90eb9b597c26989.png" src="../_images/e41bcf05a18f13d05e1bb9c777bf3f09df67fbfb134a9703a90eb9b597c26989.png" />
+</div>
+</div>
+<section id="id6">
+<h3>加载区域模式数据<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>同样的方法也适用于其他系统已下载的数据。下面示例从 CMA-MESO 1km 的 GRIB2 文件中加载 2 米温度场，其中 <code class="docutils literal notranslate"><span class="pre">heightAboveGround</span></code> 表示距地面高度层，单位米：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meso_grib2_file_path</span> <span class="o">=</span> <span class="n">get_data_file</span><span class="p">(</span><span class="s2">&quot;cma-meso-1km&quot;</span><span class="p">)</span>
+
+<span class="n">meso_field</span> <span class="o">=</span> <span class="n">load_field_from_file</span><span class="p">(</span>
+    <span class="n">meso_grib2_file_path</span><span class="p">,</span>
+    <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span>
+    <span class="n">level_type</span><span class="o">=</span><span class="s2">&quot;heightAboveGround&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">lazy</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="n">meso_field</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in notebooks */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+  line-height: 1.6;
+  padding-bottom: 4px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.xr-header {
+  border-bottom: solid 1px var(--xr-border-color);
+  margin-bottom: 4px;
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-obj-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type,
+.xr-group-box-contents > label {
+  color: var(--xr-font-color2);
+  display: block;
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item > input,
+.xr-group-box-contents > input,
+.xr-array-wrap > input {
+  display: block;
+  opacity: 0;
+  height: 0;
+  margin: 0;
+}
+
+.xr-section-item > input + label,
+.xr-var-item > input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item > input:enabled + label,
+.xr-var-item > input:enabled + label,
+.xr-array-wrap > input:enabled + label,
+.xr-group-box-contents > input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item > input:focus-visible + label,
+.xr-var-item > input:focus-visible + label,
+.xr-array-wrap > input:focus-visible + label,
+.xr-group-box-contents > input:focus-visible + label {
+  outline: auto;
+}
+
+.xr-section-item > input:enabled + label:hover,
+.xr-var-item > input:enabled + label:hover,
+.xr-array-wrap > input:enabled + label:hover,
+.xr-group-box-contents > input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.xr-section-summary > em {
+  font-weight: normal;
+}
+
+.xr-span-grid {
+  grid-column-end: -1;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.3em;
+}
+
+.xr-group-box-contents > input:checked + label > span {
+  display: inline-block;
+  padding-left: 0.6em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details,
+.xr-group-box-contents > label {
+  padding-top: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in ~ .xr-section-details {
+  display: none;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-children {
+  display: inline-grid;
+  grid-template-columns: 100%;
+  grid-column: 1 / -1;
+  padding-top: 4px;
+}
+
+.xr-group-box {
+  display: inline-grid;
+  grid-template-columns: 0px 30px auto;
+}
+
+.xr-group-box-vline {
+  grid-column-start: 1;
+  border-right: 0.2em solid;
+  border-color: var(--xr-border-color);
+  width: 0px;
+}
+
+.xr-group-box-hline {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  height: 1em;
+  width: 26px;
+  border-bottom: 0.2em solid;
+  border-color: var(--xr-border-color);
+}
+
+.xr-group-box-contents {
+  grid-column-start: 3;
+  padding-bottom: 4px;
+}
+
+.xr-group-box-contents > label::before {
+  content: "📂";
+  padding-right: 0.3em;
+}
+
+.xr-group-box-contents > input:checked + label::before {
+  content: "📁";
+}
+
+.xr-group-box-contents > input:checked + label {
+  padding-bottom: 0px;
+}
+
+.xr-group-box-contents > input:checked ~ .xr-sections {
+  display: none;
+}
+
+.xr-group-box-contents > input + label > span {
+  display: none;
+}
+
+.xr-group-box-ellipsis {
+  font-size: 1.4em;
+  font-weight: 900;
+  color: var(--xr-font-color2);
+  letter-spacing: 0.15em;
+  cursor: default;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;t&#x27; (latitude: 5011, longitude: 7501)&gt; Size: 301MB
+[37587511 values with dtype=float64]
+Coordinates:
+  * latitude           (latitude) float64 40kB 60.1 60.09 60.08 ... 10.01 10.0
+  * longitude          (longitude) float64 60kB 70.0 70.01 70.02 ... 145.0 145.0
+    time               datetime64[us] 8B 2026-07-25
+    step               timedelta64[us] 8B 1 days
+    valid_time         datetime64[us] 8B 2026-07-26
+    heightAboveGround  int64 8B 2
+Attributes: (12/24)
+    GRIB_edition:                         2
+    GRIB_centre:                          babj
+    GRIB_subCentre:                       0
+    GRIB_tablesVersion:                   4
+    GRIB_localTablesVersion:              0
+    GRIB_dataType:                        fc
+    ...                                   ...
+    GRIB_parameterCategory:               0
+    GRIB_parameterNumber:                 0
+    long_name:                            2 metre temperature
+    cemc_name:                            t2m
+    eccodes_name:                         2t
+    wgrib2_name:                          TMP</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-obj-name'>&#x27;t&#x27;</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 5011</li><li><span class='xr-has-index'>longitude</span>: 7501</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-33e2c496-88b3-446f-acdc-30834d396a73' class='xr-array-in' type='checkbox' checked><label for='section-33e2c496-88b3-446f-acdc-30834d396a73' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[37587511 values with dtype=float64]</pre></div></div></li><li class='xr-section-item'><input id='section-b8f37af6-1549-4684-a949-1301042e43a9' class='xr-section-summary-in' type='checkbox' checked /><label for='section-b8f37af6-1549-4684-a949-1301042e43a9' class='xr-section-summary' title='Expand/collapse section'>Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>60.1 60.09 60.08 ... 10.01 10.0</div><input id='attrs-b9aaa8fe-d820-47bf-8f08-05bea5d98445' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b9aaa8fe-d820-47bf-8f08-05bea5d98445' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9f12b172-7e45-4c7c-897b-796c59b263db' class='xr-var-data-in' type='checkbox'><label for='data-9f12b172-7e45-4c7c-897b-796c59b263db' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([60.099998, 60.089998, 60.079998, ..., 10.02    , 10.01    , 10.      ],
+      shape=(5011,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>70.0 70.01 70.02 ... 145.0 145.0</div><input id='attrs-aebcab12-bcf8-48d5-b81b-7ebd1b68339c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-aebcab12-bcf8-48d5-b81b-7ebd1b68339c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-29690810-2f23-4a5b-9a32-0daa7f9ccf25' class='xr-var-data-in' type='checkbox'><label for='data-29690810-2f23-4a5b-9a32-0daa7f9ccf25' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd></dl></div><div class='xr-var-data'><pre>array([ 70.  ,  70.01,  70.02, ..., 144.98, 144.99, 145.  ], shape=(7501,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[us]</div><div class='xr-var-preview xr-preview'>2026-07-25</div><input id='attrs-19adf47d-5fbe-4f85-ae53-43731071ca75' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-19adf47d-5fbe-4f85-ae53-43731071ca75' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bfdc1368-3720-4428-9cdb-816f3fcaf606' class='xr-var-data-in' type='checkbox'><label for='data-bfdc1368-3720-4428-9cdb-816f3fcaf606' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2026-07-25T00:00:00.000000&#x27;, dtype=&#x27;datetime64[us]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>step</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>timedelta64[us]</div><div class='xr-var-preview xr-preview'>1 days</div><input id='attrs-132952be-32ec-456f-8bf3-21781ab1e483' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-132952be-32ec-456f-8bf3-21781ab1e483' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ee80257c-b5db-4210-9945-403ce48d29e6' class='xr-var-data-in' type='checkbox'><label for='data-ee80257c-b5db-4210-9945-403ce48d29e6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(86400000000, dtype=&#x27;timedelta64[us]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[us]</div><div class='xr-var-preview xr-preview'>2026-07-26</div><input id='attrs-6bb6b63d-d386-4d22-8f22-1726a4250e34' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-6bb6b63d-d386-4d22-8f22-1726a4250e34' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-36dc308e-c61a-4df5-b263-22c27ddd9c1e' class='xr-var-data-in' type='checkbox'><label for='data-36dc308e-c61a-4df5-b263-22c27ddd9c1e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;2026-07-26T00:00:00.000000&#x27;, dtype=&#x27;datetime64[us]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>heightAboveGround</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>2</div><input id='attrs-fc25c748-d2dd-4f6c-bd14-52e8d5b0cccc' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-fc25c748-d2dd-4f6c-bd14-52e8d5b0cccc' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6c8fc54f-35f2-42e1-9195-543b1a9afed3' class='xr-var-data-in' type='checkbox'><label for='data-6c8fc54f-35f2-42e1-9195-543b1a9afed3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(2)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-fb452a04-e6aa-4b94-98f4-73a843a4d0ff' class='xr-section-summary-in' type='checkbox' /><label for='section-fb452a04-e6aa-4b94-98f4-73a843a4d0ff' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(24)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>GRIB_edition :</span></dt><dd>2</dd><dt><span>GRIB_centre :</span></dt><dd>babj</dd><dt><span>GRIB_subCentre :</span></dt><dd>0</dd><dt><span>GRIB_tablesVersion :</span></dt><dd>4</dd><dt><span>GRIB_localTablesVersion :</span></dt><dd>0</dd><dt><span>GRIB_dataType :</span></dt><dd>fc</dd><dt><span>GRIB_dataDate :</span></dt><dd>20260725</dd><dt><span>GRIB_dataTime :</span></dt><dd>0</dd><dt><span>GRIB_validityDate :</span></dt><dd>20260726</dd><dt><span>GRIB_validityTime :</span></dt><dd>0</dd><dt><span>GRIB_step :</span></dt><dd>24</dd><dt><span>GRIB_stepType :</span></dt><dd>instant</dd><dt><span>GRIB_stepUnits :</span></dt><dd>1</dd><dt><span>GRIB_stepRange :</span></dt><dd>24</dd><dt><span>GRIB_endStep:int :</span></dt><dd>24</dd><dt><span>GRIB_indicatorOfUnitOfTimeRange:int :</span></dt><dd>0</dd><dt><span>GRIB_count :</span></dt><dd>8</dd><dt><span>GRIB_discipline :</span></dt><dd>0</dd><dt><span>GRIB_parameterCategory :</span></dt><dd>0</dd><dt><span>GRIB_parameterNumber :</span></dt><dd>0</dd><dt><span>long_name :</span></dt><dd>2 metre temperature</dd><dt><span>cemc_name :</span></dt><dd>t2m</dd><dt><span>eccodes_name :</span></dt><dd>2t</dd><dt><span>wgrib2_name :</span></dt><dd>TMP</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<p>同样可以使用 <code class="docutils literal notranslate"><span class="pre">xarray.DataArray.plot()</span></code> 快速查看要素场分布：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">meso_field</span> <span class="o">-</span> <span class="mf">273.15</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x757e07bf8f50&gt;
+</pre></div>
+</div>
+<img alt="../_images/a067a7db2582b11f6496677773cbb50c33b9e56d7a9e78592c667ded297229e9.png" src="../_images/a067a7db2582b11f6496677773cbb50c33b9e56d7a9e78592c667ded297229e9.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./started"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CEMC数据指南</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../cemc/cma-gfs/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CMA-GFS</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">拷贝系统数据</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">本地数据目录</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">下载数据</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">本地数据文件</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reki-grib2">使用 reki 加载 GRIB2 数据</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">加载区域模式数据</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By cmec-oper
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
