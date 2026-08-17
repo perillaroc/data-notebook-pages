@@ -1,4 +1,4 @@
-build_time: 2026-07-29T16:35:47+08:00
+build_time: 2026-08-17T10:04:29+08:00
 src_repo: cemc-oper/data-notebook
-src_commit: 3cadaed27d086c88256f83498d5b1ccd2b7a4307
+src_commit: aba23a5d9ad37da8afe313f35ff1aab2d56c9be2
 src_branch: main

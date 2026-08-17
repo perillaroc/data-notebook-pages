@@ -1,0 +1,807 @@
+      序号               要素名  wgrib2  eccodes      GRIB key         单位  \
+0      1              rain    APCP  unknown     (0, 1, 8)         mm   
+1      2                sf   ASNOW  unknown    (0, 1, 29)          m   
+2      3                ts     TMP        t     (0, 0, 0)          K   
+3      4               glw   NLWRF      str     (0, 5, 5)       w/m2   
+4      5               gsw   NSWRF      ssr     (0, 4, 9)       w/m2   
+5      6                zs     HGT     orog     (0, 3, 5)        Gpm   
+6      7               q2m    SPFH      2sh     (0, 1, 0)      kg/kg   
+7      8               t2m     TMP       2t     (0, 0, 0)          K   
+8      9              u10m    UGRD      10u     (0, 2, 2)        m/s   
+9     10              v10m    VGRD      10v     (0, 2, 3)        m/s   
+10    11               tcc    TCDC      tcc     (0, 6, 1)          %   
+11    12               lcc    LCDC      lcc     (0, 6, 3)          %   
+12    13               mcc    MCDC      mcc     (0, 6, 4)          %   
+13    14               hcc    HCDC      hcc     (0, 6, 5)          %   
+14    15               tvw   TCIWV  unknown    (0, 1, 64)      kg/m2   
+15    16               tiw   TCOLI  unknown    (0, 1, 70)      kg/m2   
+16    17              pblh    HPBL      blh    (0, 3, 18)          m   
+17    18              cdbz      CR  unknown  (0, 16, 224)        dbz   
+18    19            wmax#1    DZDT       wz     (0, 2, 9)        m/s   
+19    20         u10mmax#1    UGRD      10u     (0, 2, 2)        m/s   
+20    21         v10mmax#1    VGRD      10v     (0, 2, 3)        m/s   
+21    22         cdbzmax#1      CR  unknown  (0, 16, 224)        dbz   
+22    23           echotop   RETOP  unknown    (0, 16, 3)          m   
+23    24  uhmax(2000-5000)    UPHL  unknown    (0, 7, 15)      m2/s2   
+24    25          rain5max     NaN  unknown   (0, 1, 241)         mm   
+25    26     shrmax(0-600)     NaN  unknown   (0, 2, 237)        m/s   
+26    27  shrmaxdir(0-600)     NaN  unknown   (0, 2, 238)     degree   
+27    28           dbzmaxh     NaN  unknown  (0, 16, 226)          m   
+28    29                ps    PRES       sp     (0, 3, 0)         Pa   
+29    30               psl   PRMSL    prmsl     (0, 3, 1)         Pa   
+30    31                 u    UGRD        u     (0, 2, 2)        m/s   
+31    32                 u    UGRD        u     (0, 2, 2)        m/s   
+32    33                 u    UGRD        u     (0, 2, 2)        m/s   
+33    34                 u    UGRD     100u     (0, 2, 2)        m/s   
+34    35                 u    UGRD        u     (0, 2, 2)        m/s   
+35    36                 u    UGRD        u     (0, 2, 2)        m/s   
+36    37                 u    UGRD        u     (0, 2, 2)        m/s   
+37    38                 u    UGRD        u     (0, 2, 2)        m/s   
+38    39                 u    UGRD     200u     (0, 2, 2)        m/s   
+39    40                 v    VGRD        v     (0, 2, 3)        m/s   
+40    41                 v    VGRD        v     (0, 2, 3)        m/s   
+41    42                 v    VGRD        v     (0, 2, 3)        m/s   
+42    43                 v    VGRD     100v     (0, 2, 3)        m/s   
+43    44                 v    VGRD        v     (0, 2, 3)        m/s   
+44    45                 v    VGRD        v     (0, 2, 3)        m/s   
+45    46                 v    VGRD        v     (0, 2, 3)        m/s   
+46    47                 v    VGRD        v     (0, 2, 3)        m/s   
+47    48                 v    VGRD     200v     (0, 2, 3)        m/s   
+48    49                 h     HGT       gh     (0, 3, 5)        Gpm   
+49    50                 h     HGT       gh     (0, 3, 5)        Gpm   
+50    51                 h     HGT       gh     (0, 3, 5)        Gpm   
+51    52                 h     HGT       gh     (0, 3, 5)        Gpm   
+52    53                 h     HGT       gh     (0, 3, 5)        Gpm   
+53    54                 h     HGT       gh     (0, 3, 5)        Gpm   
+54    55                 h     HGT       gh     (0, 3, 5)        Gpm   
+55    56                 h     HGT       gh     (0, 3, 5)        Gpm   
+56    57                 h     HGT       gh     (0, 3, 5)        Gpm   
+57    58                 h     HGT       gh     (0, 3, 5)        Gpm   
+58    59                 h     HGT       gh     (0, 3, 5)        Gpm   
+59    60                 h     HGT       gh     (0, 3, 5)        Gpm   
+60    61                 h     HGT       gh     (0, 3, 5)        Gpm   
+61    62                 h     HGT       gh     (0, 3, 5)        Gpm   
+62    63                 h     HGT       gh     (0, 3, 5)        Gpm   
+63    64                 h     HGT       gh     (0, 3, 5)        Gpm   
+64    65                 h     HGT       gh     (0, 3, 5)        Gpm   
+65    66                 h     HGT       gh     (0, 3, 5)        Gpm   
+66    67                 h     HGT       gh     (0, 3, 5)        Gpm   
+67    68                 h     HGT       gh     (0, 3, 5)        Gpm   
+68    69                 h     HGT       gh     (0, 3, 5)        Gpm   
+69    70                 t     TMP        t     (0, 0, 0)          K   
+70    71                 t     TMP        t     (0, 0, 0)          K   
+71    72                 t     TMP        t     (0, 0, 0)          K   
+72    73                 t     TMP        t     (0, 0, 0)          K   
+73    74                 t     TMP        t     (0, 0, 0)          K   
+74    75                 t     TMP        t     (0, 0, 0)          K   
+75    76                 t     TMP        t     (0, 0, 0)          K   
+76    77                 t     TMP        t     (0, 0, 0)          K   
+77    78                 t     TMP        t     (0, 0, 0)          K   
+78    79                 t     TMP        t     (0, 0, 0)          K   
+79    80                 t     TMP        t     (0, 0, 0)          K   
+80    81                 t     TMP        t     (0, 0, 0)          K   
+81    82                 t     TMP        t     (0, 0, 0)          K   
+82    83                 t     TMP        t     (0, 0, 0)          K   
+83    84                 t     TMP        t     (0, 0, 0)          K   
+84    85                 t     TMP        t     (0, 0, 0)          K   
+85    86                 t     TMP        t     (0, 0, 0)          K   
+86    87                 t     TMP        t     (0, 0, 0)          K   
+87    88                 t     TMP        t     (0, 0, 0)          K   
+88    89                 t     TMP        t     (0, 0, 0)          K   
+89    90                 t     TMP        t     (0, 0, 0)          K   
+90    91                 u    UGRD        u     (0, 2, 2)        m/s   
+91    92                 u    UGRD        u     (0, 2, 2)        m/s   
+92    93                 u    UGRD        u     (0, 2, 2)        m/s   
+93    94                 u    UGRD        u     (0, 2, 2)        m/s   
+94    95                 u    UGRD        u     (0, 2, 2)        m/s   
+95    96                 u    UGRD        u     (0, 2, 2)        m/s   
+96    97                 u    UGRD        u     (0, 2, 2)        m/s   
+97    98                 u    UGRD        u     (0, 2, 2)        m/s   
+98    99                 u    UGRD        u     (0, 2, 2)        m/s   
+99   100                 u    UGRD        u     (0, 2, 2)        m/s   
+100  101                 u    UGRD        u     (0, 2, 2)        m/s   
+101  102                 u    UGRD        u     (0, 2, 2)        m/s   
+102  103                 u    UGRD        u     (0, 2, 2)        m/s   
+103  104                 u    UGRD        u     (0, 2, 2)        m/s   
+104  105                 u    UGRD        u     (0, 2, 2)        m/s   
+105  106                 u    UGRD        u     (0, 2, 2)        m/s   
+106  107                 u    UGRD        u     (0, 2, 2)        m/s   
+107  108                 u    UGRD        u     (0, 2, 2)        m/s   
+108  109                 u    UGRD        u     (0, 2, 2)        m/s   
+109  110                 u    UGRD        u     (0, 2, 2)        m/s   
+110  111                 u    UGRD        u     (0, 2, 2)        m/s   
+111  112                 v    VGRD        v     (0, 2, 3)        m/s   
+112  113                 v    VGRD        v     (0, 2, 3)        m/s   
+113  114                 v    VGRD        v     (0, 2, 3)        m/s   
+114  115                 v    VGRD        v     (0, 2, 3)        m/s   
+115  116                 v    VGRD        v     (0, 2, 3)        m/s   
+116  117                 v    VGRD        v     (0, 2, 3)        m/s   
+117  118                 v    VGRD        v     (0, 2, 3)        m/s   
+118  119                 v    VGRD        v     (0, 2, 3)        m/s   
+119  120                 v    VGRD        v     (0, 2, 3)        m/s   
+120  121                 v    VGRD        v     (0, 2, 3)        m/s   
+121  122                 v    VGRD        v     (0, 2, 3)        m/s   
+122  123                 v    VGRD        v     (0, 2, 3)        m/s   
+123  124                 v    VGRD        v     (0, 2, 3)        m/s   
+124  125                 v    VGRD        v     (0, 2, 3)        m/s   
+125  126                 v    VGRD        v     (0, 2, 3)        m/s   
+126  127                 v    VGRD        v     (0, 2, 3)        m/s   
+127  128                 v    VGRD        v     (0, 2, 3)        m/s   
+128  129                 v    VGRD        v     (0, 2, 3)        m/s   
+129  130                 v    VGRD        v     (0, 2, 3)        m/s   
+130  131                 v    VGRD        v     (0, 2, 3)        m/s   
+131  132                 v    VGRD        v     (0, 2, 3)        m/s   
+132  133                 w    DZDT       wz     (0, 2, 9)        m/s   
+133  134                 w    DZDT       wz     (0, 2, 9)        m/s   
+134  135                 w    DZDT       wz     (0, 2, 9)        m/s   
+135  136                 w    DZDT       wz     (0, 2, 9)        m/s   
+136  137                 w    DZDT       wz     (0, 2, 9)        m/s   
+137  138                 w    DZDT       wz     (0, 2, 9)        m/s   
+138  139                 w    DZDT       wz     (0, 2, 9)        m/s   
+139  140                 w    DZDT       wz     (0, 2, 9)        m/s   
+140  141                 w    DZDT       wz     (0, 2, 9)        m/s   
+141  142                 w    DZDT       wz     (0, 2, 9)        m/s   
+142  143                 w    DZDT       wz     (0, 2, 9)        m/s   
+143  144                 w    DZDT       wz     (0, 2, 9)        m/s   
+144  145                 w    DZDT       wz     (0, 2, 9)        m/s   
+145  146                 w    DZDT       wz     (0, 2, 9)        m/s   
+146  147                 w    DZDT       wz     (0, 2, 9)        m/s   
+147  148                 w    DZDT       wz     (0, 2, 9)        m/s   
+148  149                 w    DZDT       wz     (0, 2, 9)        m/s   
+149  150                 w    DZDT       wz     (0, 2, 9)        m/s   
+150  151                 w    DZDT       wz     (0, 2, 9)        m/s   
+151  152                 w    DZDT       wz     (0, 2, 9)        m/s   
+152  153                 w    DZDT       wz     (0, 2, 9)        m/s   
+153  154                 q    SPFH        q     (0, 1, 0)      kg/kg   
+154  155                 q    SPFH        q     (0, 1, 0)      kg/kg   
+155  156                 q    SPFH        q     (0, 1, 0)      kg/kg   
+156  157                 q    SPFH        q     (0, 1, 0)      kg/kg   
+157  158                 q    SPFH        q     (0, 1, 0)      kg/kg   
+158  159                 q    SPFH        q     (0, 1, 0)      kg/kg   
+159  160                 q    SPFH        q     (0, 1, 0)      kg/kg   
+160  161                 q    SPFH        q     (0, 1, 0)      kg/kg   
+161  162                 q    SPFH        q     (0, 1, 0)      kg/kg   
+162  163                 q    SPFH        q     (0, 1, 0)      kg/kg   
+163  164                 q    SPFH        q     (0, 1, 0)      kg/kg   
+164  165                 q    SPFH        q     (0, 1, 0)      kg/kg   
+165  166                 q    SPFH        q     (0, 1, 0)      kg/kg   
+166  167                 q    SPFH        q     (0, 1, 0)      kg/kg   
+167  168                 q    SPFH        q     (0, 1, 0)      kg/kg   
+168  169                 q    SPFH        q     (0, 1, 0)      kg/kg   
+169  170                 q    SPFH        q     (0, 1, 0)      kg/kg   
+170  171                 q    SPFH        q     (0, 1, 0)      kg/kg   
+171  172                 q    SPFH        q     (0, 1, 0)      kg/kg   
+172  173                 q    SPFH        q     (0, 1, 0)      kg/kg   
+173  174                 q    SPFH        q     (0, 1, 0)      kg/kg   
+174  175                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+175  176                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+176  177                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+177  178                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+178  179                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+179  180                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+180  181                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+181  182                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+182  183                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+183  184                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+184  185                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+185  186                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+186  187                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+187  188                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+188  189                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+189  190                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+190  191                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+191  192                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+192  193                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+193  194                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+194  195                qc    CLMR    clwmr    (0, 1, 22)      kg/kg   
+195  196                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+196  197                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+197  198                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+198  199                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+199  200                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+200  201                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+201  202                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+202  203                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+203  204                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+204  205                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+205  206                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+206  207                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+207  208                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+208  209                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+209  210                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+210  211                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+211  212                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+212  213                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+213  214                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+214  215                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+215  216                qr    RWMR     rwmr    (0, 1, 24)      kg/kg   
+216  217                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+217  218                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+218  219                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+219  220                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+220  221                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+221  222                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+222  223                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+223  224                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+224  225                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+225  226                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+226  227                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+227  228                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+228  229                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+229  230                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+230  231                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+231  232                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+232  233                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+233  234                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+234  235                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+235  236                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+236  237                qi    ICMR     icmr    (0, 1, 23)      kg/kg   
+237  238                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+238  239                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+239  240                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+240  241                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+241  242                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+242  243                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+243  244                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+244  245                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+245  246                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+246  247                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+247  248                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+248  249                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+249  250                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+250  251                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+251  252                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+252  253                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+253  254                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+254  255                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+255  256                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+256  257                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+257  258                qs    SNMR     snmr    (0, 1, 25)      kg/kg   
+258  259           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+259  260           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+260  261           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+261  262           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+262  263           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+263  264           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+264  265           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+265  266           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+266  267           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+267  268           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+268  269           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+269  270           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+270  271           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+271  272           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+272  273           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+273  274           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+274  275           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+275  276           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+276  277           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+277  278           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+278  279           graupel    GRLE     grle    (0, 1, 32)      kg/kg   
+279  280                cc    CDCC      ccl    (0, 6, 22)          %   
+280  281                cc    CDCC      ccl    (0, 6, 22)          %   
+281  282                cc    CDCC      ccl    (0, 6, 22)          %   
+282  283                cc    CDCC      ccl    (0, 6, 22)          %   
+283  284                cc    CDCC      ccl    (0, 6, 22)          %   
+284  285                cc    CDCC      ccl    (0, 6, 22)          %   
+285  286                cc    CDCC      ccl    (0, 6, 22)          %   
+286  287                cc    CDCC      ccl    (0, 6, 22)          %   
+287  288                cc    CDCC      ccl    (0, 6, 22)          %   
+288  289                cc    CDCC      ccl    (0, 6, 22)          %   
+289  290                cc    CDCC      ccl    (0, 6, 22)          %   
+290  291                cc    CDCC      ccl    (0, 6, 22)          %   
+291  292                cc    CDCC      ccl    (0, 6, 22)          %   
+292  293                cc    CDCC      ccl    (0, 6, 22)          %   
+293  294                cc    CDCC      ccl    (0, 6, 22)          %   
+294  295                cc    CDCC      ccl    (0, 6, 22)          %   
+295  296                cc    CDCC      ccl    (0, 6, 22)          %   
+296  297                cc    CDCC      ccl    (0, 6, 22)          %   
+297  298                cc    CDCC      ccl    (0, 6, 22)          %   
+298  299                cc    CDCC      ccl    (0, 6, 22)          %   
+299  300                cc    CDCC      ccl    (0, 6, 22)          %   
+300  301                rh      RH        r     (0, 1, 1)          %   
+301  302                rh      RH        r     (0, 1, 1)          %   
+302  303                rh      RH        r     (0, 1, 1)          %   
+303  304                rh      RH        r     (0, 1, 1)          %   
+304  305                rh      RH        r     (0, 1, 1)          %   
+305  306                rh      RH        r     (0, 1, 1)          %   
+306  307                rh      RH        r     (0, 1, 1)          %   
+307  308                rh      RH        r     (0, 1, 1)          %   
+308  309                rh      RH        r     (0, 1, 1)          %   
+309  310                rh      RH        r     (0, 1, 1)          %   
+310  311                rh      RH        r     (0, 1, 1)          %   
+311  312                rh      RH        r     (0, 1, 1)          %   
+312  313                rh      RH        r     (0, 1, 1)          %   
+313  314                rh      RH        r     (0, 1, 1)          %   
+314  315                rh      RH        r     (0, 1, 1)          %   
+315  316                rh      RH        r     (0, 1, 1)          %   
+316  317                rh      RH        r     (0, 1, 1)          %   
+317  318                rh      RH        r     (0, 1, 1)          %   
+318  319                rh      RH        r     (0, 1, 1)          %   
+319  320                rh      RH        r     (0, 1, 1)          %   
+320  321                rh      RH        r     (0, 1, 1)          %   
+321  322              rh2m      RH       2r     (0, 1, 1)          %   
+322  323              td2m     DPT       2d     (0, 0, 6)          K   
+323  324               div    RELD        d    (0, 2, 13)        s-1   
+324  325               div    RELD        d    (0, 2, 13)        s-1   
+325  326               div    RELD        d    (0, 2, 13)        s-1   
+326  327               div    RELD        d    (0, 2, 13)        s-1   
+327  328               div    RELD        d    (0, 2, 13)        s-1   
+328  329              tadv     NaN  unknown   (0, 0, 224)  1.e-6 k/s   
+329  330              tadv     NaN  unknown   (0, 0, 224)  1.e-6 k/s   
+330  331              tadv     NaN  unknown   (0, 0, 224)  1.e-6 k/s   
+331  332                td     DPT      dpt     (0, 0, 6)          K   
+332  333                td     DPT      dpt     (0, 0, 6)          K   
+333  334                td     DPT      dpt     (0, 0, 6)          K   
+334  335                td     DPT      dpt     (0, 0, 6)          K   
+335  336                td     DPT      dpt     (0, 0, 6)          K   
+336  337                td     DPT      dpt     (0, 0, 6)          K   
+337  338                td     DPT      dpt     (0, 0, 6)          K   
+338  339                td     DPT      dpt     (0, 0, 6)          K   
+339  340                td     DPT      dpt     (0, 0, 6)          K   
+340  341                td     DPT      dpt     (0, 0, 6)          K   
+341  342                td     DPT      dpt     (0, 0, 6)          K   
+342  343                td     DPT      dpt     (0, 0, 6)          K   
+343  344                td     DPT      dpt     (0, 0, 6)          K   
+344  345                td     DPT      dpt     (0, 0, 6)          K   
+345  346                td     DPT      dpt     (0, 0, 6)          K   
+346  347                td     DPT      dpt     (0, 0, 6)          K   
+347  348                td     DPT      dpt     (0, 0, 6)          K   
+348  349                td     DPT      dpt     (0, 0, 6)          K   
+349  350                td     DPT      dpt     (0, 0, 6)          K   
+350  351                td     DPT      dpt     (0, 0, 6)          K   
+351  352                td     DPT      dpt     (0, 0, 6)          K   
+352  353               ttd    DEPR  unknown     (0, 0, 7)          K   
+353  354               ttd    DEPR  unknown     (0, 0, 7)          K   
+354  355               ttd    DEPR  unknown     (0, 0, 7)          K   
+355  356           thetaSe    EPOT     papt     (0, 0, 3)          K   
+356  357           thetaSe    EPOT     papt     (0, 0, 3)          K   
+357  358           thetaSe    EPOT     papt     (0, 0, 3)          K   
+358  359              kidx      KX       kx     (0, 7, 2)          C   
+359  360              cape    CAPE  unknown     (0, 7, 6)       J/kg   
+360  361               cin     CIN  unknown     (0, 7, 7)       J/kg   
+361  362               pli     PLI      pli     (0, 7, 0)          K   
+362  363                pc     NaN  unknown   (0, 1, 228)         Pa   
+363  364             dcape   DCAPE  unknown   (0, 7, 224)       J/kg   
+364  365       shr(0-1000)    VWSH     vwsh    (0, 2, 25)        s-1   
+365  366       shr(0-3000)    VWSH     vwsh    (0, 2, 25)        s-1   
+366  367       shr(0-6000)    VWSH     vwsh    (0, 2, 25)        s-1   
+367  368               bli     BLI      bli     (0, 7, 1)          K   
+368  369               dbz     NaN  unknown  (0, 16, 225)        dbz   
+369  370               dbz     NaN  unknown  (0, 16, 225)        dbz   
+370  371               dbz     NaN  unknown  (0, 16, 225)        dbz   
+371  372               dbz     NaN  unknown  (0, 16, 225)        dbz   
+372  373               dbz     NaN  unknown  (0, 16, 225)        dbz   
+373  374               dbz     NaN  unknown  (0, 16, 225)        dbz   
+374  375               dbz     NaN  unknown  (0, 16, 225)        dbz   
+375  376               dbz     NaN  unknown  (0, 16, 225)        dbz   
+376  377               dbz     NaN  unknown  (0, 16, 225)        dbz   
+377  378               dbz     NaN  unknown  (0, 16, 225)        dbz   
+378  379               dbz     NaN  unknown  (0, 16, 225)        dbz   
+379  380               dbz     NaN  unknown  (0, 16, 225)        dbz   
+380  381               dbz     NaN  unknown  (0, 16, 225)        dbz   
+381  382               dbz     NaN  unknown  (0, 16, 225)        dbz   
+382  383               dbz     NaN  unknown  (0, 16, 225)        dbz   
+383  384               dbz     NaN  unknown  (0, 16, 225)        dbz   
+384  385               dbz     NaN  unknown  (0, 16, 225)        dbz   
+385  386               dbz     NaN  unknown  (0, 16, 225)        dbz   
+386  387               dbz     NaN  unknown  (0, 16, 225)        dbz   
+387  388               dbz     NaN  unknown  (0, 16, 225)        dbz   
+388  389               dbz     NaN  unknown  (0, 16, 225)        dbz   
+389  390       srh(0-1000)    HLCY     hlcy     (0, 7, 8)       J/kg   
+390  391       srh(0-3000)    HLCY     hlcy     (0, 7, 8)       J/kg   
+391  392                hi      HI  unknown   (0, 1, 239)    unknown   
+392  393               ht0     NaN  unknown   (0, 3, 225)          m   
+393  394               ht2     NaN  unknown   (0, 3, 226)          m   
+394  395              pwat    PWAT     pwat     (0, 1, 3)      kg/kg   
+395  396               vis     VIS      vis    (0, 19, 0)          m   
+396  397              gust    GUST    i10fg    (0, 2, 22)        m/s   
+397  398         precitype   PTYPE    ptype    (0, 1, 19)    unknown   
+398  399              cldt  CDCTOP     cdct    (0, 6, 12)          m   
+399  400              cldb    CDCB  unknown    (0, 6, 11)          m   
+400  401               bti     NaN  unknown   (0, 4, 228)          K   
+401  402               btv     NaN  unknown   (0, 4, 227)          K   
+
+                       层次类型    层次     统计类型     时效 数据类型        网格类型  
+0                   surface     0    accum   0-24   fc  regular_ll  
+1                   surface     0    accum   0-24   fc  regular_ll  
+2                   surface     0  instant     24   fc  regular_ll  
+3                   surface     0    accum   0-24   fc  regular_ll  
+4                   surface     0    accum   0-24   fc  regular_ll  
+5                   surface     0  instant     24   fc  regular_ll  
+6         heightAboveGround     2  instant     24   fc  regular_ll  
+7         heightAboveGround     2  instant     24   fc  regular_ll  
+8         heightAboveGround    10  instant     24   fc  regular_ll  
+9         heightAboveGround    10  instant     24   fc  regular_ll  
+10         entireAtmosphere     0  instant     24   fc  regular_ll  
+11         entireAtmosphere     0  instant     24   fc  regular_ll  
+12         entireAtmosphere     0  instant     24   fc  regular_ll  
+13         entireAtmosphere     0  instant     24   fc  regular_ll  
+14               atmosphere     0  instant     24   fc  regular_ll  
+15               atmosphere     0  instant     24   fc  regular_ll  
+16                  surface     0  instant     24   fc  regular_ll  
+17                  surface     0  instant     24   fc  regular_ll  
+18            isobaricInhPa  1000      max  23-24   fc  regular_ll  
+19        heightAboveGround    10      max  23-24   fc  regular_ll  
+20        heightAboveGround    10      max  23-24   fc  regular_ll  
+21                  surface     0      max  23-24   fc  regular_ll  
+22                  surface     0  instant     24   fc  regular_ll  
+23   heightAboveGroundLayer  5000      max   0-24   fc  regular_ll  
+24                  surface     0      max  23-24   fc  regular_ll  
+25   heightAboveGroundLayer   600  instant     24   fc  regular_ll  
+26   heightAboveGroundLayer   600  instant     24   fc  regular_ll  
+27                  surface     0  instant     24   fc  regular_ll  
+28                  surface     0  instant     24   fc  regular_ll  
+29                  meanSea     0  instant     24   fc  regular_ll  
+30        heightAboveGround    30  instant     24   fc  regular_ll  
+31        heightAboveGround    50  instant     24   fc  regular_ll  
+32        heightAboveGround    70  instant     24   fc  regular_ll  
+33        heightAboveGround   100  instant     24   fc  regular_ll  
+34        heightAboveGround   120  instant     24   fc  regular_ll  
+35        heightAboveGround   140  instant     24   fc  regular_ll  
+36        heightAboveGround   160  instant     24   fc  regular_ll  
+37        heightAboveGround   180  instant     24   fc  regular_ll  
+38        heightAboveGround   200  instant     24   fc  regular_ll  
+39        heightAboveGround    30  instant     24   fc  regular_ll  
+40        heightAboveGround    50  instant     24   fc  regular_ll  
+41        heightAboveGround    70  instant     24   fc  regular_ll  
+42        heightAboveGround   100  instant     24   fc  regular_ll  
+43        heightAboveGround   120  instant     24   fc  regular_ll  
+44        heightAboveGround   140  instant     24   fc  regular_ll  
+45        heightAboveGround   160  instant     24   fc  regular_ll  
+46        heightAboveGround   180  instant     24   fc  regular_ll  
+47        heightAboveGround   200  instant     24   fc  regular_ll  
+48            isobaricInhPa  1000  instant     24   fc  regular_ll  
+49            isobaricInhPa   975  instant     24   fc  regular_ll  
+50            isobaricInhPa   950  instant     24   fc  regular_ll  
+51            isobaricInhPa   925  instant     24   fc  regular_ll  
+52            isobaricInhPa   900  instant     24   fc  regular_ll  
+53            isobaricInhPa   850  instant     24   fc  regular_ll  
+54            isobaricInhPa   800  instant     24   fc  regular_ll  
+55            isobaricInhPa   750  instant     24   fc  regular_ll  
+56            isobaricInhPa   700  instant     24   fc  regular_ll  
+57            isobaricInhPa   650  instant     24   fc  regular_ll  
+58            isobaricInhPa   600  instant     24   fc  regular_ll  
+59            isobaricInhPa   550  instant     24   fc  regular_ll  
+60            isobaricInhPa   500  instant     24   fc  regular_ll  
+61            isobaricInhPa   450  instant     24   fc  regular_ll  
+62            isobaricInhPa   400  instant     24   fc  regular_ll  
+63            isobaricInhPa   350  instant     24   fc  regular_ll  
+64            isobaricInhPa   300  instant     24   fc  regular_ll  
+65            isobaricInhPa   250  instant     24   fc  regular_ll  
+66            isobaricInhPa   200  instant     24   fc  regular_ll  
+67            isobaricInhPa   150  instant     24   fc  regular_ll  
+68            isobaricInhPa   100  instant     24   fc  regular_ll  
+69            isobaricInhPa  1000  instant     24   fc  regular_ll  
+70            isobaricInhPa   975  instant     24   fc  regular_ll  
+71            isobaricInhPa   950  instant     24   fc  regular_ll  
+72            isobaricInhPa   925  instant     24   fc  regular_ll  
+73            isobaricInhPa   900  instant     24   fc  regular_ll  
+74            isobaricInhPa   850  instant     24   fc  regular_ll  
+75            isobaricInhPa   800  instant     24   fc  regular_ll  
+76            isobaricInhPa   750  instant     24   fc  regular_ll  
+77            isobaricInhPa   700  instant     24   fc  regular_ll  
+78            isobaricInhPa   650  instant     24   fc  regular_ll  
+79            isobaricInhPa   600  instant     24   fc  regular_ll  
+80            isobaricInhPa   550  instant     24   fc  regular_ll  
+81            isobaricInhPa   500  instant     24   fc  regular_ll  
+82            isobaricInhPa   450  instant     24   fc  regular_ll  
+83            isobaricInhPa   400  instant     24   fc  regular_ll  
+84            isobaricInhPa   350  instant     24   fc  regular_ll  
+85            isobaricInhPa   300  instant     24   fc  regular_ll  
+86            isobaricInhPa   250  instant     24   fc  regular_ll  
+87            isobaricInhPa   200  instant     24   fc  regular_ll  
+88            isobaricInhPa   150  instant     24   fc  regular_ll  
+89            isobaricInhPa   100  instant     24   fc  regular_ll  
+90            isobaricInhPa  1000  instant     24   fc  regular_ll  
+91            isobaricInhPa   975  instant     24   fc  regular_ll  
+92            isobaricInhPa   950  instant     24   fc  regular_ll  
+93            isobaricInhPa   925  instant     24   fc  regular_ll  
+94            isobaricInhPa   900  instant     24   fc  regular_ll  
+95            isobaricInhPa   850  instant     24   fc  regular_ll  
+96            isobaricInhPa   800  instant     24   fc  regular_ll  
+97            isobaricInhPa   750  instant     24   fc  regular_ll  
+98            isobaricInhPa   700  instant     24   fc  regular_ll  
+99            isobaricInhPa   650  instant     24   fc  regular_ll  
+100           isobaricInhPa   600  instant     24   fc  regular_ll  
+101           isobaricInhPa   550  instant     24   fc  regular_ll  
+102           isobaricInhPa   500  instant     24   fc  regular_ll  
+103           isobaricInhPa   450  instant     24   fc  regular_ll  
+104           isobaricInhPa   400  instant     24   fc  regular_ll  
+105           isobaricInhPa   350  instant     24   fc  regular_ll  
+106           isobaricInhPa   300  instant     24   fc  regular_ll  
+107           isobaricInhPa   250  instant     24   fc  regular_ll  
+108           isobaricInhPa   200  instant     24   fc  regular_ll  
+109           isobaricInhPa   150  instant     24   fc  regular_ll  
+110           isobaricInhPa   100  instant     24   fc  regular_ll  
+111           isobaricInhPa  1000  instant     24   fc  regular_ll  
+112           isobaricInhPa   975  instant     24   fc  regular_ll  
+113           isobaricInhPa   950  instant     24   fc  regular_ll  
+114           isobaricInhPa   925  instant     24   fc  regular_ll  
+115           isobaricInhPa   900  instant     24   fc  regular_ll  
+116           isobaricInhPa   850  instant     24   fc  regular_ll  
+117           isobaricInhPa   800  instant     24   fc  regular_ll  
+118           isobaricInhPa   750  instant     24   fc  regular_ll  
+119           isobaricInhPa   700  instant     24   fc  regular_ll  
+120           isobaricInhPa   650  instant     24   fc  regular_ll  
+121           isobaricInhPa   600  instant     24   fc  regular_ll  
+122           isobaricInhPa   550  instant     24   fc  regular_ll  
+123           isobaricInhPa   500  instant     24   fc  regular_ll  
+124           isobaricInhPa   450  instant     24   fc  regular_ll  
+125           isobaricInhPa   400  instant     24   fc  regular_ll  
+126           isobaricInhPa   350  instant     24   fc  regular_ll  
+127           isobaricInhPa   300  instant     24   fc  regular_ll  
+128           isobaricInhPa   250  instant     24   fc  regular_ll  
+129           isobaricInhPa   200  instant     24   fc  regular_ll  
+130           isobaricInhPa   150  instant     24   fc  regular_ll  
+131           isobaricInhPa   100  instant     24   fc  regular_ll  
+132           isobaricInhPa  1000  instant     24   fc  regular_ll  
+133           isobaricInhPa   975  instant     24   fc  regular_ll  
+134           isobaricInhPa   950  instant     24   fc  regular_ll  
+135           isobaricInhPa   925  instant     24   fc  regular_ll  
+136           isobaricInhPa   900  instant     24   fc  regular_ll  
+137           isobaricInhPa   850  instant     24   fc  regular_ll  
+138           isobaricInhPa   800  instant     24   fc  regular_ll  
+139           isobaricInhPa   750  instant     24   fc  regular_ll  
+140           isobaricInhPa   700  instant     24   fc  regular_ll  
+141           isobaricInhPa   650  instant     24   fc  regular_ll  
+142           isobaricInhPa   600  instant     24   fc  regular_ll  
+143           isobaricInhPa   550  instant     24   fc  regular_ll  
+144           isobaricInhPa   500  instant     24   fc  regular_ll  
+145           isobaricInhPa   450  instant     24   fc  regular_ll  
+146           isobaricInhPa   400  instant     24   fc  regular_ll  
+147           isobaricInhPa   350  instant     24   fc  regular_ll  
+148           isobaricInhPa   300  instant     24   fc  regular_ll  
+149           isobaricInhPa   250  instant     24   fc  regular_ll  
+150           isobaricInhPa   200  instant     24   fc  regular_ll  
+151           isobaricInhPa   150  instant     24   fc  regular_ll  
+152           isobaricInhPa   100  instant     24   fc  regular_ll  
+153           isobaricInhPa  1000  instant     24   fc  regular_ll  
+154           isobaricInhPa   975  instant     24   fc  regular_ll  
+155           isobaricInhPa   950  instant     24   fc  regular_ll  
+156           isobaricInhPa   925  instant     24   fc  regular_ll  
+157           isobaricInhPa   900  instant     24   fc  regular_ll  
+158           isobaricInhPa   850  instant     24   fc  regular_ll  
+159           isobaricInhPa   800  instant     24   fc  regular_ll  
+160           isobaricInhPa   750  instant     24   fc  regular_ll  
+161           isobaricInhPa   700  instant     24   fc  regular_ll  
+162           isobaricInhPa   650  instant     24   fc  regular_ll  
+163           isobaricInhPa   600  instant     24   fc  regular_ll  
+164           isobaricInhPa   550  instant     24   fc  regular_ll  
+165           isobaricInhPa   500  instant     24   fc  regular_ll  
+166           isobaricInhPa   450  instant     24   fc  regular_ll  
+167           isobaricInhPa   400  instant     24   fc  regular_ll  
+168           isobaricInhPa   350  instant     24   fc  regular_ll  
+169           isobaricInhPa   300  instant     24   fc  regular_ll  
+170           isobaricInhPa   250  instant     24   fc  regular_ll  
+171           isobaricInhPa   200  instant     24   fc  regular_ll  
+172           isobaricInhPa   150  instant     24   fc  regular_ll  
+173           isobaricInhPa   100  instant     24   fc  regular_ll  
+174           isobaricInhPa  1000  instant     24   fc  regular_ll  
+175           isobaricInhPa   975  instant     24   fc  regular_ll  
+176           isobaricInhPa   950  instant     24   fc  regular_ll  
+177           isobaricInhPa   925  instant     24   fc  regular_ll  
+178           isobaricInhPa   900  instant     24   fc  regular_ll  
+179           isobaricInhPa   850  instant     24   fc  regular_ll  
+180           isobaricInhPa   800  instant     24   fc  regular_ll  
+181           isobaricInhPa   750  instant     24   fc  regular_ll  
+182           isobaricInhPa   700  instant     24   fc  regular_ll  
+183           isobaricInhPa   650  instant     24   fc  regular_ll  
+184           isobaricInhPa   600  instant     24   fc  regular_ll  
+185           isobaricInhPa   550  instant     24   fc  regular_ll  
+186           isobaricInhPa   500  instant     24   fc  regular_ll  
+187           isobaricInhPa   450  instant     24   fc  regular_ll  
+188           isobaricInhPa   400  instant     24   fc  regular_ll  
+189           isobaricInhPa   350  instant     24   fc  regular_ll  
+190           isobaricInhPa   300  instant     24   fc  regular_ll  
+191           isobaricInhPa   250  instant     24   fc  regular_ll  
+192           isobaricInhPa   200  instant     24   fc  regular_ll  
+193           isobaricInhPa   150  instant     24   fc  regular_ll  
+194           isobaricInhPa   100  instant     24   fc  regular_ll  
+195           isobaricInhPa  1000  instant     24   fc  regular_ll  
+196           isobaricInhPa   975  instant     24   fc  regular_ll  
+197           isobaricInhPa   950  instant     24   fc  regular_ll  
+198           isobaricInhPa   925  instant     24   fc  regular_ll  
+199           isobaricInhPa   900  instant     24   fc  regular_ll  
+200           isobaricInhPa   850  instant     24   fc  regular_ll  
+201           isobaricInhPa   800  instant     24   fc  regular_ll  
+202           isobaricInhPa   750  instant     24   fc  regular_ll  
+203           isobaricInhPa   700  instant     24   fc  regular_ll  
+204           isobaricInhPa   650  instant     24   fc  regular_ll  
+205           isobaricInhPa   600  instant     24   fc  regular_ll  
+206           isobaricInhPa   550  instant     24   fc  regular_ll  
+207           isobaricInhPa   500  instant     24   fc  regular_ll  
+208           isobaricInhPa   450  instant     24   fc  regular_ll  
+209           isobaricInhPa   400  instant     24   fc  regular_ll  
+210           isobaricInhPa   350  instant     24   fc  regular_ll  
+211           isobaricInhPa   300  instant     24   fc  regular_ll  
+212           isobaricInhPa   250  instant     24   fc  regular_ll  
+213           isobaricInhPa   200  instant     24   fc  regular_ll  
+214           isobaricInhPa   150  instant     24   fc  regular_ll  
+215           isobaricInhPa   100  instant     24   fc  regular_ll  
+216           isobaricInhPa  1000  instant     24   fc  regular_ll  
+217           isobaricInhPa   975  instant     24   fc  regular_ll  
+218           isobaricInhPa   950  instant     24   fc  regular_ll  
+219           isobaricInhPa   925  instant     24   fc  regular_ll  
+220           isobaricInhPa   900  instant     24   fc  regular_ll  
+221           isobaricInhPa   850  instant     24   fc  regular_ll  
+222           isobaricInhPa   800  instant     24   fc  regular_ll  
+223           isobaricInhPa   750  instant     24   fc  regular_ll  
+224           isobaricInhPa   700  instant     24   fc  regular_ll  
+225           isobaricInhPa   650  instant     24   fc  regular_ll  
+226           isobaricInhPa   600  instant     24   fc  regular_ll  
+227           isobaricInhPa   550  instant     24   fc  regular_ll  
+228           isobaricInhPa   500  instant     24   fc  regular_ll  
+229           isobaricInhPa   450  instant     24   fc  regular_ll  
+230           isobaricInhPa   400  instant     24   fc  regular_ll  
+231           isobaricInhPa   350  instant     24   fc  regular_ll  
+232           isobaricInhPa   300  instant     24   fc  regular_ll  
+233           isobaricInhPa   250  instant     24   fc  regular_ll  
+234           isobaricInhPa   200  instant     24   fc  regular_ll  
+235           isobaricInhPa   150  instant     24   fc  regular_ll  
+236           isobaricInhPa   100  instant     24   fc  regular_ll  
+237           isobaricInhPa  1000  instant     24   fc  regular_ll  
+238           isobaricInhPa   975  instant     24   fc  regular_ll  
+239           isobaricInhPa   950  instant     24   fc  regular_ll  
+240           isobaricInhPa   925  instant     24   fc  regular_ll  
+241           isobaricInhPa   900  instant     24   fc  regular_ll  
+242           isobaricInhPa   850  instant     24   fc  regular_ll  
+243           isobaricInhPa   800  instant     24   fc  regular_ll  
+244           isobaricInhPa   750  instant     24   fc  regular_ll  
+245           isobaricInhPa   700  instant     24   fc  regular_ll  
+246           isobaricInhPa   650  instant     24   fc  regular_ll  
+247           isobaricInhPa   600  instant     24   fc  regular_ll  
+248           isobaricInhPa   550  instant     24   fc  regular_ll  
+249           isobaricInhPa   500  instant     24   fc  regular_ll  
+250           isobaricInhPa   450  instant     24   fc  regular_ll  
+251           isobaricInhPa   400  instant     24   fc  regular_ll  
+252           isobaricInhPa   350  instant     24   fc  regular_ll  
+253           isobaricInhPa   300  instant     24   fc  regular_ll  
+254           isobaricInhPa   250  instant     24   fc  regular_ll  
+255           isobaricInhPa   200  instant     24   fc  regular_ll  
+256           isobaricInhPa   150  instant     24   fc  regular_ll  
+257           isobaricInhPa   100  instant     24   fc  regular_ll  
+258           isobaricInhPa  1000  instant     24   fc  regular_ll  
+259           isobaricInhPa   975  instant     24   fc  regular_ll  
+260           isobaricInhPa   950  instant     24   fc  regular_ll  
+261           isobaricInhPa   925  instant     24   fc  regular_ll  
+262           isobaricInhPa   900  instant     24   fc  regular_ll  
+263           isobaricInhPa   850  instant     24   fc  regular_ll  
+264           isobaricInhPa   800  instant     24   fc  regular_ll  
+265           isobaricInhPa   750  instant     24   fc  regular_ll  
+266           isobaricInhPa   700  instant     24   fc  regular_ll  
+267           isobaricInhPa   650  instant     24   fc  regular_ll  
+268           isobaricInhPa   600  instant     24   fc  regular_ll  
+269           isobaricInhPa   550  instant     24   fc  regular_ll  
+270           isobaricInhPa   500  instant     24   fc  regular_ll  
+271           isobaricInhPa   450  instant     24   fc  regular_ll  
+272           isobaricInhPa   400  instant     24   fc  regular_ll  
+273           isobaricInhPa   350  instant     24   fc  regular_ll  
+274           isobaricInhPa   300  instant     24   fc  regular_ll  
+275           isobaricInhPa   250  instant     24   fc  regular_ll  
+276           isobaricInhPa   200  instant     24   fc  regular_ll  
+277           isobaricInhPa   150  instant     24   fc  regular_ll  
+278           isobaricInhPa   100  instant     24   fc  regular_ll  
+279           isobaricInhPa  1000  instant     24   fc  regular_ll  
+280           isobaricInhPa   975  instant     24   fc  regular_ll  
+281           isobaricInhPa   950  instant     24   fc  regular_ll  
+282           isobaricInhPa   925  instant     24   fc  regular_ll  
+283           isobaricInhPa   900  instant     24   fc  regular_ll  
+284           isobaricInhPa   850  instant     24   fc  regular_ll  
+285           isobaricInhPa   800  instant     24   fc  regular_ll  
+286           isobaricInhPa   750  instant     24   fc  regular_ll  
+287           isobaricInhPa   700  instant     24   fc  regular_ll  
+288           isobaricInhPa   650  instant     24   fc  regular_ll  
+289           isobaricInhPa   600  instant     24   fc  regular_ll  
+290           isobaricInhPa   550  instant     24   fc  regular_ll  
+291           isobaricInhPa   500  instant     24   fc  regular_ll  
+292           isobaricInhPa   450  instant     24   fc  regular_ll  
+293           isobaricInhPa   400  instant     24   fc  regular_ll  
+294           isobaricInhPa   350  instant     24   fc  regular_ll  
+295           isobaricInhPa   300  instant     24   fc  regular_ll  
+296           isobaricInhPa   250  instant     24   fc  regular_ll  
+297           isobaricInhPa   200  instant     24   fc  regular_ll  
+298           isobaricInhPa   150  instant     24   fc  regular_ll  
+299           isobaricInhPa   100  instant     24   fc  regular_ll  
+300           isobaricInhPa  1000  instant     24   fc  regular_ll  
+301           isobaricInhPa   975  instant     24   fc  regular_ll  
+302           isobaricInhPa   950  instant     24   fc  regular_ll  
+303           isobaricInhPa   925  instant     24   fc  regular_ll  
+304           isobaricInhPa   900  instant     24   fc  regular_ll  
+305           isobaricInhPa   850  instant     24   fc  regular_ll  
+306           isobaricInhPa   800  instant     24   fc  regular_ll  
+307           isobaricInhPa   750  instant     24   fc  regular_ll  
+308           isobaricInhPa   700  instant     24   fc  regular_ll  
+309           isobaricInhPa   650  instant     24   fc  regular_ll  
+310           isobaricInhPa   600  instant     24   fc  regular_ll  
+311           isobaricInhPa   550  instant     24   fc  regular_ll  
+312           isobaricInhPa   500  instant     24   fc  regular_ll  
+313           isobaricInhPa   450  instant     24   fc  regular_ll  
+314           isobaricInhPa   400  instant     24   fc  regular_ll  
+315           isobaricInhPa   350  instant     24   fc  regular_ll  
+316           isobaricInhPa   300  instant     24   fc  regular_ll  
+317           isobaricInhPa   250  instant     24   fc  regular_ll  
+318           isobaricInhPa   200  instant     24   fc  regular_ll  
+319           isobaricInhPa   150  instant     24   fc  regular_ll  
+320           isobaricInhPa   100  instant     24   fc  regular_ll  
+321       heightAboveGround     2  instant     24   fc  regular_ll  
+322       heightAboveGround     2  instant     24   fc  regular_ll  
+323           isobaricInhPa  1000  instant     24   fc  regular_ll  
+324           isobaricInhPa   925  instant     24   fc  regular_ll  
+325           isobaricInhPa   850  instant     24   fc  regular_ll  
+326           isobaricInhPa   700  instant     24   fc  regular_ll  
+327           isobaricInhPa   500  instant     24   fc  regular_ll  
+328           isobaricInhPa   850  instant     24   fc  regular_ll  
+329           isobaricInhPa   700  instant     24   fc  regular_ll  
+330           isobaricInhPa   500  instant     24   fc  regular_ll  
+331           isobaricInhPa  1000  instant     24   fc  regular_ll  
+332           isobaricInhPa   975  instant     24   fc  regular_ll  
+333           isobaricInhPa   950  instant     24   fc  regular_ll  
+334           isobaricInhPa   925  instant     24   fc  regular_ll  
+335           isobaricInhPa   900  instant     24   fc  regular_ll  
+336           isobaricInhPa   850  instant     24   fc  regular_ll  
+337           isobaricInhPa   800  instant     24   fc  regular_ll  
+338           isobaricInhPa   750  instant     24   fc  regular_ll  
+339           isobaricInhPa   700  instant     24   fc  regular_ll  
+340           isobaricInhPa   650  instant     24   fc  regular_ll  
+341           isobaricInhPa   600  instant     24   fc  regular_ll  
+342           isobaricInhPa   550  instant     24   fc  regular_ll  
+343           isobaricInhPa   500  instant     24   fc  regular_ll  
+344           isobaricInhPa   450  instant     24   fc  regular_ll  
+345           isobaricInhPa   400  instant     24   fc  regular_ll  
+346           isobaricInhPa   350  instant     24   fc  regular_ll  
+347           isobaricInhPa   300  instant     24   fc  regular_ll  
+348           isobaricInhPa   250  instant     24   fc  regular_ll  
+349           isobaricInhPa   200  instant     24   fc  regular_ll  
+350           isobaricInhPa   150  instant     24   fc  regular_ll  
+351           isobaricInhPa   100  instant     24   fc  regular_ll  
+352           isobaricInhPa   850  instant     24   fc  regular_ll  
+353           isobaricInhPa   700  instant     24   fc  regular_ll  
+354           isobaricInhPa   500  instant     24   fc  regular_ll  
+355           isobaricInhPa   850  instant     24   fc  regular_ll  
+356           isobaricInhPa   700  instant     24   fc  regular_ll  
+357           isobaricInhPa   500  instant     24   fc  regular_ll  
+358                 meanSea     0  instant     24   fc  regular_ll  
+359                 surface     0  instant     24   fc  regular_ll  
+360                 surface     0  instant     24   fc  regular_ll  
+361                 surface     0  instant     24   fc  regular_ll  
+362                 surface     0  instant     24   fc  regular_ll  
+363                 surface     0  instant     24   fc  regular_ll  
+364  heightAboveGroundLayer  1000  instant     24   fc  regular_ll  
+365  heightAboveGroundLayer  3000  instant     24   fc  regular_ll  
+366  heightAboveGroundLayer  6000  instant     24   fc  regular_ll  
+367                 surface     0  instant     24   fc  regular_ll  
+368           isobaricInhPa  1000  instant     24   fc  regular_ll  
+369           isobaricInhPa   975  instant     24   fc  regular_ll  
+370           isobaricInhPa   950  instant     24   fc  regular_ll  
+371           isobaricInhPa   925  instant     24   fc  regular_ll  
+372           isobaricInhPa   900  instant     24   fc  regular_ll  
+373           isobaricInhPa   850  instant     24   fc  regular_ll  
+374           isobaricInhPa   800  instant     24   fc  regular_ll  
+375           isobaricInhPa   750  instant     24   fc  regular_ll  
+376           isobaricInhPa   700  instant     24   fc  regular_ll  
+377           isobaricInhPa   650  instant     24   fc  regular_ll  
+378           isobaricInhPa   600  instant     24   fc  regular_ll  
+379           isobaricInhPa   550  instant     24   fc  regular_ll  
+380           isobaricInhPa   500  instant     24   fc  regular_ll  
+381           isobaricInhPa   450  instant     24   fc  regular_ll  
+382           isobaricInhPa   400  instant     24   fc  regular_ll  
+383           isobaricInhPa   350  instant     24   fc  regular_ll  
+384           isobaricInhPa   300  instant     24   fc  regular_ll  
+385           isobaricInhPa   250  instant     24   fc  regular_ll  
+386           isobaricInhPa   200  instant     24   fc  regular_ll  
+387           isobaricInhPa   150  instant     24   fc  regular_ll  
+388           isobaricInhPa   100  instant     24   fc  regular_ll  
+389  heightAboveGroundLayer  1000  instant     24   fc  regular_ll  
+390  heightAboveGroundLayer  3000  instant     24   fc  regular_ll  
+391                 surface     0  instant     24   fc  regular_ll  
+392                 surface     0  instant     24   fc  regular_ll  
+393                 surface     0  instant     24   fc  regular_ll  
+394              atmosphere     0  instant     24   fc  regular_ll  
+395                 surface     0  instant     24   fc  regular_ll  
+396       heightAboveGround    10  instant     24   fc  regular_ll  
+397                 surface     0  instant     24   fc  regular_ll  
+398                 surface     0  instant     24   fc  regular_ll  
+399                 surface     0  instant     24   fc  regular_ll  
+400                 surface     0  instant     24   fc  regular_ll  
+401                 surface     0  instant     24   fc  regular_ll  

@@ -9,9 +9,9 @@
 
 | 项 | 值 |
 |---|---|
-| 构建时间 | 2026-07-29T16:35:47+08:00 |
+| 构建时间 | 2026-08-17T10:04:29+08:00 |
 | 源码仓库 | cemc-oper/data-notebook |
-| 源码提交 | 3cadaed27d086c88256f83498d5b1ccd2b7a4307 |
+| 源码提交 | aba23a5d9ad37da8afe313f35ff1aab2d56c9be2 |
 | 源码分支 | main |
 
 恢复任意历史版本: `git checkout <commit> -- html/`
